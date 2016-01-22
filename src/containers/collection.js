@@ -11,15 +11,19 @@ export default class Collections extends Component {
   }
 
   render() {
+    const {collection} = this.props
+
     return <div>
-      <CollectionBreadcrumb collectionName={this.props.collectionId} />
+      <CollectionBreadcrumb collectionName={collection.label} />
     </div>
   }
 }
 
-function mapStateToProps({router}) {
+function mapStateToProps({router, collections}) {
   const {collectionId} = router.params
-  return {collectionId}
+  const collection = _.find(collections.items, {id: collectionId})
+
+  return {collection, collections}
 }
 
 export default connect(mapStateToProps)(Collections)
