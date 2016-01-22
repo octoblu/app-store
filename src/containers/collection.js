@@ -8,7 +8,7 @@ import Loading from '../components/loading'
 
 import {fetchBluprints} from '../actions/bluprint-actions'
 
-export default class Bluprints extends Component {
+export default class Collection extends Component {
   constructor(props) {
     super(props)
   }
@@ -36,4 +36,4 @@ function mapStateToProps({router, collections, bluprints}) {
   return {collection, bluprints}
 }
 
-export default connect(mapStateToProps)(Bluprints)
+export default connect(mapStateToProps)(Collection)

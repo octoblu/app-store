@@ -5,3 +5,10 @@ export function fetchBluprints() {
     type: types.FETCH_BLUPRINTS
   }
 }
+
+export function fetchBluprint(bluprintId) {
+  return {
+    type: types.FETCH_BLUPRINT,
+    bluprintId
+  }
+}
