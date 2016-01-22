@@ -3,17 +3,17 @@ import { IndexRoute, Route, Router } from 'react-router'
 
 import { createHistory } from 'history'
 
-import Collection from '../containers/Collection'
+import Bluprints from '../containers/bluprints'
 import Detail from '../containers/detail'
-import Home from '../containers/home'
+import Collections from '../containers/collections'
 import Layout from '../containers/layout'
 
 const Routes = (
   <Router history={createHistory()}>
     <Route path="/" component={Layout}>
-      <IndexRoute component={Home} />
-      <Route path="/collection/:collectionId" component={Collection} />
-      <Route path="/:bluprintId" component={Detail} />
+      <IndexRoute component={Collections} />
+      <Route path="/collection/:collectionId" component={Bluprints} />
+      <Route path="/bluprints/:bluprintId" component={Detail} />
     </Route>
   </Router>
 )

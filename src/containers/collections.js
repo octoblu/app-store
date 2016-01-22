@@ -7,7 +7,7 @@ import Loading from '../components/loading'
 
 import {fetchCollections} from '../actions/collection-actions'
 
-export default class Home extends Component {
+export default class Collections extends Component {
   constructor(props) {
     super(props)
   }
@@ -31,4 +31,4 @@ function mapStateToProps({collections}) {
   return {collections}
 }
 
-export default connect(mapStateToProps)(Home)
+export default connect(mapStateToProps)(Collections)

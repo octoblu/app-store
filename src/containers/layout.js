@@ -11,7 +11,7 @@ export default class Layout extends Component {
       <nav>
         <Link to="/">Index</Link>
         <Link to="/collection/epic-collection">Epic Collection</Link>
-        <Link to="/bluprint-awesome">Bluprint, Awesome</Link>
+        <Link to="/bluprints/bluprint-awesome">Bluprint, Awesome</Link>
       </nav>
 
       {this.props.children}

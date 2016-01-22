@@ -10,7 +10,7 @@ const CollectionBreadcrumb = ({collectionName}) => {
 }
 
 CollectionBreadcrumb.propTypes = {
-  collectionName: PropTypes.node.isRequired
+  collectionName: PropTypes.string.isRequired
 }
 
 export default CollectionBreadcrumb
