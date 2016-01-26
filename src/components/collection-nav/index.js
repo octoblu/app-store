@@ -4,7 +4,7 @@ import { Link } from 'react-router'
 import './index.css'
 
 const CollectionNav = ({ items }) => {
-  let collectionNavItems = items.map(collection => <Link to={`/collection/${collection.id}`} key={collection.id}>{collection.label}</Link>)
+  let collectionNavItems = items.map(collection => <div key={collection.id}><Link to={`/collection/${collection.id}`}>{collection.label}</Link></div>)
   return <nav className="CollectionNav">{collectionNavItems}</nav>
 }
 

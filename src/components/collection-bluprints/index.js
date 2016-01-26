@@ -4,7 +4,7 @@ import { Link } from 'react-router'
 import './index.css'
 
 const CollectionBluprints = ({bluprints}) => {
-  const bluprintItems = bluprints.map(bluprint => <Link to={`/bluprints/${bluprint.id}`}>{bluprint.label}</Link>)
+  const bluprintItems = bluprints.map(bluprint => <Link to={`/bluprints/${bluprint.id}`} key={bluprint.id}>{bluprint.label}</Link>)
 
   return <div className="CollectionBluprints">
     <h2>Bluprintssss</h2>

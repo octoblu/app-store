@@ -14,7 +14,8 @@ export default class Collection extends Component {
   }
 
   componentDidMount() {
-    this.props.dispatch(fetchBluprints())
+    let {dispatch} = this.props
+    dispatch(fetchBluprints())
   }
 
   render() {
