@@ -1,18 +1,22 @@
 .Page {
-  flex:1;
   height: 100%;
-  margin: 36px;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .Page-header {
   display: flex;
   justify-content: space-between;
   margin-bottom: 36px;
+  text-align: center;
 }
 
 .Page-title {
   margin: 0 12px 0 0;
   padding: 0;
+  flex: 1;
+  font-size: 60px;
 }
 
 .Page-actions {}

@@ -2,10 +2,11 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router'
 
-import CollectionNav from '../components/collection-nav'
-import Loading from '../components/loading'
+import CollectionCard from '../components/collection-card'
+import { Page } from '../components/page'
+import { Hero, HeroTitle, HeroSubTitle } from '../components/hero'
 
-import {fetchCollections} from '../actions/collection-actions'
+import { fetchCollections } from '../actions/collection-actions'
 
 export default class Collections extends Component {
   constructor(props) {
@@ -18,12 +19,21 @@ export default class Collections extends Component {
   }
 
   render() {
-    let {collections} = this.props
+    let { items } = this.props.collections
+    const collectionCards = _.map(items, (collection) =>
+      <CollectionCard
+        collection={collection}
+        key={collection.id}/>
+    )
 
-    return <div>
-      <h1>Automation App Store</h1>
-      <CollectionNav items={collections.items}/>
-    </div>
+    return <Page>
+      <Hero>
+        <HeroTitle>Automation App Store</HeroTitle>
+        <HeroSubTitle>Explore. Automate. Cats.</HeroSubTitle>
+      </Hero>
+
+      <div className="CollectionCard-container">{collectionCards}</div>
+    </Page>
   }
 }
 

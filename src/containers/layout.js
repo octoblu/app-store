@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router'
 
+import '../styles/handglide/fonts.css'
 import '../styles/base.css'
 
 import Loading from '../components/loading'

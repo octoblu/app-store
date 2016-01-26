@@ -3,20 +3,24 @@ import * as types from '../constants/action-types'
 
 var initialState = {
   items: [{
+    id: "workspace",
     label: "Workspace",
-    id: "workspace"
+    description: "Automate your workspace."
   },
   {
+    id: "security",
     label: "Security",
-    id: "security"
+    description: "Create automations to ensure security."
   },
   {
+    id: "alerts-monitoring",
     label: "Alerts & Monitoring",
-    id: "alerts-monitoring"
+    description: "Get notified when things no worky."
   },
   {
+    id: "workflow",
     label: "Workflow",
-    id: "workflow"
+    description: "I don't understand this one at all."
   }]
 }
 
