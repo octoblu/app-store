@@ -7,24 +7,26 @@ var bluprints = [{
   id: "bluprint-1",
   octobluUrl: "adkfaslkdjflasdjfjas",
   tags: ['podio', 'sharefile'],
-  collectionIds:['meetings', 'process-automation']
+  collectionIds:['meetings', 'process-automation'],
+  description: "IT IS A BLLUPRINT"
 },
 {
   label: "Bluprint 2",
   id: "bluprint-2",
   octobluUrl: "adkfaslkdjflasdjfjas",
   tags: ['podio', 'sharefile'],
-  collectionIds:['alerts', 'process-automation']
+  collectionIds:['alerts', 'process-automation'],
+  description: "IT IS A BLLUPRINT"
 }]
 
 var initialState = {
-  items: []
+  items: bluprints
 }
 
 export default function(state = initialState, action) {
   switch(action.type) {
     case types.FETCH_BLUPRINTS:
-      return _.assign({}, state, { items: bluprints })
+      return _.assign({}, state, state)
 
     default:
       return state

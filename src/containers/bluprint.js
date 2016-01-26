@@ -2,9 +2,6 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router'
 
-import CollectionBluprints from '../components/collection-bluprints'
-import Loading from '../components/loading'
-
 import {fetchBluprints} from '../actions/bluprint-actions'
 
 export default class Bluprint extends Component {

@@ -2,9 +2,10 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router'
 
-import CollectionBluprints from '../components/collection-bluprints'
+import { Page, PageHeader, PageTitle } from '../components/page'
+
+import BluprintCard from '../components/bluprint-card'
 import CollectionBreadcrumb from '../components/collection-breadcrumb'
-import Loading from '../components/loading'
 
 import {fetchBluprints} from '../actions/bluprint-actions'
 
@@ -20,13 +21,28 @@ export default class Collection extends Component {
 
   render() {
     const {collection, bluprints} = this.props
+    const { items } = bluprints
+    if (!items.length) return <div>There are no Bluprints for <em>{collection.name}</em></div>
 
-    if (!bluprints.items.length) return <div>There are no Bluprints for <em>{collection.name}</em></div>
+    const bluprintCards = _.map(items, (bluprint)=>
+      <BluprintCard
+        bluprint={bluprint}
+        key={bluprint.id}
+      />
+    )
 
-    return <div>
-      <CollectionBreadcrumb collectionName={collection.label} />
-      <CollectionBluprints bluprints={bluprints.items} />
-    </div>
+    return <Page>
+      <PageHeader>
+        <PageTitle>
+          <CollectionBreadcrumb collectionName={collection.label} />
+        </PageTitle>
+      </PageHeader>
+
+      <div className="BluprintCard-container">
+        {bluprintCards}
+      </div>
+
+    </Page>
   }
 }
 
