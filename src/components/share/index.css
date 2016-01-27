@@ -1,0 +1,7 @@
+.Share {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 36px 150px;
+}

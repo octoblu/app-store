@@ -71,6 +71,7 @@ const BUTTON_KINDS = [
   'hollow-approve',
   'hollow-danger',
   'hollow-neutral',
+  'jumbo',
   'no-style'
 ]
 

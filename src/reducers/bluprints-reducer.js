@@ -8,7 +8,7 @@ var bluprints = [{
   octobluUrl: "adkfaslkdjflasdjfjas",
   tags: ['sharefile'],
   collectionIds:['meetings', 'process-automation'],
-  description: "IT IS A BLLUPRINT"
+  description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
 },
 {
   label: "Bluprint 2",
@@ -16,7 +16,7 @@ var bluprints = [{
   octobluUrl: "adkfaslkdjflasdjfjas",
   tags: ['podio'],
   collectionIds:['alerts', 'process-automation'],
-  description: "IT IS A BLLUPRINT"
+  description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
 }]
 
 var initialState = {
