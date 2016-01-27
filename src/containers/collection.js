@@ -23,7 +23,7 @@ export default class Collection extends Component {
     const {collection, bluprints} = this.props
     const { items } = bluprints
     const breadcrumbFragments = [
-      { label: 'Collections', linkTo: '/' },
+      { label: 'Home', linkTo: '/' },
       { label: collection.label }
     ]
 
@@ -32,6 +32,7 @@ export default class Collection extends Component {
     const bluprintCards = _.map(items, (bluprint)=>
       <BluprintCard
         bluprint={bluprint}
+        collectionId={collection.id}
         key={bluprint.id}
       />
     )

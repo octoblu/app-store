@@ -16,12 +16,14 @@ export default class Bluprint extends Component {
   componentDidMount() {
     const { dispatch } = this.props
     dispatch(fetchBluprints())
+
   }
 
   render() {
-    const { bluprint } = this.props
+    const { bluprint, collection } = this.props
     const fragments = [
-      { label: 'Browse Apps', linkTo: '/' },
+      { label: 'Home', linkTo: '/' },
+      { label: collection.label, linkTo: `/collections/${collection.id}` },
       { label: bluprint.label }
     ]
 
@@ -34,10 +36,12 @@ export default class Bluprint extends Component {
   }
 }
 
-function mapStateToProps({ router, bluprints }) {
-  const { bluprintId } = router.params
+function mapStateToProps({ router, bluprints, collections }) {
+  const { bluprintId, collectionId } = router.params
   const bluprint = _.find(bluprints.items, {id: bluprintId})
-  return { bluprint, bluprintId }
+  const collection = _.find(collections.items, {id: collectionId})
+
+  return { bluprint, bluprintId, collection }
 }
 
 export default connect(mapStateToProps)(Bluprint)

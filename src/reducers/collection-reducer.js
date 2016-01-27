@@ -13,8 +13,8 @@ var initialState = {
     description: "Create automations to ensure security."
   },
   {
-    id: "alerts-monitoring",
-    label: "Alerts & Monitoring",
+    id: "monitoring-alerts",
+    label: "Monitoring & Alerts",
     description: "Get notified when things no worky."
   },
   {

@@ -14,7 +14,7 @@ const BluprintDetail = ({ bluprint }) => {
     {channelImage}
     <h1 className="font-bold BluprintDetail-label">{bluprint.label}</h1>
     <p className="BluprintDetail-description">{bluprint.description}</p>
-    <Button href={bluprint.octobluUrl} kind="jumbo">Deploy</Button>
+    <Button href={bluprint.octobluUrl} kind="jumbo">Automate</Button>
 
     <ShareButtons />
   </div>
