@@ -29,7 +29,7 @@ export default class Collections extends Component {
     return <Page>
       <Hero>
         <HeroTitle>Automation App Store</HeroTitle>
-        <HeroSubTitle>Explore. Automate. Cats.</HeroSubTitle>
+        <HeroSubTitle>Explore. Automate. Empower.</HeroSubTitle>
       </Hero>
 
       <div className="CollectionCard-container">{collectionCards}</div>
