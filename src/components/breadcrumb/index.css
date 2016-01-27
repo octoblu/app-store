@@ -1,5 +1,6 @@
 .Breadcrumb {
   margin: 24px 0;
+  font-size: 20px;
 }
 
 .Breadcrumb-fragment {
@@ -18,9 +19,6 @@
 .Breadcrumb-fragment:not(:first-child):before {
   content: '\/';
   color: #babbbf;
-  font-family: Slack;
-  font-weight: 400;
-  font-size: 16px;
   position: absolute;
   top: 0;
   left: 11px;

@@ -3,5 +3,33 @@
   flex: 1;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 36px 150px;
+  padding: 36px 100px;
 }
+
+.Share-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  border: 1px solid #DDD;
+
+  color: #AAA;
+
+  background: #EEE;
+}
+
+.Share-button:hover {
+  color: #999;
+}
+
+.Share-buttonImage {
+  height: 18px;
+  width: 18px;
+  margin: 0 6px 0 0;
+}
+
+.Share-button--email {}
+
+.Share-button--facebook {}
+
+.Share-button--twitter {}

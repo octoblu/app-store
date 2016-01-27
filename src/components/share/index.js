@@ -1,42 +1,23 @@
+import classNames from 'classnames'
 import React, { PropTypes } from 'react'
 
 import './index.css'
-import Button from '../button'
 
-import classNames from 'classnames';
+import EmailShareButton from './email-share-button'
+import FacebookShareButton from './facebook-share-button'
+import TwitterShareButton from './twitter-share-button'
 
-const Share = ({children, className}) => {
-  const componentClass = classNames('Share', className);
+const Share = ({className}) => {
+  const componentClass = classNames('Share', className)
 
   return <div className={componentClass}>
-    <Button
-      href="https://twitter.com/intent/tweet?source=webclient&text=Octoblu"
-      kind="neutral"
-      size="large"
-    >
-      Twitter
-    </Button>
-
-    <Button
-      href="https://www.facebook.com/sharer/sharer.php?u=http://octoblu.com"
-      kind="neutral"
-      size="large"
-    >
-      Facebook
-    </Button>
-
-    <Button
-      href="mailto:?subject=Octoblu is so cool"
-      kind="neutral"
-      size="large"
-    >
-      Email
-    </Button>
+    <TwitterShareButton text="Octoblu" />
+    <FacebookShareButton url="http://octoblu.com" />
+    <EmailShareButton subject="Octoblu is so cool" body="Fancy body" />
   </div>
 }
 
 Share.propTypes = {
-  children: PropTypes.node.isRequired,
   className: PropTypes.string
 }
 
