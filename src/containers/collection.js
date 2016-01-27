@@ -3,11 +3,12 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router'
 
 import { Page, PageHeader, PageTitle } from '../components/page'
+import Loading from '../components/loading'
 
 import BluprintCard from '../components/bluprint-card'
 import Breadcrumb from '../components/breadcrumb'
 
-import {fetchBluprints} from '../actions/bluprint-actions'
+import { fetchBluprints, fetchBluprintsByCollectionId } from '../actions/bluprint-actions'
 
 export default class Collection extends Component {
   constructor(props) {
@@ -15,21 +16,26 @@ export default class Collection extends Component {
   }
 
   componentDidMount() {
-    let {dispatch} = this.props
+    let { dispatch, collection } = this.props
+    dispatch(fetchBluprintsByCollectionId(collection.id))
+  }
+
+  componentWillUnmount() {
+    let { dispatch } = this.props
     dispatch(fetchBluprints())
   }
 
   render() {
     const {collection, bluprints} = this.props
-    const { items } = bluprints
+
     const breadcrumbFragments = [
       { label: 'Home', linkTo: '/' },
       { label: collection.label }
     ]
 
-    if (!items.length) return <div>There are no Bluprints for <em>{collection.label}</em></div>
+    if (!bluprints.items.length) return <div>There are no Bluprints for <em>{collection.label}</em></div>
 
-    const bluprintCards = _.map(items, (bluprint)=>
+    const bluprintCards = _.map(bluprints.items, (bluprint)=>
       <BluprintCard
         bluprint={bluprint}
         collectionId={collection.id}
@@ -39,6 +45,9 @@ export default class Collection extends Component {
 
     return <Page>
       <Breadcrumb fragments={breadcrumbFragments} />
+      <PageHeader>
+        <PageTitle>{collection.label} Apps</PageTitle>
+      </PageHeader>
 
       <div className="BluprintCard-container">
         {bluprintCards}

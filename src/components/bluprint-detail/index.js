@@ -8,7 +8,7 @@ import ShareButtons from '../share'
 import './index.css'
 
 const BluprintDetail = ({ bluprint }) => {
-  const channelImage = _.map(bluprint.tags, (tag) => <ChannelImage name={tag} className="BluprintDetail-icon" />)
+  const channelImage = _.map(bluprint.tags, (tag, index) => <ChannelImage key={index} name={tag} className="BluprintDetail-icon" />)
 
   return <div className="BluprintDetail">
     {channelImage}

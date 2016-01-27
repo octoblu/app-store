@@ -5,3 +5,11 @@ export function fetchBluprints() {
     type: types.FETCH_BLUPRINTS
   }
 }
+
+
+export function fetchBluprintsByCollectionId(collectionId) {
+  return {
+    type: types.FETCH_BLUPRINTS_BY_COLLECTION,
+    collectionId
+  }
+}
