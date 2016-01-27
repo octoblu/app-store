@@ -23,8 +23,8 @@ export default class Collection extends Component {
     const {collection, bluprints} = this.props
     const { items } = bluprints
     const breadcrumbFragments = [
-      { label: 'Browse Apps', linkTo: '/' },
-      { label: `Collection: ${collection.label}` }
+      { label: 'Collections', linkTo: '/' },
+      { label: collection.label }
     ]
 
     if (!items.length) return <div>There are no Bluprints for <em>{collection.label}</em></div>
