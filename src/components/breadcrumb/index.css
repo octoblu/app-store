@@ -1,0 +1,23 @@
+.Breadcrumb {
+  margin: 24px 0;
+}
+
+.Breadcrumb-fragment:not(:first-child) {
+  position: relative;
+  padding-left: 24px;
+}
+
+.Breadcrumb-fragment--active {
+  font-family: 'citrixsans-semibold', sans-serif;
+}
+
+.Breadcrumb-fragment:not(:first-child):before {
+  content: '\/';
+  color: #babbbf;
+  font-family: Slack;
+  font-weight: 400;
+  font-size: 16px;
+  position: absolute;
+  top: 0;
+  left: 12px;
+}

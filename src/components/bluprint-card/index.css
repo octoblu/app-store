@@ -6,11 +6,17 @@
 
 .BluprintCard {
   display: block;
-  width: 50%;
+  width: 100%;
+  max-width: 250px;
   padding: 48px;
+  margin: 12px;
 
   text-align: center;
   text-decoration: none;
+
+  background: #FFF;
+  border-radius: 2px;
+  border: 1px solid #E0E0E0;
 }
 
 .BluprintCard-label {

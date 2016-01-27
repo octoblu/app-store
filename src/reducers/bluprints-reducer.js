@@ -6,7 +6,7 @@ var bluprints = [{
   label: "Bluprint 1",
   id: "bluprint-1",
   octobluUrl: "adkfaslkdjflasdjfjas",
-  tags: ['podio', 'sharefile'],
+  tags: ['sharefile'],
   collectionIds:['meetings', 'process-automation'],
   description: "IT IS A BLLUPRINT"
 },
@@ -14,7 +14,7 @@ var bluprints = [{
   label: "Bluprint 2",
   id: "bluprint-2",
   octobluUrl: "adkfaslkdjflasdjfjas",
-  tags: ['podio', 'sharefile'],
+  tags: ['podio'],
   collectionIds:['alerts', 'process-automation'],
   description: "IT IS A BLLUPRINT"
 }]

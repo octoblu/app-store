@@ -5,7 +5,7 @@ import { Link } from 'react-router'
 import { Page, PageHeader, PageTitle } from '../components/page'
 
 import BluprintCard from '../components/bluprint-card'
-import CollectionBreadcrumb from '../components/collection-breadcrumb'
+import Breadcrumb from '../components/breadcrumb'
 
 import {fetchBluprints} from '../actions/bluprint-actions'
 
@@ -22,7 +22,12 @@ export default class Collection extends Component {
   render() {
     const {collection, bluprints} = this.props
     const { items } = bluprints
-    if (!items.length) return <div>There are no Bluprints for <em>{collection.name}</em></div>
+    const breadcrumbFragments = [
+      { label: 'Browse Apps', linkTo: '/' },
+      { label: `Collection: ${collection.label}` }
+    ]
+
+    if (!items.length) return <div>There are no Bluprints for <em>{collection.label}</em></div>
 
     const bluprintCards = _.map(items, (bluprint)=>
       <BluprintCard
@@ -32,16 +37,11 @@ export default class Collection extends Component {
     )
 
     return <Page>
-      <PageHeader>
-        <PageTitle>
-          <CollectionBreadcrumb collectionName={collection.label} />
-        </PageTitle>
-      </PageHeader>
+      <Breadcrumb fragments={breadcrumbFragments} />
 
       <div className="BluprintCard-container">
         {bluprintCards}
       </div>
-
     </Page>
   }
 }
