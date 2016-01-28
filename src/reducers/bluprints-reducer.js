@@ -11,6 +11,15 @@ var bluprints = [{
     description: "This flow allows you to set people to approve documents sent through Sharefile. (ie: Have your boss approve a memo before it's sent out to the team)."
   },
   {
+    label: "Group Email Defined By Podio App",
+    id: "79dc87f4-9fab-43fc-8c8d-bcdbbd7e54f7",
+    octobluUrl: "adkfaslkdjflasdjfjas",
+    tags: ['podio'],
+    collectionIds:['workspace', 'workflow'],
+    intro: "Email large groups defined in a Podio app.",
+    description: "Create a Podio app that stores contact information and use Octoblu to send emails to each person. You can customize the subject and body of the email."
+  },
+  {
     label: "Launch XenMobile On Entry",
     id: "5733402e-9633-492f-ab9d-d540a90642e7",
     octobluUrl: "adkfaslkdjflasdjfjas",
