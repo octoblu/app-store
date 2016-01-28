@@ -11,6 +11,11 @@
 
 .Breadcrumb-fragment {
   text-decoration: none;
+  color: #FFF;
+}
+
+.Breadcrumb-fragment:hover {
+  color: #E6E6E6;
 }
 
 .Breadcrumb-fragment--active {

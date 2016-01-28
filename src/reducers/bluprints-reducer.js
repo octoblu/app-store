@@ -4,7 +4,6 @@ import * as types from '../constants/action-types'
 var bluprints = [{
     label: "Sharefile Document Approval",
     id: "9fde959f-4835-4a46-a76d-f6b217118601",
-    octobluUrl: "adkfaslkdjflasdjfjas",
     tags: ['sharefile'],
     collectionIds:['workspace', 'security'],
     intro: "Enhance your Sharefile account with document approval automation",
@@ -12,8 +11,7 @@ var bluprints = [{
   },
   {
     label: "Group Email Defined By Podio App",
-    id: "79dc87f4-9fab-43fc-8c8d-bcdbbd7e54f7",
-    octobluUrl: "adkfaslkdjflasdjfjas",
+    id: "ced4a912-6a18-40e0-8c9a-fd38a4e30248",
     tags: ['podio'],
     collectionIds:['workspace', 'workflow'],
     intro: "Email large groups defined in a Podio app.",
@@ -22,7 +20,6 @@ var bluprints = [{
   {
     label: "Launch XenMobile On Entry",
     id: "5733402e-9633-492f-ab9d-d540a90642e7",
-    octobluUrl: "adkfaslkdjflasdjfjas",
     tags: ['xenapp'],
     collectionIds:['security', 'workspace'],
     intro: "Launch XenDesktop when employee enters office lobby",
@@ -31,7 +28,6 @@ var bluprints = [{
   {
     label: "Auto-Start Your Next Meeting",
     id: "9135019c-ead1-4f20-9d3f-78536e2a099d",
-    octobluUrl: "adkfaslkdjflasdjfjas",
     tags: ['gotomeeting'],
     collectionIds: ['workspace', 'workflow'],
     intro: "Automate meetings in conference rooms",
@@ -40,7 +36,6 @@ var bluprints = [{
   {
     label: "Netscaler Cyber Threat Detection",
     id: "ec1ff208-244b-42b0-bcf1-7d54c44f40ba",
-    octobluUrl: "adkfaslkdjflasdjfjas",
     tags: ['netscaler-logo'],
     collectionIds:['monitoring-alerts', 'security'],
     intro: "Cyber threat detection and NetScaler remediation",
@@ -49,7 +44,6 @@ var bluprints = [{
   {
     label: "Sharefile Cyber Threat Detection",
     id: "b40396b0-8185-4943-b30d-d37a45b246ae",
-    octobluUrl: "adkfaslkdjflasdjfjas",
     tags: ['sharefile'],
     collectionIds:['monitoring-alerts', 'security'],
     intro: "Cyber threat detection and ShareFile remediation",
@@ -58,7 +52,6 @@ var bluprints = [{
   {
     label: "Director SMS Alerts",
     id: "d0d1c6e0-5c14-4e64-933a-cf228884899c",
-    octobluUrl: "adkfaslkdjflasdjfjas",
     tags: ['director'],
     collectionIds:['monitoring-alerts'],
     intro: "Send SMS alerts when Director detects issues",
@@ -67,7 +60,6 @@ var bluprints = [{
   {
     label: "Health Based Lighting",
     id: "29841084-b4cd-4655-95a6-1728472d3795",
-    octobluUrl: "adkfaslkdjflasdjfjas",
     tags: ['director'],
     collectionIds:['monitoring-alerts'],
     intro: "Change lighting based on platform health",
@@ -76,7 +68,6 @@ var bluprints = [{
   {
     label: "Auto-Open Support Tickets",
     id: "a4f81fde-f8a3-4a2d-944e-898db62989d3",
-    octobluUrl: "adkfaslkdjflasdjfjas",
     tags: ['director'],
     collectionIds:['workflow'],
     intro: "Open support tickets for issues automatically",
@@ -85,7 +76,6 @@ var bluprints = [{
   {
     label: "App Approval",
     id: "a1ae6b79-950a-4af9-b95d-4977b0e027d2",
-    octobluUrl: "adkfaslkdjflasdjfjas",
     tags: ['xenapp'],
     collectionIds:['workflow'],
     intro: "App approval process automation",
@@ -94,7 +84,6 @@ var bluprints = [{
   {
     label: "Get Daily Reports",
     id: "ea169335-317b-4064-8134-062cf0d9f2e6",
-    octobluUrl: "adkfaslkdjflasdjfjas",
     tags: ['director'],
     collectionIds:['workflow'],
     intro: "Schedule daily report generation",
@@ -103,7 +92,6 @@ var bluprints = [{
   {
     label: "Self-Healing System",
     id: "2c0eddc3-4bfd-4b97-8700-3483be70f2c3",
-    octobluUrl: "adkfaslkdjflasdjfjas",
     tags: ['director'],
     collectionIds:['monitoring-alerts'],
     intro: "Self-healing system automation",
@@ -112,7 +100,6 @@ var bluprints = [{
   {
     label: "Display Director Alerts",
     id: "896ec2f4-1c1f-43d0-a7a3-877149e5f9d6",
-    octobluUrl: "adkfaslkdjflasdjfjas",
     tags: ['director'],
     collectionIds:['monitoring-alerts'],
     intro: "Display information on monitors when Director detects an issue",
@@ -121,7 +108,6 @@ var bluprints = [{
   {
     label: "Geofence Your Office",
     id: "638b4ee9-466c-4bff-aae6-dc33883a70c1",
-    octobluUrl: "adkfaslkdjflasdjfjas",
     tags: ['xenapp'],
     collectionIds:['workspace', 'security'],
     intro: "Add perimeter security to Apps!",
@@ -130,7 +116,6 @@ var bluprints = [{
   {
     label: "Cloud to Sharefile",
     id: "e8ec011f-c36e-4ef3-b749-b07b4a799215",
-    octobluUrl: "adkfaslkdjflasdjfjas",
     tags: ['sharefile'],
     collectionIds:['workflow'],
     intro: "Transfer files from cloud storage platforms to ShareFile",

@@ -9,6 +9,7 @@ import './index.css'
 
 const BluprintDetail = ({ bluprint }) => {
   const channelImage = _.map(bluprint.tags, (tag, index) => <ChannelImage key={index} name={tag} className="BluprintDetail-icon" />)
+  const octobluUrl = `https://app.octoblu.com/bluprints/import/${bluprint.id}`
 
   return <div className="BluprintDetail">
     {channelImage}
@@ -24,10 +25,10 @@ const BluprintDetail = ({ bluprint }) => {
           Installs: <strong>2.5k</strong>
         </div>
       </div>
-      <ShareButtons />
+      <ShareButtons importUrl={octobluUrl}/>
     </div>
 
-    <Button href={bluprint.octobluUrl} kind="jumbo">Automate</Button>
+    <Button href={octobluUrl} kind="jumbo">Automate</Button>
 
   </div>
 }
