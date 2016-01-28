@@ -14,7 +14,7 @@ var bluprints = [{
     label: "Launch XenMobile On Entry",
     id: "5733402e-9633-492f-ab9d-d540a90642e7",
     octobluUrl: "adkfaslkdjflasdjfjas",
-    tags: ['xenmobile'],
+    tags: ['xenapp'],
     collectionIds:['security', 'workspace'],
     intro: "Launch XenDesktop when employee enters office lobby",
     description: "Using either XenMobile geolocation or beacon detection, Octoblu can launch or reconfigure XenDesktop sessions so they are ready when the employee reaches their workspace "
@@ -32,7 +32,7 @@ var bluprints = [{
     label: "Netscaler Cyber Threat Detection",
     id: "ec1ff208-244b-42b0-bcf1-7d54c44f40ba",
     octobluUrl: "adkfaslkdjflasdjfjas",
-    tags: ['netscaler'],
+    tags: ['netscaler-logo'],
     collectionIds:['monitoring-alerts', 'security'],
     intro: "Cyber threat detection and NetScaler remediation",
     description: "Using Splunk's advanced Enterprise Security module, Octoblu can be notified of various cyber threat activity on a network and block IP address and/or disable ports on NetScalers affected. https://www.citrix.com/blogs/2015/11/23/automate-netscaler-security-with-octoblu/"
@@ -77,7 +77,7 @@ var bluprints = [{
     label: "App Approval",
     id: "a1ae6b79-950a-4af9-b95d-4977b0e027d2",
     octobluUrl: "adkfaslkdjflasdjfjas",
-    tags: ['xenmobile'],
+    tags: ['xenapp'],
     collectionIds:['workflow'],
     intro: "App approval process automation",
     description: "Streamline application access requests and manager approval processes. If the manager approves access to an application, Octoblu will update permissions in StoreFront."
@@ -113,7 +113,7 @@ var bluprints = [{
     label: "Geofence Your Office",
     id: "638b4ee9-466c-4bff-aae6-dc33883a70c1",
     octobluUrl: "adkfaslkdjflasdjfjas",
-    tags: ['xenmobile'],
+    tags: ['xenapp'],
     collectionIds:['workspace', 'security'],
     intro: "Add perimeter security to Apps!",
     description: "Setup a geofence perimeter around your office and activate/de-activate user profiles when employees enter/leave the office."

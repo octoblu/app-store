@@ -16,14 +16,16 @@ const BluprintDetail = ({ bluprint }) => {
     <p className="BluprintDetail-description">{bluprint.description}</p>
 
     <div className="BluprintMeta">
-      <div className="BluprintMeta-author">
-        Created By: <strong>Octoblu</strong>
+      <div className="BluprintInfo">
+        <div className="BluprintMeta-author">
+          Created By: <strong>Octoblu</strong>
+        </div>
+        <div className="BluprintMeta-installs">
+          Installs: <strong>2.5k</strong>
+        </div>
       </div>
-      <div className="BluprintMeta-installs">
-        Installs: <strong>2.5k</strong>
-      </div>
+      <ShareButtons />
     </div>
-    <ShareButtons />
 
     <Button href={bluprint.octobluUrl} kind="jumbo">Automate</Button>
 

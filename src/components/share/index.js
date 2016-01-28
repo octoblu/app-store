@@ -11,10 +11,12 @@ const Share = ({className}) => {
   const componentClass = classNames('Share', className)
 
   return <div className={componentClass}>
-    Share: 
-    <TwitterShareButton text="Octoblu" />
-    <FacebookShareButton url="http://octoblu.com" />
-    <EmailShareButton subject="Octoblu is so cool" body="Fancy body" />
+    <p>Share</p>
+    <div className="Share-buttons">
+      <TwitterShareButton text="Octoblu" />
+      <FacebookShareButton url="http://octoblu.com" />
+      <EmailShareButton subject="Octoblu is so cool" body="Fancy body" />
+    </div>
   </div>
 }
 

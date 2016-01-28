@@ -1,9 +1,14 @@
 .Share {
   display: flex;
+  flex-direction: column;
+}
+
+.Share-buttons {
+  display: flex;
   flex: 1;
   flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 36px 100px;
+  justify-content: flex-end;
+  padding-bottom: 36px;
 }
 
 .Share-button {
@@ -11,6 +16,7 @@
   flex-direction: row;
   align-items: center;
 
+  margin: 0 5px;
   border: 1px solid #DDD;
 
   color: #AAA;

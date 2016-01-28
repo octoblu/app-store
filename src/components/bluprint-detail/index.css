@@ -18,3 +18,14 @@
 .BluprintDetail-icon {
   margin: 0 auto;
 }
+
+.BluprintMeta {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.BluprintInfo {
+
+}
