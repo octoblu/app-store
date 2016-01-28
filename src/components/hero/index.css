@@ -4,19 +4,22 @@
   padding: 48px;
   text-align: center;
 
-  /*background: linear-gradient(135deg, #50a3db 0%, #ffffff 100%);
-  color: #FFF;*/
+  background: #1E6DB9 url('../../../images/bluprint-9.png') repeat;
+  color: #FFF;
 }
 
 .Hero-title {
-  font-size: 60px;
-  line-height: 1.5;
   margin: 0;
   padding:0;
+
+  font-size: 60px;
+  font-weight: normal;
+  line-height: 1.5;
 }
 
 .Hero-subTitle {
-  font-size: 36px;
   margin: 0;
   padding: 0;
+  font-size: 30px;
+  font-weight: normal;
 }

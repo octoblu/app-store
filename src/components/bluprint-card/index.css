@@ -1,46 +1,48 @@
 .BluprintCard-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
 }
 
 .BluprintCard {
   display: block;
   width: 50%;
-  max-width: 500px;
+  max-width: 400px;
   margin: 24px;
   text-align: center;
   text-decoration: none;
 
   background: #FFF;
-  background: linear-gradient(
-      45deg,
-      #044A6D, #67ADD6
-    );
+  background: linear-gradient(45deg, #044A6D, #67ADD6);
   border-radius: 2px;
   border: 1px solid #E0E0E0;
 }
 
 .BluprintCard--sharefile {
-  background: linear-gradient(
-      45deg,
-      #1D793D, #A2C339
-    );
+  background: linear-gradient(45deg, #1D793D, #A2C339);
 }
+
+.BluprintCard--netscaler {
+  background: linear-gradient(45deg, #DADDE0, #F4F5F6);
+}
+
+.BluprintCard--rightSignature {
+  background: #1170B0;
+}
+
 
 .BluprintCard-channelImage {
   margin: 24px auto;
-  /*border-radius: 2px;
-  padding: 12px;
-
-  background: #FFF;*/
 }
 
-
 .BluprintCard-footer {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
   height: 200px;
-  
+
   padding: 24px;
   background: #FFF;
   border-top: 1px solid #EEE;
@@ -56,11 +58,6 @@
 .BluprintCard-description {
   margin: 0 0 24px;
   padding: 0;
-}
-
-
-.BluprintCard-button {
-  /*width: 80%;*/
 }
 
 .BluprintCard-button:hover {

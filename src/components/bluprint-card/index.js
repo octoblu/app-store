@@ -9,7 +9,9 @@ const BluprintCard = ({ bluprint, collectionId }) => {
   const channelImages = _.map(bluprint.tags, (tag, index) => <ChannelImage key={index} name={tag} className="BluprintCard-channelImage" />)
 
   return <div className={`BluprintCard BluprintCard--${bluprint.tags[0]}`}>
-    {channelImages}
+    <header className="BluprintCard-header">
+      {channelImages}
+    </header>
 
     <footer className="BluprintCard-footer">
       <p className="font-bold BluprintCard-label">{bluprint.label}</p>

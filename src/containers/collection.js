@@ -26,16 +26,19 @@ export default class Collection extends Component {
   }
 
   render() {
-    const {collection, bluprints} = this.props
+    const { collection, bluprints } = this.props
+    const { items } = bluprints
+
+    if (!items.length)  {
+      return <div>There are no Bluprints for <em>{collection.label}</em></div>
+    }
 
     const breadcrumbFragments = [
       { label: 'Home', linkTo: '/' },
       { label: collection.label }
     ]
-
-    if (!bluprints.items.length) return <div>There are no Bluprints for <em>{collection.label}</em></div>
-
-    const bluprintCards = _.map(bluprints.items, (bluprint)=>
+    
+    let bluprintCards = _.map(items, (bluprint)=>
       <BluprintCard
         bluprint={bluprint}
         collectionId={collection.id}

@@ -3,22 +3,49 @@ import * as types from '../constants/action-types'
 
 
 var bluprints = [{
-  label: "Bluprint 1",
-  id: "bluprint-1",
+  label: "Sharefile Document Approval",
+  id: "9fde959f-4835-4a46-a76d-f6b217118601",
   octobluUrl: "adkfaslkdjflasdjfjas",
   tags: ['sharefile'],
-  collectionIds:['meetings', 'security'],
+  collectionIds:['workspace', 'security'],
   intro: "Enhance your Sharefile account with document approval automation",
-  description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  description: "This flow allows you to set people to approve documents sent through Sharefile. (ie: Have your boss approve a memo before it's sent out to the team)."
 },
 {
-  label: "Bluprint 2",
-  id: "bluprint-2",
+  label: "Geolocation & XenMobile",
+  id: "5733402e-9633-492f-ab9d-d540a90642e7",
   octobluUrl: "adkfaslkdjflasdjfjas",
-  tags: ['podio'],
-  collectionIds:['monitoring-alerts', 'workspace'],
-  intro: "Cats are the best. Meow! This flow does stuff with Podio.",
-  description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  tags: ['rightSignature'],
+  collectionIds:['workflow', 'workspace'],
+  intro: "Automate your workplace wherever you are!",
+  description: "Using XenMobile's geolocation abilities, have your lights turn on anywhere you decide to work."
+},
+{
+  label: "Netscaler Monitor",
+  id: "a4f81fde-f8a3-4a2d-944e-898db62989d3",
+  octobluUrl: "adkfaslkdjflasdjfjas",
+  tags: ['netscaler'],
+  collectionIds:['monitoring-alerts', 'security'],
+  intro: "Get Notified when Netscaler does things",
+  description: "Be sent an sms or email when your netscaler instance goes down, goes up, or does anything."
+},
+{
+  label: "Splunk",
+  id: "638b4ee9-466c-4bff-aae6-dc33883a70c1",
+  octobluUrl: "adkfaslkdjflasdjfjas",
+  tags: ['netscaler'],
+  collectionIds:['monitoring-alerts', 'security'],
+  intro: "Make your Netscaler instance even more powerful with Splunk reporting!",
+  description: "Send all your Netscaler data to Splunk."
+},
+{
+  label: "Drop-File",
+  id: "e8ec011f-c36e-4ef3-b749-b07b4a799215",
+  octobluUrl: "adkfaslkdjflasdjfjas",
+  tags: ['sharefile'],
+  collectionIds:['workflow', 'workspace'],
+  intro: "Send Dropbox files to Sharefile.",
+  description: "Transfer all of your DropBox files to Sharefile easily and painlessly."
 }]
 
 var initialState = {

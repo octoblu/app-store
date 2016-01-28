@@ -6,7 +6,7 @@ import './index.css';
 const HeroSubTitle = ({ children, className }) => {
   const componentClass = classNames(
     'Hero-subTitle',
-    'font-semibold',
+    'font-light',
     className
   )
 
