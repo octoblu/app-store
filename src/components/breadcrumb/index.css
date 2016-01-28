@@ -1,6 +1,12 @@
 .Breadcrumb {
-  margin: 24px;
-  font-size: 20px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+  margin-bottom: 24px;
+  padding: 12px 24px;
+
+  color: #FFF;
+  font-size: 16px;
+
+  background: #004EF2;
 }
 
 .Breadcrumb-fragment {
