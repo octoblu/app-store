@@ -6,6 +6,9 @@
 }
 
 .BluprintCard {
+  border-radius: 2px;
+  border: 1px solid #E0E0E0;
+  box-shadow:  0 1px 1px rgba(0, 0, 0, 0.1);
   display: block;
   width: 50%;
   max-width: 360px;
@@ -13,10 +16,7 @@
   text-align: center;
   text-decoration: none;
 
-  background: #FFF;
-  background: linear-gradient(45deg, #044A6D, #67ADD6);
-  border-radius: 2px;
-  border: 1px solid #E0E0E0;
+  background: #FFF linear-gradient(45deg, #044A6D, #67ADD6);
 }
 
 .BluprintCard--sharefile {
@@ -31,6 +31,17 @@
   background: #1170B0;
 }
 
+.BluprintCard--gotomeeting {
+  background: linear-gradient(45deg, #C95428, #E6B921);
+}
+
+.BluprintCard--xenapp {
+  background: linear-gradient(45deg, #3EC5F2, #3F56A6);
+}
+
+.BluprintCard--director {
+  background: #FFF;
+}
 
 .BluprintCard-channelImage {
   min-height: 160px;

@@ -16,7 +16,6 @@ const BluprintCard = ({ bluprint, collectionId }) => {
     <footer className="BluprintCard-footer">
       <p className="font-bold BluprintCard-label">{bluprint.label}</p>
       <p className="BluprintCard-description">{bluprint.intro}</p>
-
       <Link
         to={`/collections/${collectionId}/bluprints/${bluprint.id}`}
         className="Button Button--neutral BluprintCard-button"

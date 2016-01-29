@@ -1,0 +1,12 @@
+
+.BluprintMeta {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.BluprintMeta-info {
+  display: block;
+  text-align: left;
+}

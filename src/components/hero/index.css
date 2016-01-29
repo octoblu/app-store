@@ -1,10 +1,9 @@
 .Hero {
-  height: 100%;
   width: 100%;
   padding: 48px;
   text-align: center;
 
-  background: #1E6DB9 url('../../../images/bluprint-9.png') repeat;
+  /*background: #1E6DB9 url('../../../images/bluprint-9.png') repeat;*/
   color: #FFF;
 }
 

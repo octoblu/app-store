@@ -3,7 +3,7 @@ html {
   box-sizing: border-box;
 }
 
-html, body, #app {
+html, body, #app, #app > div {
   height:100%;
   width:100%;
 }
@@ -35,4 +35,11 @@ a:hover {
   margin: 0 auto;
   padding: 24px;
   background: #FFF;
+}
+
+.Collections {
+  background:#1E6DB9;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
 }

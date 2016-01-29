@@ -26,7 +26,7 @@ export default class Collections extends Component {
         key={collection.id}/>
     )
 
-    return <Page>
+    return <Page className="Collections">
       <Hero>
         <HeroTitle>Automation App Store</HeroTitle>
         <HeroSubTitle>Explore. Automate. Empower.</HeroSubTitle>

@@ -37,7 +37,7 @@ export default class Collection extends Component {
       { label: 'Home', linkTo: '/' },
       { label: collection.label }
     ]
-    
+
     let bluprintCards = _.map(items, (bluprint)=>
       <BluprintCard
         bluprint={bluprint}
@@ -48,9 +48,6 @@ export default class Collection extends Component {
 
     return <Page>
       <Breadcrumb fragments={breadcrumbFragments} />
-      <PageHeader>
-        <PageTitle>{collection.label} Apps</PageTitle>
-      </PageHeader>
 
       <div className="BluprintCard-container">
         {bluprintCards}
