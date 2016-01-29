@@ -1,9 +1,9 @@
 let bluprints = [{
     label: "Sharefile Document Approval",
-    id: "fa2d6eaa-de44-40bb-9077-a64cda38e0c5",
+    id: "9fde959f-4835-4a46-a76d-f6b217118601",
     tags: ['sharefile'],
     collectionIds:['workspace', 'security'],
-    intro: "Enhance your Sharefile account with document approval automation",
+    intro: "Make work easier.",
     description: "This flow allows you to set people to approve documents sent through Sharefile. (ie: Have your boss approve a memo before it's sent out to the team).",
     author: "Octocblu",
     installs: "333"
@@ -13,8 +13,18 @@ let bluprints = [{
     id: "ced4a912-6a18-40e0-8c9a-fd38a4e30248",
     tags: ['podio'],
     collectionIds:['workspace', 'workflow'],
-    intro: "Email large groups defined in a Podio app.",
+    intro: "You'll never have to send a mass email again.",
     description: "Create a Podio app that stores contact information and use Octoblu to send emails to each person. You can customize the subject and body of the email.",
+    author: "Octocblu",
+    installs: "333"
+  },
+  {
+    label: "Launch XenMobile On Entry",
+    id: "5733402e-9633-492f-ab9d-d540a90642e7",
+    tags: ['xenapp'],
+    collectionIds:['security', 'workspace'],
+    intro: "Save time by launching XenDesktop when employees enter",
+    description: "Using either XenMobile geolocation or beacon detection, Octoblu can launch or reconfigure XenDesktop sessions so they are ready when the employee reaches their workspace ",
     author: "Octocblu",
     installs: "333"
   },
@@ -81,6 +91,16 @@ let bluprints = [{
     installs: "333"
   },
   {
+    label: "App Approval",
+    id: "a1ae6b79-950a-4af9-b95d-4977b0e027d2",
+    tags: ['xenapp'],
+    collectionIds:['workflow'],
+    intro: "App approval process automation",
+    description: "Streamline application access requests and manager approval processes. If the manager approves access to an application, Octoblu will update permissions in StoreFront.",
+    author: "Octocblu",
+    installs: "333"
+  },
+  {
     label: "Get Daily Reports",
     id: "ea169335-317b-4064-8134-062cf0d9f2e6",
     tags: ['director'],
@@ -111,6 +131,16 @@ let bluprints = [{
     installs: "333"
   },
   {
+    label: "Geofence Your Office",
+    id: "638b4ee9-466c-4bff-aae6-dc33883a70c1",
+    tags: ['xenapp'],
+    collectionIds:['workspace', 'security'],
+    intro: "Add perimeter security to Apps!",
+    description: "Setup a geofence perimeter around your office and activate/de-activate user profiles when employees enter/leave the office.",
+    author: "Octocblu",
+    installs: "333"
+  },
+  {
     label: "Cloud to Sharefile",
     id: "e8ec011f-c36e-4ef3-b749-b07b4a799215",
     tags: ['sharefile'],
@@ -120,5 +150,6 @@ let bluprints = [{
     author: "Octocblu",
     installs: "333"
   }]
+
 
 export default bluprints

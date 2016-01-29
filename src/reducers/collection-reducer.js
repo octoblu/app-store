@@ -13,7 +13,6 @@ var initialState = {
     label: "Security",
     description: "Create automations to ensure security.",
     logo: "http://0.0.0.0:7777/security.svg"
-
   },
   {
     id: "monitoring-alerts",
@@ -26,7 +25,6 @@ var initialState = {
     label: "Workflow",
     description: "I don't understand this one at all.",
     logo: "http://0.0.0.0:7777/workflow.svg"
-
   }]
 }
 
