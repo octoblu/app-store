@@ -1,18 +1,37 @@
 language: node_js
+sudo: false
 node_js:
-- '5'
+- '5.1'
 addons:
   code_climate:
     repo_token: 6bb307cc2f2ae339f80eca3eb3941972a7dd6efe25b46cf63a8cc438b7dcfe85
+env:
+  global:
+  - AWS_ACCESS_KEY_ID=AKIAJH2D5IPIRHYJT5IA
+  - secure: zV0MFtPq5DYJbs8fd4gk7rdDhxPEeDgvVlv+JrRG8YwUU0ib+sj+D1wV2MXGKdUs35mjH3wahirdL3Uxoo9K32BuL7WK3RXPbLUzc2Ed9+HHor7Se/rMN4dif85/DU2iI0vxtCkmgjzxtyIWwXPeNkqam6EW0GLYJA70YmN2a7vlPkK08ua2Lz1Ndv4bYB/au5BX2bT0PN264YyBE7pwCctO2FZ+mpV1YWhHukNU9N1wvfn0t6vDPaOG6zSxU+SaNcmv5chlw78PFm/T650yU9xnUD7cWCcCgfl1j+7poTb/bqsAAQhAqRHqop5ft477nUVNp51js+T0t1XH/bGbxgY0/QhiCMEY58cAd1kG3xV5ivxvs5AyNRHC/or+r3M88G4t8SA7OGSkG/6Ksm9ekEPK+0q+l6XlCM7exTyaQiI65pE4y7UOkMgFrIeM0Ltte007tKpT65w9vonY2tIiicb266JqQdPEotWUp5GsYLa03GMVuc6D6mO88uMPj4URwSuiPCgeEFCda0P0bdBsar9FeiDFuIk8T1z1MWhKYee6KmEdRo8kZdjzmRR/g3H1HebePlfjpA/3MW6giwB0ZUH9zf8xzyNA6mX1kbOgJw+wpCiU6mfBbStmx3FUzum3e5U2/xw7OVZGRW5NDABn43WtELADfPo9U0KW/8a1wyI=
 before_script:
+- if [ ${TRAVIS_BRANCH} == master ]; then export NODE_ENV=production; else export
+  NODE_ENV=staging; fi
 - npm install -g codeclimate-test-reporter
 after_script:
 - codeclimate-test-reporter < coverage/lcov.info
+after_success:
+- npm install --global webpack
+- NODE_ENV=production webpack --config webpack.config.prod.js
+- mkdir build
+- cp -r index.html dist build/
+- for file in `find build -type f`; do gzip --best $file && mv $file.gz $file; done
+after_deploy:
+- ./deploy/invalidate-cloudfront.sh $AWS_ACCESS_KEY_ID $AWS_SECRET_ACCESS_KEY $TRAVIS_BRANCH
 deploy:
-  provider: npm
-  email: serveradmin@octoblu.com
-  api_key:
-    secure: KH6aG/kb4P81F80ktt1tiwr3xwQ07UBq6nM9+BraUn4Y2MSPzlx0W7l+VFFR0hnmpWkk3gFEnZjxaUmHyaYxM+QaJZdVhHWr8CKRc+D/5vJsUulmKXUcYEHfD3qDIDl6FKTE2Bk9IF7QZfOQMm+u9jhn8ACG02YHKspc2pKzPpqtPwAdS0DlDTZKWFBTIb+Phv7sxPJ0K4964ujnsjq7EaMpLZH0mvXNjKVtn58cphEpegIg271AL2M0BM1gEB9zydHJsU8/7/l5OMzHOrbvFklWruVhvDldShoviMKpKSkiwgB/5EVU4mcaOoXN6ZkhmneJZmAbSaEgb7Q8H6s3yTgsGu57uzxJkbcc7xkBh+NXtnh8t+1UcR7BH6RdAgs72FcqapB2Yd9CtjBTCPTM+fl9Xi79NJeh/cO3JTqJrv6S01ZYC26f4A2GoVdYo6iogR4kzbx7kJb1NNtYi3V3+w2qlGt5rP89fEAav29fC5tJeziGybNhJE/vU2HUw/xeCHd73Hi1L6Bgv6nxptj50tLeExmYCdgikzdPGmZ1oXaRWT0BJmN3gzrgUj3fM0tOvuLIYyp2TQKDP309gZkbuAAvaSQ0foubm4L8cWeLXvMct7Ed9nEo7QgEHsdccuOVweOD5FcK7+lmrELPka0r6vRbtAgoEIXhmR4t8fO4BQY=
+  provider: s3
+  access_key_id: AKIAJH2D5IPIRHYJT5IA
+  secret_access_key:
+    secure: c4AAOq1v934Bxlihi46UaXCahPvMLBRZs6QliWxBl0uU3JWnlKgmu7H6uW5BrGXvmNV5rjXe72byutSzbF/LaSuE4B6MgrqdGsDBNWd/gnYFf7zFhCB30FAu8qmQb1JPO8ulteLydzTSupJmqRwhykQjsRdiIQRJDETBcyxD8jnkopy6Di/UmWzMG2v4pGAlelBc0AfEM3AcuoTxUrcG/GEPT8IMHDV4286CVGndaV5qda3phpOSZybvNaF8uT/okut7IS/J68iXytLHbE1IVGGvfp4gT4eEi5EtwWbyeCOObCJU13atN3g+w+T65hQCWpPFVFNYh+ICYayN0RVSii5Tjy7vwBaqgUadJtVgxy2sqcx7UwRCuwAYsIbUZQvRQCuAkfN0mNLopf7sHzRjzuyROOlCO8zDM+C3carNBO3GN4Hce1c3kA7pIzcGDS02iu4fRXjxdJnXIoluJQFrICbke4LAPWx7rEDWOdXuYZcfGM9CR4EUcI5BfSpvmYjPuBm5zzEPK3jO5x4cbfZJQrD3rhr81e0qRspZHwk0GkI0c4U+1DZKVK/Oa220ISrfoOjyJXJHMFnRaqk7WNyZglubBLGoy6n6g1lB99HvyGmfC6ANhgJuu/40bYJcLqX5jo5BUQB37/6ONX32VK1ytOC2CnlKsWoujDpTRGGEEr0=
+  bucket: app-store
+  local_dir: build
+  skip_cleanup: true
+  detect_encoding: true
+  region: us-west-2
   on:
     tags: true
-    branches: true
