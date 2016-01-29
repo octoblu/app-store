@@ -5,7 +5,8 @@ var initialState = {
   items: [{
     id: "workspace",
     label: "Workspace",
-    description: "Automate your workspace."
+    description: "Automate your workspace.",
+    logo: "http://0.0.0.0:7777/workspace_white.svg"
   },
   {
     id: "security",
@@ -15,7 +16,8 @@ var initialState = {
   {
     id: "monitoring-alerts",
     label: "Monitoring & Alerts",
-    description: "Get notified when things no worky."
+    description: "Get notified when things no worky.",
+    logo: "http://0.0.0.0:7777/alert_white.svg"
   },
   {
     id: "workflow",

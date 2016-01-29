@@ -38,6 +38,10 @@ module.exports = {
       {
         test: /\.png$/,
         loader: "url-loader?limit=10000&minetype=image/png"
+      },
+      {
+        test: /\.svg$/,
+        loader: "file-loader"
       }
     ]
   },
