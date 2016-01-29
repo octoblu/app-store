@@ -5,25 +5,25 @@ var initialState = {
   items: [{
     id: "workspace",
     label: "Workspace",
-    description: "Automate your workspace.",
+    description: "Make your office work for you.",
     logo: "http://0.0.0.0:7777/workspace.svg"
   },
   {
     id: "security",
     label: "Security",
-    description: "Create automations to ensure security.",
+    description: "Lock it down with security enforcing automations.",
     logo: "http://0.0.0.0:7777/security.svg"
   },
   {
     id: "monitoring-alerts",
     label: "Monitoring & Alerts",
-    description: "Get notified when things no worky.",
+    description: "Never be surprised again. Get notifications instantly.",
     logo: "http://0.0.0.0:7777/alert.svg"
   },
   {
     id: "workflow",
     label: "Workflow",
-    description: "I don't understand this one at all.",
+    description: "Make your business more efficient through automation.",
     logo: "http://0.0.0.0:7777/workflow.svg"
   }]
 }
