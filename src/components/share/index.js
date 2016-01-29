@@ -11,7 +11,6 @@ const Share = ({ className, importUrl }) => {
   const componentClass = classNames('Share', className)
 
   return <div className={componentClass}>
-    <p>Share</p>
     <div className="Share-buttons">
       <TwitterShareButton text={`Check out this awesome bluprint on @Octoblu ${importUrl}`} />
       <FacebookShareButton url={importUrl} />

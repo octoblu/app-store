@@ -14,11 +14,25 @@ html, body, #app, #app > div {
 
 body {
   margin: 0;
-  background: #F4F5F6;
+
   color: #485264;
-  font-size: 16px;
   font-family: "citrixsans-regular", Arial, Helvetica, sans-serif;
+  font-size: 16px;
   line-height: 1.4;
+
+  background: #F4F5F6;
+
+  font-size: 16px;
+  line-height: 1.3;
+
+  @media (min-width: 800px) {
+    font-size: 18px;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 20px;
+    line-height: 1.4;
+  }
 }
 
 a {

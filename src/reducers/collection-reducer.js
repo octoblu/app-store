@@ -6,23 +6,27 @@ var initialState = {
     id: "workspace",
     label: "Workspace",
     description: "Automate your workspace.",
-    logo: "http://0.0.0.0:7777/workspace_white.svg"
+    logo: "http://0.0.0.0:7777/workspace.svg"
   },
   {
     id: "security",
     label: "Security",
-    description: "Create automations to ensure security."
+    description: "Create automations to ensure security.",
+    logo: "http://0.0.0.0:7777/security.svg"
+
   },
   {
     id: "monitoring-alerts",
     label: "Monitoring & Alerts",
     description: "Get notified when things no worky.",
-    logo: "http://0.0.0.0:7777/alert_white.svg"
+    logo: "http://0.0.0.0:7777/alert.svg"
   },
   {
     id: "workflow",
     label: "Workflow",
-    description: "I don't understand this one at all."
+    description: "I don't understand this one at all.",
+    logo: "http://0.0.0.0:7777/workflow.svg"
+
   }]
 }
 

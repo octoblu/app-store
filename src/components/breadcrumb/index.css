@@ -6,12 +6,12 @@
   color: #FFF;
   font-size: 16px;
 
-  background: #004EF2;
+  background: #1E6DB9;
+  background: #FFF;
 }
 
 .Breadcrumb-fragment {
   text-decoration: none;
-  color: #FFF;
 }
 
 .Breadcrumb-fragment:hover {
@@ -20,6 +20,7 @@
 
 .Breadcrumb-fragment--active {
   font-family: 'citrixsans-semibold', sans-serif;
+  color: rgba(72, 82, 100, 0.75);
 }
 
 .Breadcrumb-fragment:not(:first-child) {

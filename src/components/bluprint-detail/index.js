@@ -20,9 +20,9 @@ const BluprintDetail = ({ bluprint }) => {
     <h1 className="font-bold BluprintDetail-label">{bluprint.label}</h1>
     <p className="BluprintDetail-description">{bluprint.description}</p>
     { blogPost }
-    <BluprintMeta bluprint={bluprint}/>
 
     <Button href={octobluUrl} kind="jumbo">Automate</Button>
+    <BluprintMeta bluprint={bluprint}/>
   </div>
 }
 

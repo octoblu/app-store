@@ -12,14 +12,7 @@ const BluprintMeta = ({ bluprint }) => {
   const octobluUrl = `https://app.octoblu.com/bluprints/import/${id}`
 
   return <div className="BluprintMeta">
-    <div className="BluprintMeta-info">
-      <div className="BluprintMeta-author">
-        Created By: <strong>{author}</strong>
-      </div>
-      <div className="BluprintMeta-installs">
-        Installs: <strong>{installs}</strong>
-      </div>
-    </div>
+    
 
     <ShareButtons importUrl={octobluUrl}/>
   </div>
