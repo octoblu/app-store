@@ -19,7 +19,7 @@ let bluprints = [{
     installs: "333"
   },
   {
-    label: "Launch XenMobile On Entry",
+    label: "Launch XenDesktop On Entry",
     id: "5733402e-9633-492f-ab9d-d540a90642e7",
     tags: ['xenapp'],
     collectionIds:['security', 'workspace'],
