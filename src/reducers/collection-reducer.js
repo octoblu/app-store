@@ -6,25 +6,25 @@ var initialState = {
     id: "workspace",
     label: "Workspace",
     description: "Make your office work for you.",
-    logo: "http://0.0.0.0:7777/workspace.svg"
+    logo: "https://icons.octoblu.com/collection/workspace.svg"
   },
   {
     id: "security",
     label: "Security",
     description: "Lock it down with security enforcing automations.",
-    logo: "http://0.0.0.0:7777/security.svg"
+    logo: "https://icons.octoblu.com/collection/security.svg"
   },
   {
     id: "monitoring-alerts",
     label: "Monitoring & Alerts",
     description: "Never be surprised again. Get notifications instantly.",
-    logo: "http://0.0.0.0:7777/alert.svg"
+    logo: "https://icons.octoblu.com/collection/alert.svg"
   },
   {
     id: "workflow",
     label: "Workflow",
     description: "Make your business more efficient through automation.",
-    logo: "http://0.0.0.0:7777/workflow.svg"
+    logo: "https://icons.octoblu.com/collection/workflow.svg"
   }]
 }
 
