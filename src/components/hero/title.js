@@ -6,7 +6,6 @@ import './index.css';
 const HeroTitle = ({ children, className }) => {
   const componentClass = classNames(
     'Hero-title',
-    'font-light',
     className
   )
 

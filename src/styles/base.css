@@ -44,11 +44,13 @@ a:hover {
 }
 
 .container {
-  max-width: 960px;
+  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   padding: 24px;
   background: #FFF;
+
+
 }
 
 .Collections {
@@ -56,4 +58,29 @@ a:hover {
   color: #FFF;
   display: flex;
   flex-direction: column;
+
+  background: #249bd6;
+  background: -webkit-linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0.15),rgba(255,255,255,0.15)),-webkit-linear-gradient(bottom right,#49c3c9,#249bd6 50%,#0c5b9c);
+  background: -moz-linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0.15),rgba(255,255,255,0.15)),-webkit-linear-gradient(bottom right,#49c3c9,#249bd6 50%,#0c5b9c);
+  background: -o-linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0.15),rgba(255,255,255,0.15)),-webkit-linear-gradient(bottom right,#49c3c9,#249bd6 50%,#0c5b9c);
+  background: -ms-linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0.15),rgba(255,255,255,0.15)),-webkit-linear-gradient(bottom right,#49c3c9,#249bd6 50%,#0c5b9c);
+  background: linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0.15),rgba(255,255,255,0.15)),-webkit-linear-gradient(bottom right,#49c3c9,#249bd6 50%,#0c5b9c);
+  background-blend-mode: soft-light;
+
+  text-shadow: 0 1px 2px rgba(0,0,0, 0.2);
+}
+
+.Collections-title {
+  font-family: 'citrixsans-light', sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.Collections-link {
+  font-family: 'citrixsans-light', sans-serif;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.Collections-link:hover {
+  color: #FFF;
 }

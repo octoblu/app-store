@@ -6,10 +6,10 @@
   margin: 0 auto;
 
   width: 100%;
+  max-width: 960px;
 }
 
 .CollectionCard {
-  /*border-top: 1px solid #FFF;*/
   display: block;
   width: 50%;
   padding: 12px;
@@ -23,9 +23,7 @@
   color: #FFF;
 }
 
-.CollectionCard:nth-child(odd) {
-  /*border-right: 1px solid #FFF;*/
-}
+.CollectionCard:nth-child(odd) {}
 
 .CollectionCard-logo {
   width: 140px;
@@ -34,8 +32,9 @@
 .CollectionCard-label {
   margin: 0;
   padding: 0;
-  font-size: 36px;
 
+  font-size: 36px;
+  font-family: 'citrixsans-semibold', sans-serif;
 }
 
 .CollectionCard-description {

@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router'
 
 import CollectionCard from '../components/collection-card'
+import TopBar from '../components/top-bar'
 import { Page } from '../components/page'
 import { Hero, HeroTitle, HeroSubTitle } from '../components/hero'
 
@@ -20,13 +21,20 @@ export default class Collections extends Component {
 
   render() {
     let { items } = this.props.collections
-    const collectionCards = _.map(items, (collection) =>
+    let collectionCards = _.map(items, (collection) =>
       <CollectionCard
         collection={collection}
         key={collection.id}/>
     )
 
+    // collectionCards = null
+
     return <Page className="Collections">
+      <TopBar>
+        <h1 className="Collections-title">Workspace Automation Powered by <strong>Octoblu</strong></h1>
+        <a href="http://app.octoblu.com" className="Collections-link">Visit Octoblu</a>
+      </TopBar>
+
       <Hero>
         <HeroTitle>Automation App Store</HeroTitle>
         <HeroSubTitle>Explore. Automate. Empower.</HeroSubTitle>
