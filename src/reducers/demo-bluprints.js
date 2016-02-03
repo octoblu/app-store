@@ -29,6 +29,16 @@ let bluprints = [{
     installs: "333"
   },
   {
+    label: "ShareFile to Podio Status",
+    id: "462fc648-c086-4081-b591-8831aac370d8",
+    tags: ['sharefile', 'podio'],
+    collectionIds:['workspace', 'workflow'],
+    intro: "Let your Podio group know when you upload files.",
+    description: "Checks if the upload is recent, then sends a Podio status update when you share a file with ShareFile! ",
+    author: "Octoblu",
+    installs: "333"
+  },
+  {
     label: "Launch XenDesktop On Entry",
     id: "5733402e-9633-492f-ab9d-d540a90642e7",
     tags: ['xenapp'],
