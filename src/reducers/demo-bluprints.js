@@ -5,7 +5,7 @@ let bluprints = [{
     collectionIds:['workspace', 'security'],
     intro: "Make work easier.",
     description: "This flow allows you to set people to approve documents sent through Sharefile. (ie: Have your boss approve a memo before it's sent out to the team).",
-    author: "Octocblu",
+    author: "Octoblu",
     installs: "333"
   },
   {
@@ -15,7 +15,17 @@ let bluprints = [{
     collectionIds:['workspace', 'workflow'],
     intro: "You'll never have to send a mass email again.",
     description: "Create a Podio app that stores contact information and use Octoblu to send emails to each person. You can customize the subject and body of the email.",
-    author: "Octocblu",
+    author: "Octoblu",
+    installs: "333"
+  },
+  {
+    label: "ShareFile Virus Alert via SMS or Email",
+    id: "0a4bd94b-684c-431e-b86a-27257f6ac7a0",
+    tags: ['sharefile'],
+    collectionIds:['security'],
+    intro: "File virus detection with SMS and Email alerts.",
+    description: "Get an Email and SMS when ShareFile detects that one of your files has a virus.",
+    author: "Octoblu",
     installs: "333"
   },
   {
@@ -25,7 +35,7 @@ let bluprints = [{
     collectionIds:['security', 'workspace'],
     intro: "Save time by launching XenDesktop when employees enter",
     description: "Using either XenMobile geolocation or beacon detection, Octoblu can launch or reconfigure XenDesktop sessions so they are ready when the employee reaches their workspace ",
-    author: "Octocblu",
+    author: "Octoblu",
     installs: "333"
   },
   {
@@ -35,7 +45,7 @@ let bluprints = [{
     collectionIds: ['workspace', 'workflow'],
     intro: "Automate meetings in conference rooms",
     description: "Octoblu can automate the bridge dial-in, presentation displays, lighting, and thermostats based on meetings starting and stopping.",
-    author: "Octocblu",
+    author: "Octoblu",
     installs: "333"
   },
   {
@@ -46,7 +56,7 @@ let bluprints = [{
     intro: "Cyber threat detection and NetScaler remediation",
     description: "Using Splunk's advanced Enterprise Security module, Octoblu can be notified of various cyber threat activity on a network and block IP address and/or disable ports on NetScalers affected.",
     blogPost: "https://www.citrix.com/blogs/2015/11/23/automate-netscaler-security-with-octoblu/",
-    author: "Octocblu",
+    author: "Octoblu",
     installs: "333"
   },
   {
@@ -57,7 +67,7 @@ let bluprints = [{
     intro: "Cyber threat detection and ShareFile remediation",
     description: "Using Splunk's advanced Enterprise Security module, Octoblu can be notified of various cyber threat activity on a network and disable user accounts on ShareFile to stop downloads.",
     blogPost: "https://www.citrix.com/blogs/2015/11/23/automate-netscaler-security-with-octoblu/",
-    author: "Octocblu",
+    author: "Octoblu",
     installs: "333"
   },
   {
@@ -67,7 +77,7 @@ let bluprints = [{
     collectionIds:['monitoring-alerts'],
     intro: "Send SMS alerts when Director detects issues",
     description: "Send multiple SMS messages to IT personnel if/when a platform error occurs. Integrate with Twilio to build a pagerduty-like call/acknowledge tree.",
-    author: "Octocblu",
+    author: "Octoblu",
     installs: "333"
   },
   {
@@ -77,7 +87,7 @@ let bluprints = [{
     collectionIds:['monitoring-alerts'],
     intro: "Change lighting based on platform health",
     description: "Change the lights (or sirens) in your datacenter based on overall health of the platform.",
-    author: "Octocblu",
+    author: "Octoblu",
     installs: "333"
   },
   {
@@ -87,7 +97,7 @@ let bluprints = [{
     collectionIds:['workflow'],
     intro: "Open support tickets for issues automatically",
     description: "Automatically create trouble tickets in any tracking system based on issues detected by Director",
-    author: "Octocblu",
+    author: "Octoblu",
     installs: "333"
   },
   {
@@ -97,7 +107,7 @@ let bluprints = [{
     collectionIds:['workflow'],
     intro: "App approval process automation",
     description: "Streamline application access requests and manager approval processes. If the manager approves access to an application, Octoblu will update permissions in StoreFront.",
-    author: "Octocblu",
+    author: "Octoblu",
     installs: "333"
   },
   {
@@ -107,7 +117,7 @@ let bluprints = [{
     collectionIds:['workflow'],
     intro: "Schedule daily report generation",
     description: "Octoblu can schedule various reports. Export data from Director, generate PDF, upload PDF to ShareFile, and email employees links.",
-    author: "Octocblu",
+    author: "Octoblu",
     installs: "333"
   },
   {
@@ -117,7 +127,7 @@ let bluprints = [{
     collectionIds:['monitoring-alerts'],
     intro: "Self-healing system automation",
     description: "Allows IT personnel to auto-run specific powershell (or bash) scripts to fix issues detected by Director",
-    author: "Octocblu",
+    author: "Octoblu",
     installs: "333"
   },
   {
@@ -127,7 +137,7 @@ let bluprints = [{
     collectionIds:['monitoring-alerts'],
     intro: "Display information on monitors when Director detects an issue",
     description: "Update dashboards in realtime or display specific URLs, html, or text on a big screen monitor in a NOC or SOC based on an event.",
-    author: "Octocblu",
+    author: "Octoblu",
     installs: "333"
   },
   {
@@ -137,7 +147,7 @@ let bluprints = [{
     collectionIds:['workspace', 'security'],
     intro: "Add perimeter security to Apps!",
     description: "Setup a geofence perimeter around your office and activate/de-activate user profiles when employees enter/leave the office.",
-    author: "Octocblu",
+    author: "Octoblu",
     installs: "333"
   },
   {
@@ -147,7 +157,7 @@ let bluprints = [{
     collectionIds:['workflow'],
     intro: "Transfer files from cloud storage platforms to ShareFile",
     description: "Automate folder and file transfers from Box, DropBox, and Google Drive to ShareFile.",
-    author: "Octocblu",
+    author: "Octoblu",
     installs: "333"
   }]
 
