@@ -1,7 +1,7 @@
 let bluprints = [{
     label: "RightSignature Email Reminder",
     id: "e5be22d0-709f-4083-b833-b5f239c986cc",
-    tags: ['rightsignature'],
+    tags: ['rightSignature'],
     collectionIds:['workspace', 'workflow'],
     intro: "Automatically email clients who have not signed a doc.",
     description: "Send emails out to pending signees on a specified interval.",
