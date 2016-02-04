@@ -32,7 +32,7 @@ let bluprints = [{
     label: "ShareFile to Podio Status",
     id: "a2b02849-3ab8-4567-ae90-eb7c5109d730",
     tags: ['sharefile', 'podio'],
-    collectionIds:['workspace', 'workflow'],
+    collectionIds:['workflow'],
     intro: "Let your Podio group know when you upload to ShareFile.",
     description: "Checks if the upload is recent, then sends a Podio status update when you share a file with ShareFile! ",
     author: "Octoblu",
