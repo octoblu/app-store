@@ -22,7 +22,7 @@ let bluprints = [{
     label: "ShareFile Virus Alert via SMS or Email",
     id: "0a4bd94b-684c-431e-b86a-27257f6ac7a0",
     tags: ['sharefile'],
-    collectionIds:['security'],
+    collectionIds:['monitoring-alerts', 'security'],
     intro: "File virus detection with SMS and Email alerts.",
     description: "Get an Email and SMS when ShareFile detects that one of your files has a virus.",
     author: "Octoblu",
