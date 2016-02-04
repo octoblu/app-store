@@ -1,14 +1,4 @@
 let bluprints = [{
-    label: "Sharefile Document Approval",
-    id: "9fde959f-4835-4a46-a76d-f6b217118601",
-    tags: ['sharefile'],
-    collectionIds:['workspace', 'security'],
-    intro: "Make work easier.",
-    description: "This flow allows you to set people to approve documents sent through Sharefile. (ie: Have your boss approve a memo before it's sent out to the team).",
-    author: "Octoblu",
-    installs: "333"
-  },
-  {
     label: "RightSignature Email Reminder",
     id: "e5be22d0-709f-4083-b833-b5f239c986cc",
     tags: ['rightsignature'],
@@ -19,7 +9,7 @@ let bluprints = [{
     installs: "333"
   },
   {
-    label: "Group Email Defined By Podio App",
+    label: "Email List Defined By Podio App",
     id: "ced4a912-6a18-40e0-8c9a-fd38a4e30248",
     tags: ['podio'],
     collectionIds:['workspace', 'workflow'],
@@ -40,10 +30,10 @@ let bluprints = [{
   },
   {
     label: "ShareFile to Podio Status",
-    id: "462fc648-c086-4081-b591-8831aac370d8",
+    id: "a2b02849-3ab8-4567-ae90-eb7c5109d730",
     tags: ['sharefile', 'podio'],
     collectionIds:['workspace', 'workflow'],
-    intro: "Let your Podio group know when you upload files.",
+    intro: "Let your Podio group know when you upload to ShareFile.",
     description: "Checks if the upload is recent, then sends a Podio status update when you share a file with ShareFile! ",
     author: "Octoblu",
     installs: "333"
