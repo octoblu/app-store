@@ -9,6 +9,16 @@ let bluprints = [{
     installs: "333"
   },
   {
+    label: "RightSignature Email Reminder",
+    id: "e5be22d0-709f-4083-b833-b5f239c986cc",
+    tags: ['rightsignature'],
+    collectionIds:['workspace', 'workflow'],
+    intro: "Automatically email clients who have not signed a doc.",
+    description: "Send emails out to pending signees on a specified interval.",
+    author: "Octoblu",
+    installs: "333"
+  },
+  {
     label: "Group Email Defined By Podio App",
     id: "ced4a912-6a18-40e0-8c9a-fd38a4e30248",
     tags: ['podio'],
