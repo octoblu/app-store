@@ -9,6 +9,16 @@ let bluprints = [{
     installs: "333"
   },
   {
+    label: "Automated Meeting with Email Notifications",
+    id: "67efb102-b229-424a-a569-caa7b4554449",
+    tags: ['podio', 'gotomeeting'],
+    collectionIds:['workflow', 'monitoring-alerts'],
+    intro: "Automatically start a meeting and send links to people in a Podio app!",
+    description: "Compile a list of emails and a date in a Podio app. On that date, a GoToMeeting will start and send out links to everyone in the email list.",
+    author: "Octoblu",
+    installs: "333"
+  },
+  {
     label: "Automated Daily Meetings",
     id: "e16c9ce7-0b72-4f1b-ad5b-b09e115ad5f9",
     tags: ['gotomeeting', 'podio'],
