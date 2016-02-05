@@ -9,6 +9,16 @@ let bluprints = [{
     installs: "333"
   },
   {
+    label: "Automated Daily Meetings",
+    id: "e16c9ce7-0b72-4f1b-ad5b-b09e115ad5f9",
+    tags: ['gotomeeting', 'podio'],
+    collectionIds:['workspace', 'workflow'],
+    intro: "Host daily meetings with teams around the globe!",
+    description: "Start a meeting with GoToMeeting, then immediately post a status to your Podio group with the information to join.",
+    author: "Octoblu",
+    installs: "333"
+  },
+  {
     label: "Email List Defined By Podio App",
     id: "ced4a912-6a18-40e0-8c9a-fd38a4e30248",
     tags: ['podio'],
@@ -30,7 +40,7 @@ let bluprints = [{
   },
   {
     label: "ShareFile to Podio Status",
-    id: "a2b02849-3ab8-4567-ae90-eb7c5109d730",
+    id: "d12c446a-8636-4ace-84bc-564d61043847",
     tags: ['sharefile', 'podio'],
     collectionIds:['workspace'],
     intro: "Let your Podio group know when you upload to ShareFile.",
