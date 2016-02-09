@@ -15,7 +15,7 @@ let bluprints = [{
     collectionIds:['workspace', 'workflow'],
     intro: "Automatically email clients who have not signed a doc.",
     description: "Send emails out to pending signees on a specified interval.",
-    author: "Octoblu",
+    author: "Andrew S.",
     installs: "333"
   },
   {
@@ -23,9 +23,9 @@ let bluprints = [{
     id: "67efb102-b229-424a-a569-caa7b4554449",
     tags: ['podio', 'gotomeeting'],
     collectionIds:['workflow', 'monitoring-alerts'],
-    intro: "Automatically start a meeting and send links to people in a Podio app!",
+    intro: "Automatically start a meeting and send links to a list from a Podio app!",
     description: "Compile a list of emails and a date in a Podio app. On that date, a GoToMeeting will start and send out links to everyone in the email list.",
-    author: "Octoblu",
+    author: "Andrew S.",
     installs: "333"
   },
   {
@@ -35,7 +35,7 @@ let bluprints = [{
     collectionIds:['workspace', 'workflow'],
     intro: "Host daily meetings with teams around the globe!",
     description: "Start a meeting with GoToMeeting, then immediately post a status to your Podio group with the information to join.",
-    author: "Octoblu",
+    author: "Andrew S.",
     installs: "333"
   },
   {
@@ -45,7 +45,7 @@ let bluprints = [{
     collectionIds:['workspace', 'workflow'],
     intro: "You'll never have to send a mass email again.",
     description: "Create a Podio app that stores contact information and use Octoblu to send emails to each person. You can customize the subject and body of the email.",
-    author: "Octoblu",
+    author: "Andrew S.",
     installs: "333"
   },
   {
@@ -55,7 +55,7 @@ let bluprints = [{
     collectionIds:['monitoring-alerts', 'security'],
     intro: "File virus detection with SMS and Email alerts.",
     description: "Get an Email and SMS when ShareFile detects that one of your files has a virus.",
-    author: "Octoblu",
+    author: "Andrew S.",
     installs: "333"
   },
   {
@@ -65,7 +65,7 @@ let bluprints = [{
     collectionIds:['workspace'],
     intro: "Let your Podio group know when you upload to ShareFile.",
     description: "Checks if the upload is recent, then sends a Podio status update when you share a file with ShareFile! ",
-    author: "Octoblu",
+    author: "Andrew S.",
     installs: "333"
   },
   {
