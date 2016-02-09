@@ -9,8 +9,15 @@ import Collections from '../containers/collections'
 import Layout from '../containers/layout'
 
 const Routes = (
+
   <Router history={createHistory()}>
     <Route path="/" component={Layout}>
+      <IndexRoute component={Collections} />
+      <Route path="/collections/:collectionId" component={Collection} />
+      <Route path="/collections/:collectionId/bluprints/:bluprintId" component={Bluprint} />
+    </Route>
+    
+    <Route path="/cwc" component={Layout}>
       <IndexRoute component={Collections} />
       <Route path="/collections/:collectionId" component={Collection} />
       <Route path="/collections/:collectionId/bluprints/:bluprintId" component={Bluprint} />
