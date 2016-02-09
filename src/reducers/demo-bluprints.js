@@ -1,4 +1,14 @@
 let bluprints = [{
+    label: "Dropbox To Sharefile",
+    id: "edfa76a2-5fce-436b-a1e6-03434d3c2eff",
+    tags: ['sharefile'],
+    collectionIds:['workflow'],
+    intro: "Transfer files from Dropbox to ShareFile",
+    description: "Automate folder and file transfers from DropBox to ShareFile.",
+    author: "Peter D.",
+    installs: "333"
+  },
+  {
     label: "RightSignature Email Reminder",
     id: "e5be22d0-709f-4083-b833-b5f239c986cc",
     tags: ['rightSignature'],
@@ -179,17 +189,8 @@ let bluprints = [{
     description: "Setup a geofence perimeter around your office and activate/de-activate user profiles when employees enter/leave the office.",
     author: "Octoblu",
     installs: "333"
-  },
-  {
-    label: "Cloud to Sharefile",
-    id: "e8ec011f-c36e-4ef3-b749-b07b4a799215",
-    tags: ['sharefile'],
-    collectionIds:['workflow'],
-    intro: "Transfer files from cloud storage platforms to ShareFile",
-    description: "Automate folder and file transfers from Box, DropBox, and Google Drive to ShareFile.",
-    author: "Octoblu",
-    installs: "333"
-  }]
+  }
+]
 
 
 export default bluprints
