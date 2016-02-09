@@ -21,6 +21,17 @@ let bluprints = [{
     installs: "333"
   },
   {
+    label: "Start Meeting when in range of a Beacon",
+    id: "654fb609-dc26-4921-851f-d4aaf549bcef",
+    tags: ['gotomeeting', 'podio'],
+    collectionIds:['workspace', 'workflow'],
+    intro: "Automatically start a meeting when you enter the conference room.",
+    description: "Automatically start a GoToMeeting when you are in range of your beacon, then post the link to your Podio group.",
+    author: "Octoblu",
+    active: true,
+    installs: "333"
+  },
+  {
     label: "Automated Meeting with Email Notifications",
     id: "67efb102-b229-424a-a569-caa7b4554449",
     tags: ['podio', 'gotomeeting'],
