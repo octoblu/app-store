@@ -1,4 +1,4 @@
-.TopBar {
+.AppBar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,17 +11,17 @@
   color: #FFF;
 }
 
-.TopBar-logo {
+.AppBar-logo {
   width: 158px;
   height: 33px;
 }
 
-.TopBar-title {
+.AppBar-title {
   margin: 0;
   font-size: 24px;
   font-weight: normal;
 }
 
-.TopBar-action {
+.AppBar-action {
   color: #FFF;
 }

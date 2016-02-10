@@ -5,12 +5,12 @@ import './index.css'
 
 import Button from '../button'
 
-const TopBar = ({ children }) => {
-  return <Fixed className="TopBar">{children}</Fixed>
+const AppBar = ({ children }) => {
+  return <Fixed className="AppBar">{children}</Fixed>
 }
 
-TopBar.propTypes = {
+AppBar.propTypes = {
   children: PropTypes.node
 }
 
-export default TopBar
+export default AppBar

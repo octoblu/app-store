@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router'
 
 import CollectionCard from '../components/collection-card'
-import TopBar from '../components/top-bar'
+import AppBar from '../components/app-bar'
 import { Page } from '../components/page'
 import { Hero, HeroTitle, HeroSubTitle } from '../components/hero'
 
@@ -30,10 +30,10 @@ export default class Collections extends Component {
     // collectionCards = null
 
     return <Page className="Collections">
-      <TopBar>
+      <AppBar>
         <h1 className="Collections-title">Workspace Automation Powered by <strong>Octoblu</strong></h1>
         <a href="http://app.octoblu.com" className="Collections-link">Visit Octoblu</a>
-      </TopBar>
+      </AppBar>
 
       <Hero>
         <HeroTitle>Automation App Store</HeroTitle>
