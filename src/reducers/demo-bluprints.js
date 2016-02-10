@@ -55,7 +55,7 @@ let bluprints = [{
   },
   {
     label: "Email List Defined By Podio App",
-    id: "ced4a912-6a18-40e0-8c9a-fd38a4e30248",
+    id: "3ef1a2fe-dbe7-4764-92f8-39e7926b96bc",
     tags: ['podio'],
     collectionIds:['workspace', 'workflow'],
     intro: "You'll never have to send a mass email again.",
