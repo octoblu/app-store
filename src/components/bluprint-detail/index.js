@@ -11,8 +11,14 @@ import './index.css'
 const BluprintDetail = ({ bluprint }) => {
   const channelImage = _.map(bluprint.tags, (tag, index) => <ChannelImage key={index} name={tag} className="BluprintDetail-icon" />)
   const octobluUrl = `https://app.octoblu.com/bluprints/import/${bluprint.id}`
+
+  let button = <Button href={octobluUrl} kind="jumbo">Automate</Button>
+  if (!bluprint.active){
+    button = <Button disabled kind="jumbo" className="BluprintDetail-automateBtn--disabled">Coming Soon!</Button>
+  }
+
   let blogPost = null
-  if(bluprint.blogPost){
+  if (bluprint.blogPost){
     blogPost = <a className="BluprintCard-blog" href={bluprint.blogPost}>Blog Post</a>
   }
   return <div className="BluprintDetail">
@@ -21,7 +27,7 @@ const BluprintDetail = ({ bluprint }) => {
     <p className="BluprintDetail-description">{bluprint.description}</p>
     { blogPost }
 
-    <Button href={octobluUrl} kind="jumbo">Automate</Button>
+    {button}
     <BluprintMeta bluprint={bluprint}/>
   </div>
 }

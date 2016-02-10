@@ -19,3 +19,7 @@
   margin: 0 auto;
   height: 160px;
 }
+
+.BluprintDetail-automateBtn--disabled {
+  opacity: 0.5;
+}
