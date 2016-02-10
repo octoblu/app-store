@@ -1,8 +1,8 @@
 .BluprintCard-container {
-  display: flex;
+  /*display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  width: 100%;
+  width: 100%;*/
 }
 
 .BluprintCard {
@@ -10,13 +10,14 @@
   border: 1px solid #E0E0E0;
   box-shadow:  0 1px 1px rgba(0, 0, 0, 0.1);
   display: block;
-  width: 50%;
-  max-width: 460px;
+  width: 320px;
   margin: 24px;
-  text-align: center;
+  padding: 16px;
+
+  text-align: left;
   text-decoration: none;
 
-  background: #FFF linear-gradient(45deg, #044A6D, #67ADD6);
+  /*background: #FFF linear-gradient(45deg, #044A6D, #67ADD6);*/
 }
 
 .BluprintCard--sharefile {
@@ -65,7 +66,7 @@
 .BluprintCard-label {
   margin: 0 0 12px;
   padding: 0;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .BluprintCard-description {
