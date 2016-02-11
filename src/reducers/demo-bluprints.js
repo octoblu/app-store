@@ -1,10 +1,32 @@
 let bluprints = [{
     label: "Dropbox To Sharefile",
-    id: "edfa76a2-5fce-436b-a1e6-03434d3c2eff",
-    tags: ['sharefile'],
+    id: "fb3b8a07-6472-4730-a77a-0ad1d5defb50",
+    tags: ['dropbox', 'sharefile'],
     collectionIds:['workflow'],
-    intro: "Transfer files from Dropbox to ShareFile",
+    intro: "Dropbox PDF's to Sharefile",
     description: "Automate folder and file transfers from DropBox to ShareFile.",
+    author: "Octoblu",
+    active: true,
+    installs: "333"
+  },
+  {
+    label: "Google Drive To Sharefile",
+    id: "0416e2ff-b8de-4d17-9a71-29e29f7b7187",
+    tags: ['google-drive', 'sharefile'],
+    collectionIds:['workflow'],
+    intro: "Google Drive Files for Sharefile",
+    description: "Automate folder and file transfers from Google Drive to ShareFile.",
+    author: "Octoblu",
+    active: true,
+    installs: "333"
+  },
+  {
+    label: "Box to Sharefile (Paid Box Users Only)",
+    id: "103b778b-5adc-4799-b550-ce2cfb100a89",
+    tags: ['box', 'sharefile'],
+    collectionIds:['workflow'],
+    intro: "Transfer files from Box to Sharefile. For Paid Box users only.",
+    description: "Automate folder and file transfers from Box to ShareFile.",
     author: "Octoblu",
     active: true,
     installs: "333"
