@@ -30,11 +30,6 @@ export default class Collections extends Component {
     // collectionCards = null
 
     return <Page className="Collections">
-      <AppBar>
-        <h1 className="Collections-title">Workspace Automation Powered by <strong>Octoblu</strong></h1>
-        <a href="http://app.octoblu.com" className="Collections-link">Visit Octoblu</a>
-      </AppBar>
-
       <Hero>
         <HeroTitle>Automation App Store</HeroTitle>
         <HeroSubTitle>Explore. Automate. Empower.</HeroSubTitle>

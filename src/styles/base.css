@@ -53,6 +53,23 @@ a:hover {
 
 }
 
+#app {
+  display: flex;
+  flex-direction: column;
+
+  color: #485264;
+
+
+  background: #249bd6;
+  background: -webkit-linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0.15),rgba(255,255,255,0.15)),-webkit-linear-gradient(bottom right,#49c3c9,#249bd6 50%,#0c5b9c);
+  background: -moz-linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0.15),rgba(255,255,255,0.15)),-webkit-linear-gradient(bottom right,#49c3c9,#249bd6 50%,#0c5b9c);
+  background: -o-linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0.15),rgba(255,255,255,0.15)),-webkit-linear-gradient(bottom right,#49c3c9,#249bd6 50%,#0c5b9c);
+  background: -ms-linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0.15),rgba(255,255,255,0.15)),-webkit-linear-gradient(bottom right,#49c3c9,#249bd6 50%,#0c5b9c);
+  background: linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0.15),rgba(255,255,255,0.15)),-webkit-linear-gradient(bottom right,#49c3c9,#249bd6 50%,#0c5b9c);
+  background-blend-mode: soft-light;
+}
+
+
 .Collections {
   background:#1E6DB9;
   color: #FFF;

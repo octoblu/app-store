@@ -48,13 +48,7 @@ export default class Collection extends Component {
 
     return <Page>
       <Breadcrumb fragments={breadcrumbFragments} />
-      <PageHeader>
-        <PageTitle>{collection.label} Automations</PageTitle>
-      </PageHeader>
-
-      <div className="BluprintCard-container">
-        {bluprintCards}
-      </div>
+      <div className="BluprintCard-container">{bluprintCards}</div>
     </Page>
   }
 }

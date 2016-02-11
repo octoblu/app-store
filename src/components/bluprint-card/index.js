@@ -27,17 +27,18 @@ const BluprintCard = ({ bluprint, collectionId }) => {
   // </div>
 
   return <div className={`BluprintCard BluprintCards--${bluprint.tags[0]}`}>
-    <h4 className="BluprintCard-label">{bluprint.label}</h4>
-
-    <p className="BluprintCard-description">{bluprint.intro}</p>
-
-    <Link
-      to={`/collections/${collectionId}/bluprints/${bluprint.id}`}
-      key={bluprint.id}
-    >
-      Learn More
-    </Link>
-
+    <main className="BluprintCard-main">
+      <h4 className="BluprintCard-label">{bluprint.label}</h4>
+      <p className="BluprintCard-description">{bluprint.intro}</p>
+      <Link
+        to={`/collections/${collectionId}/bluprints/${bluprint.id}`}
+        key={bluprint.id}>
+        Learn More
+      </Link>
+    </main>
+    <footer className="BluprintCard-footer">
+      Footer!
+    </footer>
   </div>
 }
 
