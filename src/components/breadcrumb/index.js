@@ -1,6 +1,8 @@
 import React, { PropTypes } from 'react'
 import { Link } from 'react-router'
 
+import AppBar from '../app-bar'
+
 import './index.css'
 
 const Breadcrumb = ({fragments}) => {
@@ -11,9 +13,10 @@ const Breadcrumb = ({fragments}) => {
     return <span className="Breadcrumb-fragment Breadcrumb-fragment--active" key={label}>{label}</span>
   });
 
-  return <div className="Breadcrumb">
-    {fragmentNodes}
-  </div>
+  return <AppBar>
+    <div className="Collections-title">{fragmentNodes}</div>
+    <a href="http://app.octoblu.com" className="Collections-link">Visit Octoblu</a>
+  </AppBar>
 }
 
 Breadcrumb.propTypes = {

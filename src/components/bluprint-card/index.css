@@ -1,15 +1,24 @@
 .BluprintCard-container {
-  margin: 0 auto;
-  width: 1092px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  margin: 24px auto;
+  width: 1152px;
 }
 
 .BluprintCard {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
   border-radius: 2px;
   border: 1px solid #E0E0E0;
-  display: block;
-  float: left;
-  width: 340px;
-  height: 200px;
+  width: 100%;
+  min-width: 360px;
+  max-width: 360px;
+  height: 240px;
   margin: 12px;
 
 
@@ -17,20 +26,45 @@
   text-decoration: none;
 
   background: #FFF;
+
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+
+.BluprintCard-channelImages {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 60px;
+  min-width: 60px;
+  max-width: 60px;
+  padding: 6px;
+
   /*background: #FFF linear-gradient(45deg, #044A6D, #67ADD6);*/
+  background: #1170B0;
 }
 
 .BluprintCard-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+
+.BluprintCard-body {
   padding: 16px;
 }
 
 .BluprintCard-footer {
-  width: 100%;
-  background: oldlace;
+  display: flex;
+  justify-content: space-between;
   padding: 8px 16px;
+  width: 100%;
+
+  font-size: 15px;
+  border-top: 1px solid #EEF1F2;
 }
-
-
 
 .BluprintCard-label {
   margin: 0 0 12px;
@@ -39,9 +73,12 @@
 }
 
 .BluprintCard-description {
-  max-height: 30px;
-  margin: 0 0 24px;
+  margin: 0 0 12px;
   padding: 0;
+}
+
+.BluprintCard-mdPerson {
+  margin-right: 4px;
 }
 
 .BluprintCard-button:hover {
@@ -52,31 +89,32 @@
   min-height: 42px;
 }
 
-.BluprintCard--sharefile {
+.BluprintCard-channelImages--sharefile {
   background: linear-gradient(45deg, #1D793D, #A2C339);
 }
 
-.BluprintCard--netscaler {
+.BluprintCard-channelImages--netscaler {
   background: linear-gradient(45deg, #DADDE0, #F4F5F6);
 }
 
-.BluprintCard--rightSignature {
+.BluprintCard-channelImages--rightSignature {
   background: #1170B0;
 }
 
-.BluprintCard--gotomeeting {
+.BluprintCard-channelImages--gotomeeting {
   background: linear-gradient(45deg, #C95428, #E6B921);
 }
 
-.BluprintCard--xenapp {
+.BluprintCard-channelImages--xenapp {
   background: linear-gradient(45deg, #3EC5F2, #3F56A6);
 }
 
-.BluprintCard--director {
+.BluprintCard-channelImages--director {
   background: linear-gradient(45deg, #F1F1F1, rgba(35, 31, 32, 0.58));
 }
 
 .BluprintCard-channelImage {
-  min-height: 160px;
-  margin: 24px auto;
+  max-width: 100px;
+  /*min-height: 120px;*/
+  margin: 0 auto;
 }

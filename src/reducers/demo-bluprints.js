@@ -1,6 +1,7 @@
 let bluprints = [{
     label: "Dropbox To Sharefile",
     id: "edfa76a2-5fce-436b-a1e6-03434d3c2eff",
+    octobluImportUrl: "https://app.octoblu.com/bluprints/import/edfa76a2-5fce-436b-a1e6-03434d3c2eff",
     tags: ['sharefile'],
     collectionIds:['workflow'],
     intro: "Transfer files from Dropbox to ShareFile",
@@ -12,6 +13,7 @@ let bluprints = [{
   {
     label: "RightSignature Email Reminder",
     id: "e5be22d0-709f-4083-b833-b5f239c986cc",
+    octobluImportUrl: "https://app.octoblu.com/bluprints/import/e5be22d0-709f-4083-b833-b5f239c986cc",
     tags: ['rightSignature'],
     collectionIds:['workspace', 'workflow'],
     intro: "Automatically email clients who have not signed a doc.",
@@ -23,6 +25,7 @@ let bluprints = [{
   {
     label: "Start Meeting when in range of a Beacon",
     id: "654fb609-dc26-4921-851f-d4aaf549bcef",
+    octobluImportUrl: "https://app.octoblu.com/bluprints/import/654fb609-dc26-4921-851f-d4aaf549bcef",
     tags: ['gotomeeting', 'podio'],
     collectionIds:['workspace', 'workflow'],
     intro: "Automatically start a meeting when you enter the conference room.",
@@ -34,6 +37,7 @@ let bluprints = [{
   {
     label: "Automated Meeting with Email Notifications",
     id: "67efb102-b229-424a-a569-caa7b4554449",
+    octobluImportUrl: "https://app.octoblu.com/bluprints/import/67efb102-b229-424a-a569-caa7b4554449",
     tags: ['podio', 'gotomeeting'],
     collectionIds:['workflow', 'monitoring-alerts'],
     intro: "Automatically start a meeting and send links to a list from a Podio app!",
@@ -45,6 +49,7 @@ let bluprints = [{
   {
     label: "Automated Daily Meetings",
     id: "e16c9ce7-0b72-4f1b-ad5b-b09e115ad5f9",
+    octobluImportUrl: "https://app.octoblu.com/bluprints/import/e16c9ce7-0b72-4f1b-ad5b-b09e115ad5f9",
     tags: ['gotomeeting', 'podio'],
     collectionIds:['workspace', 'workflow'],
     intro: "Host daily meetings with teams around the globe!",
@@ -56,6 +61,7 @@ let bluprints = [{
   {
     label: "Email List Defined By Podio App",
     id: "ced4a912-6a18-40e0-8c9a-fd38a4e30248",
+    octobluImportUrl: "https://app.octoblu.com/bluprints/import/ced4a912-6a18-40e0-8c9a-fd38a4e30248",
     tags: ['podio'],
     collectionIds:['workspace', 'workflow'],
     intro: "You'll never have to send a mass email again.",
@@ -67,6 +73,7 @@ let bluprints = [{
   {
     label: "ShareFile Virus Alert via SMS or Email",
     id: "0a4bd94b-684c-431e-b86a-27257f6ac7a0",
+    octobluImportUrl: "https://app.octoblu.com/bluprints/import/0a4bd94b-684c-431e-b86a-27257f6ac7a0",
     tags: ['sharefile'],
     collectionIds:['monitoring-alerts', 'security'],
     intro: "File virus detection with SMS and Email alerts.",
@@ -78,6 +85,7 @@ let bluprints = [{
   {
     label: "ShareFile to Podio Status",
     id: "d12c446a-8636-4ace-84bc-564d61043847",
+    octobluImportUrl: "https://app.octoblu.com/bluprints/import/d12c446a-8636-4ace-84bc-564d61043847",
     tags: ['sharefile', 'podio'],
     collectionIds:['workspace'],
     intro: "Let your Podio group know when you upload to ShareFile.",
@@ -89,6 +97,7 @@ let bluprints = [{
   {
     label: "Launch XenDesktop On Entry",
     id: "5733402e-9633-492f-ab9d-d540a90642e7",
+    octobluImportUrl: "https://app.octoblu.com/bluprints/import/5733402e-9633-492f-ab9d-d540a90642e7",
     tags: ['xenapp'],
     collectionIds:['security', 'workspace'],
     intro: "Save time by launching XenDesktop when employees enter",
@@ -100,6 +109,7 @@ let bluprints = [{
   {
     label: "Auto-Start Your Next Meeting",
     id: "9135019c-ead1-4f20-9d3f-78536e2a099d",
+    octobluImportUrl: "https://app.octoblu.com/bluprints/import/9135019c-ead1-4f20-9d3f-78536e2a099d",
     tags: ['gotomeeting'],
     collectionIds: ['workspace', 'workflow'],
     intro: "Automate meetings in conference rooms",
@@ -111,6 +121,7 @@ let bluprints = [{
   {
     label: "Netscaler Cyber Threat Detection",
     id: "ec1ff208-244b-42b0-bcf1-7d54c44f40ba",
+    octobluImportUrl: "https://app.octoblu.com/bluprints/import/ec1ff208-244b-42b0-bcf1-7d54c44f40ba",
     tags: ['netscaler-logo'],
     collectionIds:['monitoring-alerts', 'security'],
     intro: "Cyber threat detection and NetScaler remediation",
@@ -123,6 +134,7 @@ let bluprints = [{
   {
     label: "Sharefile Cyber Threat Detection",
     id: "b40396b0-8185-4943-b30d-d37a45b246ae",
+    octobluImportUrl: "https://app.octoblu.com/bluprints/import/b40396b0-8185-4943-b30d-d37a45b246ae",
     tags: ['sharefile'],
     collectionIds:['monitoring-alerts', 'security'],
     intro: "Cyber threat detection and ShareFile remediation",
@@ -135,6 +147,7 @@ let bluprints = [{
   {
     label: "Director SMS Alerts",
     id: "d0d1c6e0-5c14-4e64-933a-cf228884899c",
+    octobluImportUrl: "https://app.octoblu.com/bluprints/import/d0d1c6e0-5c14-4e64-933a-cf228884899c",
     tags: ['director'],
     collectionIds:['monitoring-alerts'],
     intro: "Send SMS alerts when Director detects issues",
@@ -146,6 +159,7 @@ let bluprints = [{
   {
     label: "Health Based Lighting",
     id: "29841084-b4cd-4655-95a6-1728472d3795",
+    octobluImportUrl: "https://app.octoblu.com/bluprints/import/29841084-b4cd-4655-95a6-1728472d3795",
     tags: ['director'],
     collectionIds:['monitoring-alerts'],
     intro: "Change lighting based on platform health",
@@ -157,6 +171,7 @@ let bluprints = [{
   {
     label: "Auto-Open Support Tickets",
     id: "a4f81fde-f8a3-4a2d-944e-898db62989d3",
+    octobluImportUrl: "https://app.octoblu.com/bluprints/import/a4f81fde-f8a3-4a2d-944e-898db62989d3",
     tags: ['director'],
     collectionIds:['workflow'],
     intro: "Open support tickets for issues automatically",
@@ -168,6 +183,7 @@ let bluprints = [{
   {
     label: "App Approval",
     id: "a1ae6b79-950a-4af9-b95d-4977b0e027d2",
+    octobluImportUrl: "https://app.octoblu.com/bluprints/import/a1ae6b79-950a-4af9-b95d-4977b0e027d2",
     tags: ['xenapp'],
     collectionIds:['workflow'],
     intro: "App approval process automation",
@@ -179,6 +195,7 @@ let bluprints = [{
   {
     label: "Get Daily Reports",
     id: "ea169335-317b-4064-8134-062cf0d9f2e6",
+    octobluImportUrl: "https://app.octoblu.com/bluprints/import/ea169335-317b-4064-8134-062cf0d9f2e6",
     tags: ['director'],
     collectionIds:['workflow'],
     intro: "Schedule daily report generation",
@@ -190,6 +207,7 @@ let bluprints = [{
   {
     label: "Self-Healing System",
     id: "2c0eddc3-4bfd-4b97-8700-3483be70f2c3",
+    octobluImportUrl: "https://app.octoblu.com/bluprints/import/2c0eddc3-4bfd-4b97-8700-3483be70f2c3",
     tags: ['director'],
     collectionIds:['monitoring-alerts'],
     intro: "Self-healing system automation",
@@ -201,6 +219,7 @@ let bluprints = [{
   {
     label: "Display Director Alerts",
     id: "896ec2f4-1c1f-43d0-a7a3-877149e5f9d6",
+    octobluImportUrl: "https://app.octoblu.com/bluprints/import/896ec2f4-1c1f-43d0-a7a3-877149e5f9d6",
     tags: ['director'],
     collectionIds:['monitoring-alerts'],
     intro: "Display information on monitors when Director detects an issue",
@@ -212,6 +231,7 @@ let bluprints = [{
   {
     label: "Geofence Your Office",
     id: "638b4ee9-466c-4bff-aae6-dc33883a70c1",
+    octobluImportUrl: "https://app.octoblu.com/bluprints/import/638b4ee9-466c-4bff-aae6-dc33883a70c1",
     tags: ['xenapp'],
     collectionIds:['workspace', 'security'],
     intro: "Add perimeter security to Apps!",
