@@ -4,7 +4,7 @@ node_js:
 - '5.1'
 addons:
   code_climate:
-    repo_token: 6bb307cc2f2ae339f80eca3eb3941972a7dd6efe25b46cf63a8cc438b7dcfe85
+    repo_token: a346754071423801ffb9ee6ed15557e835cd0341eb452542410cc11bcd052adf
 env:
   global:
   - AWS_ACCESS_KEY_ID=AKIAJH2D5IPIRHYJT5IA
