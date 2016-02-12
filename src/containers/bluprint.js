@@ -21,13 +21,15 @@ export default class Bluprint extends Component {
 
   render() {
     const { bluprint, collection } = this.props
+
+    if (!bluprint) return <div>No Bluprint Found!</div>
+    if (!collection) return <div>No Collection Found!</div>
+
     const fragments = [
       { label: 'Home', linkTo: '/' },
       { label: collection.label, linkTo: `/collections/${collection.id}` },
       { label: bluprint.label }
     ]
-
-    if (!bluprint) return <div>No Bluprint Found!</div>
 
     return <Page>
       <Breadcrumb fragments={fragments} />
