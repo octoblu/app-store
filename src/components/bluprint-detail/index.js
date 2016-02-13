@@ -18,8 +18,9 @@ const BluprintDetail = ({ bluprint }) => {
 
   let blogPost = null
   if (bluprint.blogPost){
-    blogPost = <a className="BluprintCard-blog" href={bluprint.blogPost}>Blog Post</a>
+    blogPost = <a className="BluprintDetail-blogLink" href={bluprint.blogPost}>Blog Post</a>
   }
+
   return <div className="BluprintDetail">
     {channelImage}
     <h1 className="font-bold BluprintDetail-label">{bluprint.label}</h1>
