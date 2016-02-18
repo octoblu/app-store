@@ -5,6 +5,7 @@ import { Link } from 'react-router'
 import CollectionCard from '../components/collection-card'
 import AppBar from '../components/app-bar'
 import BluAppBar from '../components/octoblu-app-bar'
+import BluprintsBar from '../components/octoblu-bluprints-bar'
 import { Page } from '../components/page'
 import { Hero, HeroTitle, HeroSubTitle } from '../components/hero'
 
@@ -28,10 +29,9 @@ export default class Collections extends Component {
         key={collection.id}/>
     )
 
-    // collectionCards = null
-
     return <Page className="Collections">
       <BluAppBar />
+      <BluprintsBar />
 
       <Hero>
         <HeroTitle>Automation App Store</HeroTitle>
