@@ -1,0 +1,36 @@
+.PageBar-section {
+  display: flex;
+  flex: 1;
+}
+
+.PageBar-section--nav {
+  justify-content: flex-start;
+}
+
+.PageBar-navLink {
+  display: inline-block;
+  border-bottom: 2px solid #FFF;
+  padding: 0 20px;
+
+  color: #14568f;
+  font-size: 16px;
+  text-transform: none;
+  text-decoration: none;
+  line-height: 50px;
+
+  cursor: pointer;
+}
+
+.PageBar-navLink:hover {
+  text-decoration: none;
+}
+
+.PageBar-navLink:focus {
+  outline: none;
+}
+
+.PageBar-navLink--active {
+  border-color: #4CAF50;
+  text-decoration: none;
+  cursor: default;
+}
