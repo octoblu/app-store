@@ -1,3 +1,9 @@
+.BluAppBar-container {
+  display: block;
+  position: relative;
+  overflow: auto;
+}
+
 .BluAppBar {
   padding: 0;
   height: 52px;
@@ -24,6 +30,7 @@
 }
 
 .BluAppBar-link {
+  border: none;
   display: inline-block;
   padding: 0 16px;
 
@@ -32,6 +39,9 @@
   text-transform: none;
   text-decoration: none !important;
   line-height: 52px;
+
+  background: transparent;
+  cursor: pointer;
 }
 
 .BluAppBar-link:hover {
@@ -40,15 +50,24 @@
   background: rgba(0,0,0, 0.1);
 }
 
+.BluAppBar-link:focus {
+  outline: none;
+}
+
 .BluAppBar-link--active {
 
+}
+
+.BluAppBar-link-icon {
+  font-size: 1.33333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
 }
 
 .BluAppBar-link--logo {
   float: left;
   height: 52px;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
-  padding-left: 0;
 }
 
 .BluAppBar-logo {
