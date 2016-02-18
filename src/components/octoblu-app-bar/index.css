@@ -1,0 +1,59 @@
+.BluAppBar {
+  padding: 0;
+  height: 52px;
+  min-height: 52px;
+
+  font-family: 'citrixsans-bold', sans-serif;
+  text-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px;
+  font-smoothing: antialiased;
+
+  background: #14568F;
+}
+
+.BluAppBar-nav {
+  display: block;
+  height: 100%;
+}
+
+.BluAppBar-nav--primary {
+  float: left;
+}
+
+.BluAppBar-nav--secondary {
+  float: right;
+}
+
+.BluAppBar-link {
+  display: inline-block;
+  padding: 0 16px;
+
+  color: #E9F2FB;
+  font-size: 16px;
+  text-transform: none;
+  text-decoration: none !important;
+  line-height: 52px;
+}
+
+.BluAppBar-link:hover {
+  color: #FFF;
+  text-decoration: none;
+  background: rgba(0,0,0, 0.1);
+}
+
+.BluAppBar-link--active {
+
+}
+
+.BluAppBar-link--logo {
+  float: left;
+  height: 52px;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  padding-left: 0;
+}
+
+.BluAppBar-logo {
+  display: block;
+  float: left;
+  margin-top: 13px;
+  width: 125px;
+}

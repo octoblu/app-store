@@ -4,6 +4,7 @@ import { Link } from 'react-router'
 
 import CollectionCard from '../components/collection-card'
 import AppBar from '../components/app-bar'
+import BluAppBar from '../components/octoblu-app-bar'
 import { Page } from '../components/page'
 import { Hero, HeroTitle, HeroSubTitle } from '../components/hero'
 
@@ -30,11 +31,8 @@ export default class Collections extends Component {
     // collectionCards = null
 
     return <Page className="Collections">
-      <AppBar>
-        <h1 className="Collections-title">Workspace Automation Powered by <strong>Octoblu</strong></h1>
-        <a href="http://app.octoblu.com" className="Collections-link">Visit Octoblu</a>
-      </AppBar>
-      
+      <BluAppBar />
+
       <Hero>
         <HeroTitle>Automation App Store</HeroTitle>
         <HeroSubTitle>Explore. Automate. Empower.</HeroSubTitle>
