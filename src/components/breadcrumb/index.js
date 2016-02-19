@@ -1,22 +1,17 @@
 import React, { PropTypes } from 'react'
 import { Link } from 'react-router'
 
-import AppBar from '../app-bar'
-
 import './index.css'
 
 const Breadcrumb = ({fragments}) => {
   const fragmentNodes = fragments.map(fragment => {
     let {label, linkTo} = fragment
 
-    if (linkTo) return <Link to={linkTo} className="Breadcrumb-fragment" key={label}>{label}</Link>
-    return <span className="Breadcrumb-fragment Breadcrumb-fragment--active" key={label}>{label}</span>
+    if (linkTo) return <Link to={linkTo} className="Breadcrumb-fragment Breadcrumb-fragment--link" key={label}>{label}</Link>
+    return <span className="Breadcrumb-fragment" key={label}>{label}</span>
   });
 
-  return <AppBar>
-    <div className="Collections-title">{fragmentNodes}</div>
-    <a href="http://app.octoblu.com" className="Collections-link">Visit Octoblu</a>
-  </AppBar>
+  return <div className="Breadcrumb">{fragmentNodes}</div>
 }
 
 Breadcrumb.propTypes = {

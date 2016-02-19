@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 import PageBar from '../page-bar'
 import PageBarNav from '../page-bar-nav'
 
-const BluprintsBar = ( ) => {
+const BluprintsNavBar = ( ) => {
   return <PageBar>
     <PageBarNav>
       <a className="PageBar-navLink" href="//app.octoblu.com/bluprints">My Bluprints</a>
@@ -12,4 +12,4 @@ const BluprintsBar = ( ) => {
   </PageBar>
 }
 
-export default BluprintsBar
+export default BluprintsNavBar

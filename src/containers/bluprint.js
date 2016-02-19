@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router'
 
 import { Page } from '../components/page'
+import PageBar from '../components/page-bar'
 import BluprintDetail from '../components/bluprint-detail'
 import Breadcrumb from '../components/breadcrumb'
 
@@ -32,7 +33,9 @@ export default class Bluprint extends Component {
     ]
 
     return <Page>
-      <Breadcrumb fragments={fragments} />
+      <PageBar>
+        <Breadcrumb fragments={fragments} />
+      </PageBar>
       <BluprintDetail bluprint={bluprint} />
     </Page>
   }

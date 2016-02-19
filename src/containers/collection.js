@@ -2,11 +2,12 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router'
 
-import { Page, PageHeader, PageTitle } from '../components/page'
-import Loading from '../components/loading'
-
 import BluprintCard from '../components/bluprint-card'
 import Breadcrumb from '../components/breadcrumb'
+import Loading from '../components/loading'
+import PageBar from '../components/page-bar'
+import PageBarNav from '../components/page-bar-nav'
+import { Page, PageHeader, PageTitle } from '../components/page'
 
 import { fetchBluprints, fetchBluprintsByCollectionId } from '../actions/bluprint-actions'
 
@@ -47,7 +48,9 @@ export default class Collection extends Component {
     )
 
     return <Page>
-      <Breadcrumb fragments={breadcrumbFragments} />
+      <PageBar>
+        <Breadcrumb fragments={breadcrumbFragments} />
+      </PageBar>
       <div className="BluprintCard-container">{bluprintCards}</div>
     </Page>
   }
