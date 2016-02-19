@@ -20,9 +20,9 @@ export default class BluAppBar extends Component {
     let settings = null
     if (this.state.showSettings ) {
       settings = <span aria-hidden="true">
-        <a className="BluAppBar-link" href="/profile">Profile</a>
-        <a className="BluAppBar-link" href="/guides">Guides</a>
-        <a className="BluAppBar-link" href="/signout">Sign Out</a>
+        <a className="BluAppBar-link" href="//app.octoblu.com/profile">Profile</a>
+        <a className="BluAppBar-link" href="//app.octoblu.com/guides">Guides</a>
+        <a className="BluAppBar-link" href="//app.octoblu.com/signout">Sign Out</a>
       </span>
     }
 
@@ -33,9 +33,9 @@ export default class BluAppBar extends Component {
         </a>
 
         <nav className="BluAppBar-nav BluAppBar-nav--primary">
-          <a className="BluAppBar-link BluAppBar-link--is-selected" href="/design">Design</a>
-          <a className="BluAppBar-link" href="/things">Things</a>
-          <a className="BluAppBar-link" href="/bluprints">Bluprints</a>
+          <a className="BluAppBar-link BluAppBar-link--is-selected" href="//app.octoblu.com/design">Design</a>
+          <a className="BluAppBar-link" href="//app.octoblu.com/things">Things</a>
+          <a className="BluAppBar-link" href="//app.octoblu.com/bluprints">Bluprints</a>
         </nav>
 
         <nav className="BluAppBar-nav BluAppBar-nav--secondary">
