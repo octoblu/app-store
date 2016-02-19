@@ -2,13 +2,14 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router'
 
-import CollectionCard from '../components/collection-card'
 import AppBar from '../components/app-bar'
 import BluAppBar from '../components/octoblu-app-bar'
 import BluprintsBar from '../components/octoblu-bluprints-bar'
+import CollectionCard from '../components/collection-card'
 import { Page } from '../components/page'
 import { Hero, HeroTitle, HeroSubTitle } from '../components/hero'
 
+import { OCTOBLU_URL } from '../constants'
 import { fetchCollections } from '../actions/collection-actions'
 
 export default class Collections extends Component {
@@ -30,8 +31,8 @@ export default class Collections extends Component {
     )
 
     return <Page className="Collections">
-      <BluAppBar />
-      <BluprintsBar />
+      <BluAppBar octobluUrl={OCTOBLU_URL}/>
+      <BluprintsBar octobluUrl={OCTOBLU_URL}/>
 
       <Hero>
         <HeroTitle>Automation App Store</HeroTitle>

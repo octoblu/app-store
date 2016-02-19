@@ -8,6 +8,10 @@ export default class BluAppBar extends Component {
     showSettings: false
   }
 
+  static propTypes = {
+    octobluUrl: PropTypes.string.isRequired,
+  }
+
   constructor(props) {
     super(props)
   }
@@ -17,12 +21,14 @@ export default class BluAppBar extends Component {
   }
 
   render() {
+    const OCTOBLU_URL = this.props.octobluUrl
+     
     let settings = null
-    if (this.state.showSettings ) {
+    if (this.state.showSettings) {
       settings = <span aria-hidden="true">
-        <a className="BluAppBar-link" href="//app.octoblu.com/profile">Profile</a>
-        <a className="BluAppBar-link" href="//app.octoblu.com/guides">Guides</a>
-        <a className="BluAppBar-link" href="//app.octoblu.com/signout">Sign Out</a>
+        <a className="BluAppBar-link" href={`${OCTOBLU_URL}/profile`}>Profile</a>
+        <a className="BluAppBar-link" href={`${OCTOBLU_URL}/guides`}>Guides</a>
+        <a className="BluAppBar-link" href={`${OCTOBLU_URL}/signout`}>Sign Out</a>
       </span>
     }
 
@@ -33,9 +39,9 @@ export default class BluAppBar extends Component {
         </a>
 
         <nav className="BluAppBar-nav BluAppBar-nav--primary">
-          <a className="BluAppBar-link BluAppBar-link--is-selected" href="//app.octoblu.com/design">Design</a>
-          <a className="BluAppBar-link" href="//app.octoblu.com/things">Things</a>
-          <a className="BluAppBar-link" href="//app.octoblu.com/bluprints">Bluprints</a>
+          <a className="BluAppBar-link BluAppBar-link--is-selected" href={`${OCTOBLU_URL}/design`}>Design</a>
+          <a className="BluAppBar-link" href={`${OCTOBLU_URL}/things`}>Things</a>
+          <a className="BluAppBar-link" href={`${OCTOBLU_URL}/bluprints`}>Bluprints</a>
         </nav>
 
         <nav className="BluAppBar-nav BluAppBar-nav--secondary">
