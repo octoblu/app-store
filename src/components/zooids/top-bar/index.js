@@ -1,14 +1,14 @@
 import React, { PropTypes } from 'react'
 import './index.css'
 
-const PageBar = ({children}) => {
-  return <header className="PageBar">
+const TopBar = ({children}) => {
+  return <header className="TopBar">
     {children}
   </header>
 }
 
-PageBar.propTypes = {
+TopBar.propTypes = {
   children: PropTypes.node.isRequired
 }
 
-export default PageBar
+export default TopBar
