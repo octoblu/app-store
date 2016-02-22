@@ -20,6 +20,14 @@ export default class Collection extends Component {
     dispatch(fetchBluprintsByCollectionId(collection.id, tags))
   }
 
+  componentWillReceiveProps(nextProps) {
+    let { tags } = this.props.location.query
+    if(tags != nextProps.location.query.tags){
+      let { dispatch, collection } = nextProps
+      dispatch(fetchBluprintsByCollectionId(collection.id, nextProps.location.query.tags))
+    }
+  }
+
   componentWillUnmount() {
     let { dispatch } = this.props
     dispatch(fetchBluprints())
