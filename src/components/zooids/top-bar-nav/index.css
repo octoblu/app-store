@@ -1,13 +1,4 @@
-.PageBar-section {
-  display: flex;
-  flex: 1;
-}
-
-.PageBar-section--nav {
-  justify-content: flex-start;
-}
-
-.PageBar-navLink {
+.TopBarNav-link {
   display: inline-block;
   border-bottom: 2px solid #FFF;
   padding: 0 20px;
@@ -21,15 +12,15 @@
   cursor: pointer;
 }
 
-.PageBar-navLink:hover {
+.TopBarNav-link:hover {
   text-decoration: none;
 }
 
-.PageBar-navLink:focus {
+.TopBarNav-link:focus {
   outline: none;
 }
 
-.PageBar-navLink--active {
+.TopBarNav-link--active {
   border-color: #4CAF50;
   text-decoration: none;
   cursor: default;

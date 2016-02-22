@@ -1,12 +1,15 @@
+// @TODO: Implement dynamic nav-items like breadcrumbs
+
 import React, { PropTypes } from 'react'
 import classNames from 'classnames'
 
 import './index.css'
 
-const PageBarNav = ({children, className}) => {
+const TopBarNav = ({children, className}) => {
   const componentClass = classNames(
-    'PageBar-section',
-    'PageBar-section--nav',
+    'TopBar-section',
+    'TopBar-section--nav',
+    'TopBarNav',
     className
   )
 
@@ -15,9 +18,9 @@ const PageBarNav = ({children, className}) => {
   </nav>
 }
 
-PageBarNav.propTypes = {
+TopBarNav.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string
 }
 
-export default PageBarNav
+export default TopBarNav
