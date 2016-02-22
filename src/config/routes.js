@@ -16,7 +16,6 @@ const Routes = (
       <IndexRoute component={Collections} />
       <Route path="/tags/:tag" component={Tag} />
       <Route path="/collections/:collectionId" component={Collection} />
-    <Route path="/collections/:collectionId?tag=:tag" component={Collection} />
       <Route path="/collections/:collectionId/bluprints/:bluprintId" component={Bluprint} />
     </Route>
 
@@ -24,7 +23,6 @@ const Routes = (
       <IndexRoute component={Collections} />
       <Route path="/tags/:tag" component={Tag} />
       <Route path="/collections/:collectionId" component={Collection} />
-      <Route path="/collections/:collectionId/:tag" component={Collection} />
       <Route path="/collections/:collectionId/bluprints/:bluprintId" component={Bluprint} />
     </Route>
   </Router>

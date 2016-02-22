@@ -16,15 +16,16 @@ export default class Collection extends Component {
 
   componentDidMount() {
     let { dispatch, collection, location } = this.props
-    let { tags } = location.query
-    dispatch(fetchBluprintsByCollectionId(collection.id, tags))
+    let { tag } = location.query
+    dispatch(fetchBluprintsByCollectionId(collection.id, tag))
   }
 
   componentWillReceiveProps(nextProps) {
-    let { tags } = this.props.location.query
-    if(tags != nextProps.location.query.tags){
+    let { tag } = this.props.location.query
+    if(tag != nextProps.location.query.tag){
       let { dispatch, collection } = nextProps
-      dispatch(fetchBluprintsByCollectionId(collection.id, nextProps.location.query.tags))
+      dispatch(fetchBluprints())
+      dispatch(fetchBluprintsByCollectionId(collection.id, nextProps.location.query.tag))
     }
   }
 
@@ -35,7 +36,7 @@ export default class Collection extends Component {
 
   render() {
     const { collection, bluprints, location } = this.props
-    const { tags } = location.query
+    const { tag } = location.query
     const { items } = bluprints
 
     if (!items.length)  {
@@ -50,20 +51,20 @@ export default class Collection extends Component {
 
     let showMore = null
 
-    if(tags){
+    if(tag){
       breadcrumbFragments = [
         { label: 'Home', linkTo: '/' },
         { label: collection.label, linkTo: `/collections/${collection.id}` },
-        { label: tags }
+        { label: _.capitalize(tag) }
       ]
-      showMore = <Link to={`/tags/${tags}`}> Show More </Link>
+      showMore = <div className="Tags-showAllBtn"><Link to={`/tags/${tag}`} key={tag}>Show All {_.capitalize(tag)} Bluprints</Link></div>
     }
 
-    let bluprintCards = _.map(items, (bluprint)=>
+    let bluprintCards = _.map(items, (bluprint, index)=>
       <BluprintCard
         bluprint={bluprint}
         collectionId={collection.id}
-        key={bluprint.id}
+        key={index}
       />
     )
 

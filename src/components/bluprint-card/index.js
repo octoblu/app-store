@@ -8,7 +8,7 @@ import './index.css'
 
 const BluprintCard = ({ bluprint, collectionId }) => {
   const channelImages = _.map(bluprint.tags, (tag, index) =>
-    <Link to={`/collections/${collectionId}?tags=${tag}`} key={index}>
+    <Link to={`/collections/${collectionId}?tag=${tag}`} key={index}>
       <ChannelImage key={index} name={tag} className="BluprintCard-channelImage" />
     </Link>
   )
