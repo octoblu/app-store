@@ -3,7 +3,7 @@ import { FaCog } from 'react-icons/lib/fa'
 
 import './index.css'
 
-export default class BluAppBar extends Component {
+export default class AppBar extends Component {
   state = {
     showSettings: false
   }
@@ -26,29 +26,29 @@ export default class BluAppBar extends Component {
     let settings = null
     if (this.state.showSettings ) {
       settings = <span aria-hidden="true">
-        <a className="BluAppBar-link" href={`${OCTOBLU_URL}/profile`}>Profile</a>
-        <a className="BluAppBar-link" href={`${OCTOBLU_URL}/guides`}>Guides</a>
-        <a className="BluAppBar-link" href={`${OCTOBLU_URL}/signout`}>Sign Out</a>
+        <a className="AppBar-link" href={`${OCTOBLU_URL}/profile`}>Profile</a>
+        <a className="AppBar-link" href={`${OCTOBLU_URL}/guides`}>Guides</a>
+        <a className="AppBar-link" href={`${OCTOBLU_URL}/signout`}>Sign Out</a>
       </span>
     }
 
-    return <div className="BluAppBar-container">
-      <div className="BluAppBar">
-        <a className="BluAppBar-link BluAppBar-link--logo" href="/design">
-          <img className="BluAppBar-logo" src="//d2zw6j512x6z0x.cloudfront.net/master/d48dc0bf063ecc1477d1163831ee8ff17efbbfae/assets/images/octoblu_logo.png"/>
+    return <div className="AppBar-container">
+      <div className="AppBar">
+        <a className="AppBar-link AppBar-link--logo" href="/design">
+          <img className="AppBar-logo" src="//d2zw6j512x6z0x.cloudfront.net/master/d48dc0bf063ecc1477d1163831ee8ff17efbbfae/assets/images/octoblu_logo.png"/>
         </a>
 
-        <nav className="BluAppBar-nav BluAppBar-nav--primary">
-          <a className="BluAppBar-link BluAppBar-link--is-selected" href={`${OCTOBLU_URL}/design`}>Design</a>
-          <a className="BluAppBar-link" href={`${OCTOBLU_URL}/things`}>Things</a>
-          <a className="BluAppBar-link" href={`${OCTOBLU_URL}/bluprints`}>Bluprints</a>
+        <nav className="AppBar-nav AppBar-nav--primary">
+          <a className="AppBar-link AppBar-link--is-selected" href={`${OCTOBLU_URL}/design`}>Design</a>
+          <a className="AppBar-link" href={`${OCTOBLU_URL}/things`}>Things</a>
+          <a className="AppBar-link" href={`${OCTOBLU_URL}/bluprints`}>Bluprints</a>
         </nav>
 
-        <nav className="BluAppBar-nav BluAppBar-nav--secondary">
+        <nav className="AppBar-nav AppBar-nav--secondary">
           {settings}
 
-          <button onClick={this.toggleSettings} aria-label="Open settings menu" className="BluAppBar-link">
-            <FaCog className="BluAppBar-link-icon"/>
+          <button onClick={this.toggleSettings} aria-label="Open settings menu" className="AppBar-link">
+            <FaCog className="AppBar-link-icon"/>
           </button>
         </nav>
       </div>
