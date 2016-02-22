@@ -16,8 +16,9 @@ export default class Collection extends Component {
   }
 
   componentDidMount() {
-    let { dispatch, collection, tag } = this.props
-    dispatch(fetchBluprintsByCollectionId(collection.id, tag))
+    let { dispatch, collection, location } = this.props
+    let { tags } = location.query
+    dispatch(fetchBluprintsByCollectionId(collection.id, tags))
   }
 
   componentWillUnmount() {
@@ -26,24 +27,29 @@ export default class Collection extends Component {
   }
 
   render() {
-    const { collection, bluprints, tag } = this.props
+    const { collection, bluprints, location } = this.props
+    const { tags } = location.query
     const { items } = bluprints
 
     if (!items.length)  {
       return <div>There are no Bluprints for <em>{collection.label}</em></div>
     }
 
+
     let breadcrumbFragments = [
       { label: 'Home', linkTo: '/' },
       { label: collection.label }
     ]
 
-    if(tag){
+    let showMore = null
+
+    if(tags){
       breadcrumbFragments = [
         { label: 'Home', linkTo: '/' },
         { label: collection.label, linkTo: `/collections/${collection.id}` },
-        { label: tag }
+        { label: tags }
       ]
+      showMore = <Link to={`/tags/${tags}`}> Show More </Link>
     }
 
     let bluprintCards = _.map(items, (bluprint)=>
@@ -59,16 +65,16 @@ export default class Collection extends Component {
         <Breadcrumb fragments={breadcrumbFragments} />
       </TopBar>
       <div className="BluprintCard-container">{bluprintCards}</div>
+      {showMore}
     </Page>
   }
 }
 
 function mapStateToProps({router, collections, bluprints}) {
-  console.log(router);
-  const {collectionId, tag} = router.params
+  const {collectionId} = router.params
   const collection = _.find(collections.items, {id: collectionId})
 
-  return {collection, tag, bluprints}
+  return {collection, bluprints}
 }
 
 export default connect(mapStateToProps)(Collection)

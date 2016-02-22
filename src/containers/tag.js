@@ -5,9 +5,8 @@ import { Link } from 'react-router'
 import BluprintCard from '../components/bluprint-card'
 import Breadcrumb from '../components/breadcrumb'
 import Loading from '../components/loading'
-import PageBar from '../components/page-bar'
-import PageBarNav from '../components/page-bar-nav'
-import { Page, PageHeader, PageTitle } from '../components/page'
+import TopBar from '../components/zooids/top-bar'
+import { Page, PageTitle } from '../components/page'
 
 import { fetchBluprints, fetchBluprintsByTagName } from '../actions/bluprint-actions'
 
@@ -48,9 +47,9 @@ export default class Tag extends Component {
     )
 
     return <Page>
-      <PageBar>
+      <TopBar>
         <Breadcrumb fragments={breadcrumbFragments} />
-      </PageBar>
+      </TopBar>
       <PageTitle>Showing {tag} Bluprints</PageTitle>
       <div className="BluprintCard-container">{bluprintCards}</div>
     </Page>
