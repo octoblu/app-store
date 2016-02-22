@@ -34,7 +34,7 @@ export default class Collection extends Component {
       return <div>There are no Bluprints for <em>{collection.label}</em></div>
     }
 
-    const breadcrumbFragments = [
+    let breadcrumbFragments = [
       { label: 'Home', linkTo: '/' },
       { label: collection.label }
     ]
@@ -42,7 +42,7 @@ export default class Collection extends Component {
     if(tag){
       breadcrumbFragments = [
         { label: 'Home', linkTo: '/' },
-        { label: collection.label, linkTo: {`/collections/${collection.id}`} },
+        { label: collection.label, linkTo: `/collections/${collection.id}` },
         { label: tag }
       ]
     }
