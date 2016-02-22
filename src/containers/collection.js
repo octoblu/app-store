@@ -4,7 +4,6 @@ import { Link } from 'react-router'
 
 import BluprintCard from '../components/bluprint-card'
 import Breadcrumb from '../components/breadcrumb'
-import Loading from '../components/loading'
 import TopBar from '../components/zooids/top-bar'
 import { Page } from '../components/page'
 
