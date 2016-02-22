@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
-import './index.css'
-
 import { FaCog } from 'react-icons/lib/fa'
+
+import './index.css'
 
 export default class BluAppBar extends Component {
   state = {
@@ -10,7 +10,7 @@ export default class BluAppBar extends Component {
 
   static propTypes = {
     octobluUrl: React.PropTypes.string.isRequired
-    }
+  }
 
   constructor(props) {
     super(props)
