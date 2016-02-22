@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router'
 
-import { Page } from '../components/page'
-import PageBar from '../components/page-bar'
 import BluprintDetail from '../components/bluprint-detail'
 import Breadcrumb from '../components/breadcrumb'
+import TopBar from '../components/zooids/top-bar'
+import { Page } from '../components/page'
 
 import {fetchBluprints} from '../actions/bluprint-actions'
 
@@ -33,9 +33,10 @@ export default class Bluprint extends Component {
     ]
 
     return <Page>
-      <PageBar>
+      <TopBar>
         <Breadcrumb fragments={fragments} />
-      </PageBar>
+      </TopBar>
+
       <BluprintDetail bluprint={bluprint} />
     </Page>
   }

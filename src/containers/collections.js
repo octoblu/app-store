@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Link } from 'react-router'
 
-import AppBar from '../components/app-bar'
 import BluprintsBar from '../components/octoblu-bluprints-bar'
 import CollectionCard from '../components/collection-card'
 import { Page } from '../components/page'

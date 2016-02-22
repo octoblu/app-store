@@ -5,9 +5,8 @@ import { Link } from 'react-router'
 import BluprintCard from '../components/bluprint-card'
 import Breadcrumb from '../components/breadcrumb'
 import Loading from '../components/loading'
-import PageBar from '../components/page-bar'
-import PageBarNav from '../components/page-bar-nav'
-import { Page, PageHeader, PageTitle } from '../components/page'
+import TopBar from '../components/zooids/top-bar'
+import { Page } from '../components/page'
 
 import { fetchBluprints, fetchBluprintsByCollectionId } from '../actions/bluprint-actions'
 
@@ -56,9 +55,9 @@ export default class Collection extends Component {
     )
 
     return <Page>
-      <PageBar>
+      <TopBar>
         <Breadcrumb fragments={breadcrumbFragments} />
-      </PageBar>
+      </TopBar>
       <div className="BluprintCard-container">{bluprintCards}</div>
     </Page>
   }

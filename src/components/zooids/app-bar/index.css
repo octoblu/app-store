@@ -1,10 +1,10 @@
-.BluAppBar-container {
+.AppBar-container {
   display: block;
   position: relative;
   overflow: auto;
 }
 
-.BluAppBar {
+.AppBar {
   padding: 0;
   height: 52px;
   min-height: 52px;
@@ -16,20 +16,20 @@
   background: #14568F;
 }
 
-.BluAppBar-nav {
+.AppBar-nav {
   display: block;
   height: 100%;
 }
 
-.BluAppBar-nav--primary {
+.AppBar-nav--primary {
   float: left;
 }
 
-.BluAppBar-nav--secondary {
+.AppBar-nav--secondary {
   float: right;
 }
 
-.BluAppBar-link {
+.AppBar-link {
   border: none;
   display: inline-block;
   padding: 0 16px;
@@ -44,33 +44,33 @@
   cursor: pointer;
 }
 
-.BluAppBar-link:hover {
+.AppBar-link:hover {
   color: #FFF;
   text-decoration: none;
   background: rgba(0,0,0, 0.1);
 }
 
-.BluAppBar-link:focus {
+.AppBar-link:focus {
   outline: none;
 }
 
-.BluAppBar-link--active {
+.AppBar-link--active {
 
 }
 
-.BluAppBar-link-icon {
+.AppBar-link-icon {
   font-size: 1.33333333em;
   line-height: 0.75em;
   vertical-align: -15%;
 }
 
-.BluAppBar-link--logo {
+.AppBar-link--logo {
   float: left;
   height: 52px;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.BluAppBar-logo {
+.AppBar-logo {
   display: block;
   float: left;
   margin-top: 13px;
