@@ -10,7 +10,6 @@ import Layout from '../containers/layout'
 import Tag from '../containers/tag'
 
 const Routes = (
-
   <Router history={createHistory()}>
     <Route path="/" component={Layout}>
       <IndexRoute component={Collections} />
