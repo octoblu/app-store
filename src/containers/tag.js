@@ -9,16 +9,16 @@ import PageBar from '../components/page-bar'
 import PageBarNav from '../components/page-bar-nav'
 import { Page, PageHeader, PageTitle } from '../components/page'
 
-import { fetchBluprints, fetchBluprintsByCollectionId } from '../actions/bluprint-actions'
+import { fetchBluprints, fetchBluprintsByTagName } from '../actions/bluprint-actions'
 
-export default class Collection extends Component {
+export default class Tag extends Component {
   constructor(props) {
     super(props)
   }
 
   componentDidMount() {
-    let { dispatch, collection, tag } = this.props
-    dispatch(fetchBluprintsByCollectionId(collection.id, tag))
+    let { dispatch, tag } = this.props
+    dispatch(fetchBluprintsByTagName(tag))
   }
 
   componentWillUnmount() {
@@ -27,30 +27,22 @@ export default class Collection extends Component {
   }
 
   render() {
-    const { collection, bluprints, tag } = this.props
+    const { tag, bluprints } = this.props
     const { items } = bluprints
 
     if (!items.length)  {
-      return <div>There are no Bluprints for <em>{collection.label}</em></div>
+      return <div>There are no Bluprints for <em>{tag}</em></div>
     }
 
     const breadcrumbFragments = [
       { label: 'Home', linkTo: '/' },
-      { label: collection.label }
+      { label: tag }
     ]
-
-    if(tag){
-      breadcrumbFragments = [
-        { label: 'Home', linkTo: '/' },
-        { label: collection.label, linkTo: {`/collections/${collection.id}`} },
-        { label: tag }
-      ]
-    }
 
     let bluprintCards = _.map(items, (bluprint)=>
       <BluprintCard
         bluprint={bluprint}
-        route={`/collections/${collection.id}`}
+        route={`/collections/${bluprint.collectionIds[0]}`}
         key={bluprint.id}
       />
     )
@@ -59,17 +51,16 @@ export default class Collection extends Component {
       <PageBar>
         <Breadcrumb fragments={breadcrumbFragments} />
       </PageBar>
+      <PageTitle>Showing {tag} Bluprints</PageTitle>
       <div className="BluprintCard-container">{bluprintCards}</div>
     </Page>
   }
 }
 
-function mapStateToProps({router, collections, bluprints}) {
-  console.log(router);
-  const {collectionId, tag} = router.params
-  const collection = _.find(collections.items, {id: collectionId})
+function mapStateToProps({router, bluprints}) {
+  const {tag} = router.params
 
-  return {collection, tag, bluprints}
+  return {tag, bluprints}
 }
 
-export default connect(mapStateToProps)(Collection)
+export default connect(mapStateToProps)(Tag)

@@ -14,9 +14,20 @@ export default function(state = initialState, action) {
       })
 
     case types.FETCH_BLUPRINTS_BY_COLLECTION:
+      let collectionBluprints = _.filter(state.items, (bluprint) => {
+        return _.includes(bluprint.collectionIds, action.collectionId)
+      })
+      if(action.tag){
+        collectionBluprints = _.filter(collectionBluprints, (bluprint) => {
+          return _.includes(bluprint.tags, action.tag)
+        })
+      }
+      return _.assign({}, state, { items: collectionBluprints })
+
+    case types.FETCH_BLUPRINTS_BY_TAG_NAME:
       return _.assign({}, state, {
         items: _.filter(state.items, (bluprint) => {
-          return _.includes(bluprint.collectionIds, action.collectionId)
+          return _.includes(bluprint.tags, action.tag)
         })
       })
 

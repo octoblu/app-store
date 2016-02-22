@@ -6,8 +6,13 @@ import ChannelImage from '../channel-image'
 
 import './index.css'
 
-const BluprintCard = ({ bluprint, collectionId }) => {
-  const channelImages = _.map(bluprint.tags, (tag, index) => <ChannelImage key={index} name={tag} className="BluprintCard-channelImage" />)
+const BluprintCard = ({ bluprint, route }) => {
+  const channelImages = _.map(bluprint.tags, (tag, index) =>
+    <Link to={`/tags/${tag}`} key={index}>
+      <ChannelImage key={index} name={tag} className="BluprintCard-channelImage" />
+    </Link>
+  )
+
 
   return <div className="BluprintCard">
     <aside className={`BluprintCard-channelImages xBluprintCard-channelImages--${bluprint.tags[0]}`}>{channelImages}</aside>
@@ -16,7 +21,7 @@ const BluprintCard = ({ bluprint, collectionId }) => {
         <h4 className="BluprintCard-label">{bluprint.label}</h4>
         <p className="BluprintCard-description">{bluprint.intro}</p>
         <Link
-          to={`/collections/${collectionId}/bluprints/${bluprint.id}`}
+          to={`${route}/bluprints/${bluprint.id}`}
           key={bluprint.id}>
           Learn More
         </Link>
@@ -34,7 +39,7 @@ const BluprintCard = ({ bluprint, collectionId }) => {
 
 BluprintCard.propTypes = {
   bluprint: PropTypes.object.isRequired,
-  collectionId: PropTypes.string.isRequired
+  route: PropTypes.string.isRequired
 }
 
 export default BluprintCard
