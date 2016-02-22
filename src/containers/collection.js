@@ -50,7 +50,7 @@ export default class Collection extends Component {
     let bluprintCards = _.map(items, (bluprint)=>
       <BluprintCard
         bluprint={bluprint}
-        route={`/collections/${collection.id}`}
+        collectionId={collection.id}
         key={bluprint.id}
       />
     )

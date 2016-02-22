@@ -42,7 +42,7 @@ export default class Tag extends Component {
     let bluprintCards = _.map(items, (bluprint)=>
       <BluprintCard
         bluprint={bluprint}
-        route={`/collections/${bluprint.collectionIds[0]}`}
+        collectionId={bluprint.collectionIds[0]}
         key={bluprint.id}
       />
     )
