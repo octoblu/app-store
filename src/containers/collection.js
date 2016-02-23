@@ -34,6 +34,20 @@ export default class Collection extends Component {
     dispatch(fetchBluprints())
   }
 
+  generateBluprintCards() {
+    let { bluprints, collection } = this.props
+    let { items } = bluprints
+
+    const cards = _.map(items, (bluprint)=>
+      <BluprintCard
+      bluprint={bluprint}
+      collectionId={collection.id}
+      key={bluprint.id}
+      />
+    )
+    return cards
+  }
+
   render() {
     const { collection, bluprints, location } = this.props
     const { tag } = location.query
@@ -43,36 +57,24 @@ export default class Collection extends Component {
       return <div>There are no Bluprints for <em>{collection.label}</em></div>
     }
 
-
+    let showMore = null
     let breadcrumbFragments = [
       { label: 'Home', linkTo: '/' },
       { label: collection.label }
     ]
 
-    let showMore = null
-
     if(tag){
-      breadcrumbFragments = [
-        { label: 'Home', linkTo: '/' },
-        { label: collection.label, linkTo: `/collections/${collection.id}` },
-        { label: _.capitalize(tag) }
-      ]
+      breadcrumbFragments[1].linkTo = `/collections/${collection.id}`
+      breadcrumbFragments[2] = { label: _.capitalize(tag) }
       showMore = <div className="Tags-showAllBtn"><Link to={`/tags/${tag}`} key={tag}>Show All {_.capitalize(tag)} Bluprints</Link></div>
     }
-
-    let bluprintCards = _.map(items, (bluprint, index)=>
-      <BluprintCard
-        bluprint={bluprint}
-        collectionId={collection.id}
-        key={index}
-      />
-    )
 
     return <Page>
       <TopBar>
         <Breadcrumb fragments={breadcrumbFragments} />
       </TopBar>
-      <div className="BluprintCard-container">{bluprintCards}</div>
+
+      <div className="BluprintCard-container">{this.generateBluprintCards()}</div>
       {showMore}
     </Page>
   }
