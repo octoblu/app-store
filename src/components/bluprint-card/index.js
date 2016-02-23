@@ -9,6 +9,12 @@ import './index.css'
 const BluprintCard = ({ bluprint, collectionId }) => {
   const channelImages = _.map(bluprint.tags, (tag, index) => <ChannelImage key={index} name={tag} className="BluprintCard-channelImage" />)
 
+  let importLink = <span>Coming Soon...</span>
+
+  if(bluprint.active){
+    importLink = <a href={bluprint.octobluImportUrl} title="Import App">Automate</a>
+  }
+
   return <div className="BluprintCard">
     <aside className={`BluprintCard-channelImages xBluprintCard-channelImages--${bluprint.tags[0]}`}>{channelImages}</aside>
     <main className="BluprintCard-main">
@@ -26,7 +32,7 @@ const BluprintCard = ({ bluprint, collectionId }) => {
           <MdPerson className="BluprintCard-mdPerson"/>{bluprint.author}
         </span>
 
-        <a href={bluprint.octobluImportUrl} title="Import App">Automate</a>
+        {importLink}
       </footer>
     </main>
   </div>

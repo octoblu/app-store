@@ -36,8 +36,8 @@ let bluprints = [{
   },
   {
     label: "RightSignature Email Reminder",
-    id: "e5be22d0-709f-4083-b833-b5f239c986cc",
-    octobluImportUrl: "https://app.octoblu.com/bluprints/import/e5be22d0-709f-4083-b833-b5f239c986cc",
+    id: "5ddfe657-a7ad-46d3-bad9-48b30739e00d",
+    octobluImportUrl: "https://app.octoblu.com/bluprints/import/5ddfe657-a7ad-46d3-bad9-48b30739e00d",
     tags: ['rightsignature'],
     collectionIds:['workspace', 'workflow'],
     intro: "Automatically email clients who have not signed a doc.",
@@ -84,7 +84,7 @@ let bluprints = [{
   },
   {
     label: "Email List Defined By Podio App",
-    octobluImportUrl: "https://app.octoblu.com/bluprints/import/ced4a912-6a18-40e0-8c9a-fd38a4e30248",
+    octobluImportUrl: "https://app.octoblu.com/bluprints/import/3ef1a2fe-dbe7-4764-92f8-39e7926b96bc",
     id: "3ef1a2fe-dbe7-4764-92f8-39e7926b96bc",
     tags: ['podio'],
     collectionIds:['workspace', 'workflow'],
@@ -96,7 +96,7 @@ let bluprints = [{
   },
   {
     label: "ShareFile Virus Alert via SMS or Email",
-    octobluImportUrl: "https://app.octoblu.com/bluprints/import/0a4bd94b-684c-431e-b86a-27257f6ac7a0",
+    octobluImportUrl: "https://app.octoblu.com/bluprints/import/8fae32f4-80b3-4729-a5ac-796825163d2a",
     id: "8fae32f4-80b3-4729-a5ac-796825163d2a",
     tags: ['sharefile'],
     collectionIds:['monitoring-alerts', 'security'],
