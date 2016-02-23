@@ -35,7 +35,7 @@ export default class Tag extends Component {
 
     const breadcrumbFragments = [
       { label: 'Home', linkTo: '/' },
-      { label: tag }
+      { label: _.capitalize(tag) }
     ]
 
     let bluprintCards = _.map(items, (bluprint)=>
@@ -50,7 +50,6 @@ export default class Tag extends Component {
       <TopBar>
         <Breadcrumb fragments={breadcrumbFragments} />
       </TopBar>
-      <PageTitle>Showing {tag} Bluprints</PageTitle>
       <div className="BluprintCard-container">{bluprintCards}</div>
     </Page>
   }

@@ -22,11 +22,9 @@ export default class Collection extends Component {
 
   componentWillReceiveProps(nextProps) {
     let { tag } = this.props.location.query
-    let newTag = nextProps.location.query.tag
-    if(tag != newTag){
-      let { dispatch, collection } = nextProps
-      dispatch(fetchBluprints())
-      dispatch(fetchBluprintsByCollectionId(collection.id, newTag))
+    let { dispatch, collection, location } = nextProps
+    if(tag != location.query.tag){
+      dispatch(fetchBluprintsByCollectionId(collection.id, location.query.tag))
     }
   }
 
@@ -35,25 +33,25 @@ export default class Collection extends Component {
     dispatch(fetchBluprints())
   }
 
-  generateBluprintCards(bluprints, collection) {
-    const cards = _.map(bluprints, (bluprint)=>
+
+
+  render() {
+    const { collection, bluprints } = this.props
+    const { items } = bluprints
+
+    const { tag } = this.props.location.query
+
+    if (!items.length)  {
+      return <div>There are no Bluprints for <em>{collection.label}</em></div>
+    }
+
+    let bluprintCards = _.map(items, (bluprint)=>
       <BluprintCard
       bluprint={bluprint}
       collectionId={collection.id}
       key={bluprint.id}
       />
     )
-    return cards
-  }
-
-  render() {
-    const { collection, bluprints, location } = this.props
-    const { tag } = location.query
-    const { items } = bluprints
-
-    if (!items.length)  {
-      return <div>There are no Bluprints for <em>{collection.label}</em></div>
-    }
 
     let showMore = null
     let breadcrumbFragments = [
@@ -72,7 +70,7 @@ export default class Collection extends Component {
         <Breadcrumb fragments={breadcrumbFragments} />
       </TopBar>
 
-      <div className="BluprintCard-container">{this.generateBluprintCards(items, collection)}</div>
+      <div className="BluprintCard-container">{bluprintCards}</div>
       {showMore}
     </Page>
   }
