@@ -102,6 +102,7 @@ a:hover {
   color: #FFF;
 }
 
+.CWCLayout .AppBar,
 .CWCLayout .TopBar {
   display: none;
 }
