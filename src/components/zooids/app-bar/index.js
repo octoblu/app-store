@@ -34,7 +34,7 @@ export default class AppBar extends Component {
 
     return <div className="AppBar-container">
       <div className="AppBar">
-        <a className="AppBar-link AppBar-link--logo" href="/design">
+        <a className="AppBar-link AppBar-link--logo" href={`${OCTOBLU_URL}`}>
           <img className="AppBar-logo" src="//d2zw6j512x6z0x.cloudfront.net/master/d48dc0bf063ecc1477d1163831ee8ff17efbbfae/assets/images/octoblu_logo.png"/>
         </a>
 
