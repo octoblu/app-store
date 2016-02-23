@@ -115,6 +115,6 @@
 
 .BluprintCard-channelImage {
   max-width: 100px;
-  /*min-height: 120px;*/
+  max-height: 60px;
   margin: 0 auto;
 }
