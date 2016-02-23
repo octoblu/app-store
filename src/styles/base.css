@@ -101,3 +101,7 @@ a:hover {
 .Collections-link:hover {
   color: #FFF;
 }
+
+.CWCLayout .TopBar {
+  display: none;
+}

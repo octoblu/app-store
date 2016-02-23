@@ -39,8 +39,8 @@ export default class AppBar extends Component {
         </a>
 
         <nav className="AppBar-nav AppBar-nav--primary">
-          <a className="AppBar-link AppBar-link--is-selected" href={`${OCTOBLU_URL}/design`}>Design</a>
           <a className="AppBar-link" href={`${OCTOBLU_URL}/things`}>Things</a>
+          <a className="AppBar-link AppBar-link--is-selected" href={`${OCTOBLU_URL}/design`}>Design</a>
           <a className="AppBar-link" href={`${OCTOBLU_URL}/bluprints`}>Bluprints</a>
         </nav>
 
