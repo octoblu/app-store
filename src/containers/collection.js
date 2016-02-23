@@ -22,10 +22,11 @@ export default class Collection extends Component {
 
   componentWillReceiveProps(nextProps) {
     let { tag } = this.props.location.query
-    if(tag != nextProps.location.query.tag){
+    let newTag = nextProps.location.query.tag
+    if(tag != newTag){
       let { dispatch, collection } = nextProps
       dispatch(fetchBluprints())
-      dispatch(fetchBluprintsByCollectionId(collection.id, nextProps.location.query.tag))
+      dispatch(fetchBluprintsByCollectionId(collection.id, newTag))
     }
   }
 
@@ -34,11 +35,8 @@ export default class Collection extends Component {
     dispatch(fetchBluprints())
   }
 
-  generateBluprintCards() {
-    let { bluprints, collection } = this.props
-    let { items } = bluprints
-
-    const cards = _.map(items, (bluprint)=>
+  generateBluprintCards(bluprints, collection) {
+    const cards = _.map(bluprints, (bluprint)=>
       <BluprintCard
       bluprint={bluprint}
       collectionId={collection.id}
@@ -74,7 +72,7 @@ export default class Collection extends Component {
         <Breadcrumb fragments={breadcrumbFragments} />
       </TopBar>
 
-      <div className="BluprintCard-container">{this.generateBluprintCards()}</div>
+      <div className="BluprintCard-container">{this.generateBluprintCards(items, collection)}</div>
       {showMore}
     </Page>
   }
