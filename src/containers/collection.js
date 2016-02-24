@@ -25,7 +25,7 @@ export default class Collection extends Component {
   }
 
   render() {
-    const { collection, bluprints, context } = this.props
+    const { collection, bluprints } = this.props
     const { items } = bluprints
 
     if (!items.length)  {
@@ -46,7 +46,7 @@ export default class Collection extends Component {
     )
 
     return <Page>
-      <TopBar context={context}>
+      <TopBar>
         <Breadcrumb fragments={breadcrumbFragments} />
       </TopBar>
       <div className="BluprintCard-container">{bluprintCards}</div>
@@ -54,11 +54,11 @@ export default class Collection extends Component {
   }
 }
 
-function mapStateToProps({router, collections, bluprints, context}) {
+function mapStateToProps({router, collections, bluprints}) {
   const {collectionId} = router.params
   const collection = _.find(collections.items, {id: collectionId})
 
-  return {collection, bluprints, context}
+  return {collection, bluprints}
 }
 
 export default connect(mapStateToProps)(Collection)

@@ -12,5 +12,4 @@ export default class TopBar extends Component {
 
 TopBar.propTypes = {
   children: PropTypes.node.isRequired,
-  context: React.PropTypes.string
 }

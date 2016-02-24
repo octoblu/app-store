@@ -20,7 +20,7 @@ export default class Bluprint extends Component {
   }
 
   render() {
-    const { bluprint, collection, context } = this.props
+    const { bluprint, collection } = this.props
 
     if (!bluprint) return <div>No Bluprint Found!</div>
     if (!collection) return <div>No Collection Found!</div>
@@ -32,7 +32,7 @@ export default class Bluprint extends Component {
     ]
 
     return <Page>
-      <TopBar context={context}>
+      <TopBar>
         <Breadcrumb fragments={fragments} />
       </TopBar>
 
@@ -41,12 +41,12 @@ export default class Bluprint extends Component {
   }
 }
 
-function mapStateToProps({ router, bluprints, collections, context }) {
+function mapStateToProps({ router, bluprints, collections }) {
   const { bluprintId, collectionId } = router.params
   const bluprint = _.find(bluprints.items, {id: bluprintId})
   const collection = _.find(collections.items, {id: collectionId})
 
-  return { bluprint, bluprintId, collection, context }
+  return { bluprint, bluprintId, collection }
 }
 
 export default connect(mapStateToProps)(Bluprint)

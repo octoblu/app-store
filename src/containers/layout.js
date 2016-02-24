@@ -10,10 +10,14 @@ import { OCTOBLU_URL } from '../constants'
 
 export default class Layout extends Component {
   render() {
-    let { context } = this.props
+    const { context } = this.props
+
+    let appBar = <AppBar octobluUrl={ OCTOBLU_URL }/>
+    if (context !== 'octoblu') appBar = null
+
     return <div>
-      <AppBar octobluUrl={OCTOBLU_URL} context={context}/>
-      {this.props.children}
+      { appBar }
+      { this.props.children }
     </div>
   }
 }

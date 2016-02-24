@@ -33,7 +33,7 @@ export default class Collections extends Component {
 
     let topBar = null
     if (context === 'octoblu') {
-      topBar = <TopBar context={context}>
+      topBar = <TopBar>
         <TopBarNav>
           <a className="TopBarNav-link" href={`${OCTOBLU_URL}/bluprints`}>My Bluprints</a>
           <a className="TopBarNav-link" href={`${OCTOBLU_URL}/discover`}>Discover Bluprints</a>
