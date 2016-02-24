@@ -12,6 +12,7 @@ export default class Layout extends Component {
   render() {
     const { context } = this.props
 
+
     let appBar = <AppBar octobluUrl={ OCTOBLU_URL }/>
     if (context !== 'octoblu') appBar = null
 
