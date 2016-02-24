@@ -33,24 +33,38 @@ export default class Collections extends Component {
     )
 
     let topBar = null
+    let visitOctobluButton = (
+      <Button
+        href={OCTOBLU_URL}
+        className="Hero-floatingButton"
+        kind="hollow-neutral"
+        size="small"
+      >
+        Visit Octoblu
+      </Button>
+    )
+    
     if (context === 'octoblu') {
-      topBar = <TopBar>
-        <TopBarNav>
-          <a className="TopBarNav-link" href={`${OCTOBLU_URL}/bluprints`}>My Bluprints</a>
-          <a className="TopBarNav-link" href={`${OCTOBLU_URL}/discover`}>Discover Bluprints</a>
-          <a className="TopBarNav-link TopBarNav-link--active" href="//store.octoblu.com">Citrix App Store</a>
-        </TopBarNav>
-      </TopBar>
+      topBar = (
+        <TopBar>
+          <TopBarNav>
+            <a className="TopBarNav-link" href={`${OCTOBLU_URL}/bluprints`}>My Bluprints</a>
+            <a className="TopBarNav-link" href={`${OCTOBLU_URL}/discover`}>Discover Bluprints</a>
+            <a className="TopBarNav-link TopBarNav-link--active" href="//store.octoblu.com">Citrix App Store</a>
+          </TopBarNav>
+        </TopBar>
+      )
+
+      visitOctobluButton = null
     }
 
     return <Page className="Collections">
       {topBar}
 
-
       <Hero>
         <HeroTitle>Automation App Store</HeroTitle>
         <HeroSubTitle>Explore. Automate. Empower.</HeroSubTitle>
-        <Button href={OCTOBLU_URL} className="Hero-floatingButton" kind="hollow-neutral" size="small">Visit Octoblu</Button>
+        {visitOctobluButton}
       </Hero>
 
       <div className="CollectionCard-container">{collectionCards}</div>
