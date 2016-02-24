@@ -36,8 +36,8 @@ let bluprints = [{
   },
   {
     label: "RightSignature Email Reminder",
-    id: "5ddfe657-a7ad-46d3-bad9-48b30739e00d",
-    octobluImportUrl: "https://app.octoblu.com/bluprints/import/5ddfe657-a7ad-46d3-bad9-48b30739e00d",
+    id: "cab2cb53-e2d8-4f54-8ef9-6ec2bace41f5",
+    octobluImportUrl: "https://app.octoblu.com/bluprints/import/cab2cb53-e2d8-4f54-8ef9-6ec2bace41f5",
     tags: ['rightsignature'],
     collectionIds:['workspace', 'workflow'],
     intro: "Automatically email clients who have not signed a doc.",
