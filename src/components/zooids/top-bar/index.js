@@ -4,7 +4,7 @@ import './index.css'
 export default class TopBar extends Component {
   render() {
     const {children, context} = this.props
-    if (context === 'cwc') return null
+    // if (context !== 'octoblu') return null
 
     return <header className="TopBar">
     {children}

@@ -24,7 +24,7 @@ export default class AppBar extends Component {
   render() {
     const { context, OCTOBLU_URL } = this.props
 
-    if (context === 'cwc') return null
+    if (context !== 'octoblu') return null
 
     let settings = null
     if (this.state.showSettings ) {

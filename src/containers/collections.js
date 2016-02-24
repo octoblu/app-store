@@ -31,15 +31,19 @@ export default class Collections extends Component {
         key={collection.id}/>
     )
 
-    return <Page className="Collections">
-      <TopBar context={context}>
+    let topBar = null
+    if (context === 'octoblu') {
+      topBar = <TopBar context={context}>
         <TopBarNav>
           <a className="TopBarNav-link" href={`${OCTOBLU_URL}/bluprints`}>My Bluprints</a>
           <a className="TopBarNav-link" href={`${OCTOBLU_URL}/discover`}>Discover Bluprints</a>
           <a className="TopBarNav-link TopBarNav-link--active" href="//store.octoblu.com">Citrix App Store</a>
         </TopBarNav>
       </TopBar>
+    }
 
+    return <Page className="Collections">
+      {topBar}
       <Hero>
         <HeroTitle>Automation App Store</HeroTitle>
         <HeroSubTitle>Explore. Automate. Empower.</HeroSubTitle>
