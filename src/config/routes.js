@@ -8,6 +8,7 @@ import Collection from '../containers/collection'
 import Collections from '../containers/collections'
 import Layout from '../containers/layout'
 import CWCLayout from '../containers/cwc-layout'
+import ContextHandler from '../containers/context-handler'
 
 const Routes = (
   <Router history={createHistory()}>
@@ -21,6 +22,9 @@ const Routes = (
       <IndexRoute component={Collections} />
       <Route path="/collections/:collectionId" component={Collection} />
       <Route path="/collections/:collectionId/bluprints/:bluprintId" component={Bluprint} />
+    </Route>
+
+    <Route path="/context/:context" component={ContextHandler}>
     </Route>
   </Router>
 )

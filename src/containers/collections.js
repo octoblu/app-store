@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 
 import BluprintsBar from '../components/octoblu-bluprints-bar'
 import CollectionCard from '../components/collection-card'
+import TopBar from '../components/zooids/top-bar'
+import TopBarNav from '../components/zooids/top-bar-nav'
 import { Page } from '../components/page'
 import { Hero, HeroTitle, HeroSubTitle } from '../components/hero'
 
@@ -20,7 +22,9 @@ export default class Collections extends Component {
   }
 
   render() {
-    let { items } = this.props.collections
+    let { collections, context } = this.props
+    let { items } = collections
+
     let collectionCards = _.map(items, (collection) =>
       <CollectionCard
         collection={collection}
@@ -28,7 +32,14 @@ export default class Collections extends Component {
     )
 
     return <Page className="Collections">
-      <BluprintsBar octobluUrl={OCTOBLU_URL} />
+      <TopBar context={context}>
+        <TopBarNav>
+          <a className="TopBarNav-link" href={`${OCTOBLU_URL}/bluprints`}>My Bluprints</a>
+          <a className="TopBarNav-link" href={`${OCTOBLU_URL}/discover`}>Discover Bluprints</a>
+          <a className="TopBarNav-link TopBarNav-link--active" href="//store.octoblu.com">Citrix App Store</a>
+        </TopBarNav>
+      </TopBar>
+
       <Hero>
         <HeroTitle>Automation App Store</HeroTitle>
         <HeroSubTitle>Explore. Automate. Empower.</HeroSubTitle>
@@ -39,8 +50,8 @@ export default class Collections extends Component {
   }
 }
 
-function mapStateToProps({collections}) {
-  return {collections}
+function mapStateToProps({collections, context}) {
+  return {collections, context}
 }
 
 export default connect(mapStateToProps)(Collections)

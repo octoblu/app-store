@@ -1,14 +1,18 @@
-import React, { PropTypes } from 'react'
+import React, { Component, PropTypes } from 'react'
 import './index.css'
 
-const TopBar = ({children}) => {
-  return <header className="TopBar">
+export default class TopBar extends Component {
+  render() {
+    const {children, context} = this.props
+    if (context === 'cwc') return null
+
+    return <header className="TopBar">
     {children}
-  </header>
+    </header>
+  }
 }
 
 TopBar.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  context: React.PropTypes.string
 }
-
-export default TopBar

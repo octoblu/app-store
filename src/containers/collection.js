@@ -15,7 +15,7 @@ export default class Collection extends Component {
   }
 
   componentDidMount() {
-    let { dispatch, collection } = this.props
+    let { collection, dispatch } = this.props
     dispatch(fetchBluprintsByCollectionId(collection.id))
   }
 
@@ -25,7 +25,7 @@ export default class Collection extends Component {
   }
 
   render() {
-    const { collection, bluprints } = this.props
+    const { collection, bluprints, context } = this.props
     const { items } = bluprints
 
     if (!items.length)  {
@@ -46,7 +46,7 @@ export default class Collection extends Component {
     )
 
     return <Page>
-      <TopBar>
+      <TopBar context={context}>
         <Breadcrumb fragments={breadcrumbFragments} />
       </TopBar>
       <div className="BluprintCard-container">{bluprintCards}</div>
@@ -54,11 +54,11 @@ export default class Collection extends Component {
   }
 }
 
-function mapStateToProps({router, collections, bluprints}) {
+function mapStateToProps({router, collections, bluprints, context}) {
   const {collectionId} = router.params
   const collection = _.find(collections.items, {id: collectionId})
 
-  return {collection, bluprints}
+  return {collection, bluprints, context}
 }
 
 export default connect(mapStateToProps)(Collection)

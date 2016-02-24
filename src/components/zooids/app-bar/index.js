@@ -9,6 +9,7 @@ export default class AppBar extends Component {
   }
 
   static propTypes = {
+    context: React.PropTypes.string,
     octobluUrl: React.PropTypes.string.isRequired
   }
 
@@ -21,7 +22,9 @@ export default class AppBar extends Component {
   }
 
   render() {
-    const OCTOBLU_URL = this.props.octobluUrl
+    const { context, OCTOBLU_URL } = this.props
+
+    if (context === 'cwc') return null
 
     let settings = null
     if (this.state.showSettings ) {
