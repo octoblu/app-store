@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
+import Button from '../components/button'
 import BluprintsBar from '../components/octoblu-bluprints-bar'
 import CollectionCard from '../components/collection-card'
 import TopBar from '../components/zooids/top-bar'
@@ -44,9 +45,12 @@ export default class Collections extends Component {
 
     return <Page className="Collections">
       {topBar}
+
+
       <Hero>
         <HeroTitle>Automation App Store</HeroTitle>
         <HeroSubTitle>Explore. Automate. Empower.</HeroSubTitle>
+        <Button href={OCTOBLU_URL} className="Hero-floatingButton" kind="hollow-neutral" size="small">Visit Octoblu</Button>
       </Hero>
 
       <div className="CollectionCard-container">{collectionCards}</div>

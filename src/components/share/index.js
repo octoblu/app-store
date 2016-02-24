@@ -14,7 +14,7 @@ const Share = ({ className, label }) => {
     <div className="Share-buttons">
       <TwitterShareButton message={`Check out ${label} on @octoblu`} />
       <FacebookShareButton message={`Check out ${label} on @octoblu`} />
-      <EmailShareButton subject={`Check out ${label} on Octoblu ${window.location.href}`} />
+      <EmailShareButton subject={label} body={`Check out ${label} on Octoblu ${window.location.href}`} />
     </div>
   </div>
 }
