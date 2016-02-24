@@ -17,7 +17,8 @@ const TwitterButton = ({ className, text }) => {
   return <Button
     href={`${TWITTER_SHARE_URL}${encodeURIComponent(text)}`}
     title="Share App on Twitter"
-    className={componentClass}>
+    className={componentClass}
+    target="blank">
     <ChannelImage name="twitter" className="Share-buttonImage" />
     Twitter
   </Button>

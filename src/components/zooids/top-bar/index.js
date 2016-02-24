@@ -3,11 +3,9 @@ import './index.css'
 
 export default class TopBar extends Component {
   render() {
-    const {children, context} = this.props
-    // if (context !== 'octoblu') return null
-
+    const { children } = this.props
     return <header className="TopBar">
-    {children}
+      {children}
     </header>
   }
 }

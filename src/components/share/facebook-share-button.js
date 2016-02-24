@@ -17,7 +17,8 @@ const FacebookButton = ({ className, url }) => {
   return <Button
     href={`${FACEBOOK_SHARE_URL}${url}`}
     title="Share App on Facebook"
-    className={componentClass}>
+    className={componentClass}
+    target="blank">
     <ChannelImage name="facebook" className="Share-buttonImage" />
     Facebook
   </Button>
