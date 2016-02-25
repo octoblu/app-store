@@ -11,7 +11,7 @@ module.exports = {
   ],
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'bundle.'+ pkg.version +'.js',
+    filename: 'bundle.js',
   },
   plugins: [
     new webpack.NoErrorsPlugin(),
