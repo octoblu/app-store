@@ -1,6 +1,8 @@
-var path          = require('path');
-var webpack       = require('webpack');
-var autoprefixer  = require('autoprefixer');
+var path              = require('path');
+var webpack           = require('webpack');
+var autoprefixer      = require('autoprefixer');
+var htmlWebpackPlugin = require('html-webpack-plugin');
+var pkg               = require('./package.json');
 
 module.exports = {
   devtool: 'source-map',
@@ -9,7 +11,7 @@ module.exports = {
   ],
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: 'bundle.'+ pkg.version +'.js',
   },
   plugins: [
     new webpack.NoErrorsPlugin(),
@@ -18,6 +20,13 @@ module.exports = {
       'process.env': {
         'NODE_ENV': JSON.stringify('production')
       }
+    }),
+    new htmlWebpackPlugin({
+      filename: 'index.html',
+      inject: false,
+      template: path.join(__dirname, '_index.ejs'),
+      title: 'Octoblu - Automation App Store',
+      pkg: pkg
     })
   ],
   module: {
