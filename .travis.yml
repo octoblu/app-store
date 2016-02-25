@@ -19,7 +19,7 @@ after_success:
 - npm install --global webpack
 - NODE_ENV=production webpack --config webpack.config.prod.js
 - mkdir build
-- cp -r dist/ build/
+- cp -r dist/* build/
 - for file in `find build -type f`; do gzip --best $file && mv $file.gz $file; done
 deploy:
   provider: s3
