@@ -10,7 +10,7 @@ const ChannelImages = ({ bluprint, collectionId, className }) => {
   const classes = classNames('ChannelImages', className)
   const channelImages = _.map(bluprint.tags, (tag, index) =>
     <Link to={`/collections/${collectionId}?tag=${tag}`} key={index}>
-      <ChannelImage key={index} name={tag} className="ChannelImages-image" />
+      <ChannelImage name={tag} className="ChannelImages-image" />
     </Link>
   )
 
