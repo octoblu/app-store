@@ -21,14 +21,18 @@ export default class Collection extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    let { tag } = this.props.location.query
-    let { dispatch, collection, location } = nextProps
-    if(tag != location.query.tag){
-      dispatch(fetchBluprintsByCollectionId(collection.id, location.query.tag))
+    const { tag }                  = this.props.location.query
+    const { dispatch, collection } = nextProps
+    const nextTag                  = nextProps.location.query.tag
+
+    if (tag != nextTag) {
+      console.log('fetch next tag...');
+      dispatch(fetchBluprintsByCollectionId(collection.id, nextTag))
     }
   }
 
   componentWillUnmount() {
+    console.log('Unmounting...');
     let { dispatch } = this.props
     dispatch(fetchBluprints())
   }
@@ -84,7 +88,7 @@ export default class Collection extends Component {
       </TopBar>
 
       <div className="BluprintCard-container">{bluprintCards}</div>
-      
+
       {this.renderShowMore()}
     </Page>
   }
