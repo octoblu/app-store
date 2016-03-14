@@ -1,8 +1,7 @@
+import classNames from 'classnames'
 import React, { PropTypes } from 'react'
 
 import './index.css'
-
-import classNames from 'classnames'
 
 const ChannelImage = ({name, className}) => {
   const componentClass = classNames('ChannelImage', className)
