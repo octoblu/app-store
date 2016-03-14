@@ -24,16 +24,20 @@ const BluprintCard = ({ bluprint, collectionId }) => {
       <div className="BluprintCard-body">
         <h4 className="BluprintCard-label">{bluprint.label}</h4>
         <p className="BluprintCard-description">{bluprint.intro}</p>
+
         <Link
           to={`/collections/${collectionId}/bluprints/${bluprint.id}`}
-          key={bluprint.id}>
+          key={bluprint.id}
+        >
           Learn More
         </Link>
+
       </div>
 
       <footer className="BluprintCard-footer">
         <span>
-          <MdPerson className="BluprintCard-mdPerson"/>{bluprint.author}
+          <MdPerson className="BluprintCard-mdPerson" />
+          {bluprint.author}
         </span>
         {importLink}
       </footer>
