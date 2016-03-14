@@ -33,51 +33,65 @@ export default class Collection extends Component {
     dispatch(fetchBluprints())
   }
 
+  breadcrumbFragments() {
+    const { collection } = this.props
+    const { tag }        = this.props.location.query
 
-
-  render() {
-    const { collection, bluprints } = this.props
-    const { items } = bluprints
-
-    const { tag } = this.props.location.query
-
-    if (!items.length)  {
-      return <div>There are no Bluprints for <em>{collection.label}</em></div>
-    }
-
-    let bluprintCards = _.map(items, (bluprint)=>
-      <BluprintCard
-      bluprint={bluprint}
-      collectionId={collection.id}
-      key={bluprint.id}
-      />
-    )
-
-    let showMore = null
     let breadcrumbFragments = [
       { label: 'Home', linkTo: '/' },
       { label: collection.label }
     ]
 
-    if(tag){
+    if (tag) {
       breadcrumbFragments[1].linkTo = `/collections/${collection.id}`
       breadcrumbFragments[2] = { label: _.capitalize(tag) }
-      showMore = <div className="Tags-showAllBtn"><Link to={`/tags/${tag}`} key={tag}>Show All {_.capitalize(tag)} Bluprints</Link></div>
     }
+
+    return breadcrumbFragments
+  }
+
+  renderShowMore() {
+    const { tag } = this.props.location.query
+
+    if (!tag) return null
+
+    return <div className="Tags-showAllBtn">
+      <Link to={`/tags/${tag}`} key={tag}>
+        Show All {_.capitalize(tag)} Bluprints
+      </Link>
+    </div>
+  }
+
+  render() {
+    const { collection, bluprints } = this.props
+    const { items } = bluprints
+
+    if (!items.length)  {
+      return <div>There are no Bluprints for <em>{collection.label}</em></div>
+    }
+
+    const bluprintCards = _.map(items, (bluprint) =>
+      <BluprintCard
+        bluprint={bluprint}
+        collectionId={collection.id}
+        key={bluprint.id}
+      />
+    )
 
     return <Page>
       <TopBar>
-        <Breadcrumb fragments={breadcrumbFragments} />
+        <Breadcrumb fragments={this.breadcrumbFragments()} />
       </TopBar>
 
       <div className="BluprintCard-container">{bluprintCards}</div>
-      {showMore}
+      
+      {this.renderShowMore()}
     </Page>
   }
 }
 
 function mapStateToProps({router, collections, bluprints}) {
-  const {collectionId} = router.params
+  const { collectionId } = router.params
   const collection = _.find(collections.items, {id: collectionId})
 
   return {collection, bluprints}
