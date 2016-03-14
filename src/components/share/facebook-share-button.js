@@ -1,30 +1,33 @@
 import React, { PropTypes } from 'react'
 import classNames from 'classnames'
+import { FacebookButton } from 'react-social'
 
 import './index.css'
-import Button from '../button'
 import ChannelImage from '../channel-image'
 
-const FacebookButton = ({ className, url }) => {
+const FacebookShareButton = ({ className, message }) => {
   const componentClass = classNames(
+    'Button',
+    'Button--primary',
+    'Button--regular',
     'Share-button',
     'Share-button--facebook',
     className
   )
 
-  const FACEBOOK_SHARE_URL = 'https://www.facebook.com/sharer/sharer.php?u='
-
-  return <Button
-    href={`${FACEBOOK_SHARE_URL}${url}`}
-    title="Share App on Facebook"
-    className={componentClass}>
-    <ChannelImage name="facebook" className="Share-buttonImage" />
-    Facebook
-  </Button>
+  return (
+    <FacebookButton
+      message={message}
+      className={componentClass}
+    >
+      <ChannelImage name="facebook" className="Share-buttonImage" />
+      Facebook
+    </FacebookButton>
+  )
 }
 
-FacebookButton.PropTypes = {
+FacebookShareButton.PropTypes = {
   className: PropTypes.string,
-  url: PropTypes.string.isRequired,
+  message: PropTypes.string.isRequired,
 }
-export default FacebookButton
+export default FacebookShareButton

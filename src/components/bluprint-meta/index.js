@@ -8,11 +8,8 @@ import ShareButtons from '../share'
 import './index.css'
 
 const BluprintMeta = ({ bluprint }) => {
-  let {author, id, installs} = bluprint
-  const octobluUrl = `https://app.octoblu.com/bluprints/import/${id}`
-
   return <div className="BluprintMeta">
-    <ShareButtons importUrl={octobluUrl}/>
+    <ShareButtons label={bluprint.label}/>
   </div>
 }
 

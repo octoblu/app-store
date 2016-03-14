@@ -17,7 +17,6 @@ export default class Bluprint extends Component {
   componentDidMount() {
     const { dispatch } = this.props
     dispatch(fetchBluprints())
-
   }
 
   render() {
