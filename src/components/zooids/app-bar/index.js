@@ -1,5 +1,5 @@
-import React, { Component, PropTypes } from 'react'
-import { FaCog } from 'react-icons/lib/fa'
+import React, {Component, PropTypes} from 'react'
+import {FaCog} from 'react-icons/lib/fa'
 
 import './index.css'
 
@@ -9,7 +9,7 @@ export default class AppBar extends Component {
   }
 
   static propTypes = {
-    octobluUrl: React.PropTypes.string.isRequired
+    octobluUrl: PropTypes.string.isRequired
   }
 
   constructor(props) {
