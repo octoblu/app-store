@@ -15,7 +15,7 @@ export default class Bluprint extends Component {
   }
 
   componentDidMount() {
-    const { dispatch } = this.props
+    const {dispatch} = this.props
     dispatch(fetchBluprints())
   }
 
@@ -41,12 +41,13 @@ export default class Bluprint extends Component {
   }
 }
 
-function mapStateToProps({ router, bluprints, collections }) {
-  const { bluprintId, collectionId } = router.params
-  const bluprint = _.find(bluprints.items, {id: bluprintId})
+function mapStateToProps({bluprints, collections}, props) {
+  const {bluprintId, collectionId} = props.params
+
+  const bluprint   = _.find(bluprints.items, {id: bluprintId})
   const collection = _.find(collections.items, {id: collectionId})
 
-  return { bluprint, bluprintId, collection }
+  return {bluprint, bluprintId, collection}
 }
 
 export default connect(mapStateToProps)(Bluprint)

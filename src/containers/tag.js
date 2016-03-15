@@ -55,8 +55,8 @@ export default class Tag extends Component {
   }
 }
 
-function mapStateToProps({router, bluprints}) {
-  const {tag} = router.params
+function mapStateToProps({bluprints}, props) {
+  const {tag} = props.params
 
   return {tag, bluprints}
 }

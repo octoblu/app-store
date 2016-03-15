@@ -43,7 +43,7 @@ export default class Collections extends Component {
         Visit Octoblu
       </Button>
     )
-    
+
     if (context === 'octoblu') {
       topBar = (
         <TopBar>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
 import { connect } from 'react-redux'
-import { replaceState } from 'redux-router'
+import { replace } from 'react-router-redux'
 
 import '../styles/handglide/fonts.css'
 import '../styles/base.css'
@@ -15,7 +15,7 @@ export default class ContextHandler extends Component {
     let { dispatch, params } = this.props
     let { context } = params
     dispatch(setContext(context))
-    dispatch(replaceState(null, '/'))
+    dispatch(replace('/'))
   }
 
   render() {
@@ -25,7 +25,7 @@ export default class ContextHandler extends Component {
 
 
 function mapStateToProps({context}) {
-  return { context, replaceState}
+  return {context, replaceState}
 }
 
 export default connect(mapStateToProps)(ContextHandler)

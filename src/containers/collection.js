@@ -15,8 +15,8 @@ export default class Collection extends Component {
   }
 
   componentDidMount() {
-    let { dispatch, collection, location } = this.props
-    let { tag } = location.query
+    const { dispatch, collection, location } = this.props
+    const { tag } = location.query
     dispatch(fetchBluprintsByCollectionId(collection.id, tag))
   }
 
@@ -25,15 +25,13 @@ export default class Collection extends Component {
     const { dispatch, collection } = nextProps
     const nextTag                  = nextProps.location.query.tag
 
-    if (tag != nextTag) {
-      console.log('fetch next tag...');
-      dispatch(fetchBluprintsByCollectionId(collection.id, nextTag))
-    }
+    if (tag == nextTag) return
+
+    dispatch(fetchBluprintsByCollectionId(collection.id, nextTag))
   }
 
   componentWillUnmount() {
-    console.log('Unmounting...');
-    let { dispatch } = this.props
+    const { dispatch } = this.props
     dispatch(fetchBluprints())
   }
 
@@ -94,9 +92,9 @@ export default class Collection extends Component {
   }
 }
 
-function mapStateToProps({router, collections, bluprints}) {
-  const { collectionId } = router.params
-  const collection = _.find(collections.items, {id: collectionId})
+function mapStateToProps({collections, bluprints}, props) {
+  const {collectionId} = props.params
+  const collection     = _.find(collections.items, {id: collectionId})
 
   return {collection, bluprints}
 }

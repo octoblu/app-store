@@ -1,33 +1,25 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { applyMiddleware, createStore, compose } from 'redux'
 import { Provider } from 'react-redux'
+import { browserHistory } from 'react-router'
+import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
+import { applyMiddleware, createStore, compose } from 'redux'
 import thunkMiddleware from 'redux-thunk'
 import createLogger from 'redux-logger'
-import { createHistory } from 'history'
-import { reduxReactRouter, ReduxRouter } from 'redux-router';
 
 import reducers from './reducers/'
-import routes from './config/routes'
+import AppRoutes from './config/routes'
 
-const createStoreWithMiddleware = applyMiddleware(
-  thunkMiddleware,
-  createLogger(),
-)
+const createStoreWithMiddleware = applyMiddleware(thunkMiddleware, createLogger())
 
-const reduxRouterMiddleware = reduxReactRouter({
-  routes,
-  createHistory
-})
+const store = createStore(reducers, createStoreWithMiddleware)
 
-const store = compose(
-  createStoreWithMiddleware,
-  reduxRouterMiddleware
-)(createStore)(reducers)
+// Create an enhanced history that syncs navigation events with the store
+const history = syncHistoryWithStore(browserHistory, store)
 
 render(
   <Provider store={store}>
-    <ReduxRouter />
+    <AppRoutes history={history} />
   </Provider>,
   document.getElementById('app')
 )
