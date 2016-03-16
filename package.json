@@ -1,6 +1,6 @@
 {
   "name": "app-store",
-  "version": "2.2.10",
+  "version": "2.2.11",
   "description": "[![Build Status](https://travis-ci.org/octoblu/.svg?branch=master)](https://travis-ci.org/octoblu/) [![Code Climate](https://codeclimate.com/github/octoblu//badges/gpa.svg)](https://codeclimate.com/github/octoblu/) [![Test Coverage](https://codeclimate.com/github/octoblu//badges/coverage.svg)](https://codeclimate.com/github/octoblu/) [![npm version](https://badge.fury.io/js/.svg)](http://badge.fury.io/js/) [![Gitter](https://badges.gitter.im/octoblu/help.svg)](https://gitter.im/octoblu/help)",
   "main": "webpack.config.dev.js",
   "directories": {
@@ -51,8 +51,7 @@
     "build:webpack": "NODE_ENV=production webpack --config webpack.config.prod.js",
     "build": "npm run clean && npm run build:webpack",
     "start": "env PORT=6040 node devServer.js",
-    "lint": "eslint src",
-    "test": "istanbul cover _mocha -- -R spec --require coffee-coverage/register-istanbul"
+    "lint": "eslint src"
   },
   "repository": {
     "type": "git",
