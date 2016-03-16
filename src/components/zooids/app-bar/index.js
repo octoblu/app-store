@@ -1,5 +1,5 @@
 import React, {Component, PropTypes} from 'react'
-import {FaCog} from 'react-icons/lib/fa'
+import FaCog from 'react-icons/lib/fa/cog'
 
 import './index.css'
 

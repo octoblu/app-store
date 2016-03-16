@@ -1,6 +1,6 @@
-import React, { PropTypes } from 'react'
-import { Link } from 'react-router'
-import { MdPerson } from 'react-icons/lib/md'
+import React, {PropTypes} from 'react'
+import {Link} from 'react-router'
+import MdPerson from 'react-icons/lib/md/person'
 
 import './index.css'
 
