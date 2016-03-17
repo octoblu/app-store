@@ -110,8 +110,8 @@ let bluprints = [{
   },
   {
     label: "ShareFile Virus Alert via SMS or Email",
-    octobluImportUrl: "https://app.octoblu.com/bluprints/import/8fae32f4-80b3-4729-a5ac-796825163d2a",
-    id: "8fae32f4-80b3-4729-a5ac-796825163d2a",
+    octobluImportUrl: "https://app.octoblu.com/bluprints/import/753e3063-338c-4fcb-a763-f96f8653b4e0",
+    id: "753e3063-338c-4fcb-a763-f96f8653b4e0",
     tags: ['sharefile'],
     collectionIds:['monitoring-alerts', 'security'],
     intro: "File virus detection with SMS and Email alerts.",
