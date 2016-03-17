@@ -35,6 +35,18 @@ let bluprints = [{
     installs: "333"
   },
   {
+    label: "WorxForms to Podio task",
+    id: "bbbdc3bf-a692-4c35-bfc5-925501f7beea",
+    tags: ['Podio'],
+    octobluImportUrl: "https://app.octoblu.com/bluprints/import/bbbdc3bf-a692-4c35-bfc5-925501f7beea",
+    collectionIds:['monitoring-alerts'],
+    intro: "Recieve data from WorxForms and post it to Podio",
+    description: "Post WorxForms data to Podio and send texts if something is urgent.",
+    author: "Ingmar Verheij",
+    active: true,
+    installs: "333"
+  },
+  {
     label: "RightSignature Email Reminder",
     id: "cab2cb53-e2d8-4f54-8ef9-6ec2bace41f5",
     octobluImportUrl: "https://app.octoblu.com/bluprints/import/cab2cb53-e2d8-4f54-8ef9-6ec2bace41f5",
