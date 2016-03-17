@@ -7,12 +7,6 @@ import './index.css'
 import ChannelImages from '../channel-images'
 
 const BluprintCard = ({ bluprint, collectionId }) => {
-  let importLink = <span>Coming Soon...</span>
-
-  if(bluprint.active){
-    importLink = <a href={bluprint.octobluImportUrl} title="Import App">Automate</a>
-  }
-
   return <div className="BluprintCard">
     <ChannelImages
       bluprint={bluprint}
@@ -39,7 +33,7 @@ const BluprintCard = ({ bluprint, collectionId }) => {
           <MdPerson className="BluprintCard-mdPerson" />
           {bluprint.author}
         </span>
-        {importLink}
+        <a href={bluprint.octobluImportUrl} title="Import App">Automate</a>
       </footer>
 
     </main>

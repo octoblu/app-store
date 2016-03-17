@@ -7,7 +7,6 @@ let bluprints = [{
     intro: "Dropbox PDF's to Sharefile",
     description: "Automate folder and file transfers from DropBox to ShareFile.",
     author: "Octoblu",
-    active: true,
     installs: "333"
   },
   {
@@ -19,7 +18,6 @@ let bluprints = [{
     intro: "Google Drive Files for Sharefile",
     description: "Automate folder and file transfers from Google Drive to ShareFile.",
     author: "Octoblu",
-    active: true,
     installs: "333"
   },
   {
@@ -31,19 +29,28 @@ let bluprints = [{
     intro: "Transfer files from Box to Sharefile. For Paid Box users only.",
     description: "Automate folder and file transfers from Box to ShareFile.",
     author: "Octoblu",
-    active: true,
     installs: "333"
   },
   {
     label: "WorxForms to Podio task",
     id: "bbbdc3bf-a692-4c35-bfc5-925501f7beea",
-    tags: ['Podio'],
+    tags: ['podio'],
     octobluImportUrl: "https://app.octoblu.com/bluprints/import/bbbdc3bf-a692-4c35-bfc5-925501f7beea",
     collectionIds:['monitoring-alerts'],
     intro: "Recieve data from WorxForms and post it to Podio",
     description: "Post WorxForms data to Podio and send texts if something is urgent.",
     author: "Ingmar Verheij",
-    active: true,
+    installs: "333"
+  },
+  {
+    label: "Daily SSL Labs Grade Report via E-mail",
+    id: "2be55069-2e89-4dba-ae0b-96638bb50ce4",
+    tags: ['xenapp'],
+    octobluImportUrl: "https://app.octoblu.com/bluprints/import/2be55069-2e89-4dba-ae0b-96638bb50ce4",
+    collectionIds:['monitoring-alerts', 'security'],
+    intro: "Monitor your site's SSL security and get email alerts",
+    description: "Runs once a day to check a website's SSL security strength and send the resulting grade to an email address.",
+    author: "Joe Shonk",
     installs: "333"
   },
   {
@@ -55,7 +62,6 @@ let bluprints = [{
     intro: "Automatically email clients who have not signed a doc.",
     description: "Send emails out to pending signees on a specified interval.",
     author: "Octoblu",
-    active: true,
     installs: "333"
   },
   {
@@ -67,7 +73,6 @@ let bluprints = [{
     intro: "Automatically start a meeting when you enter the conference room.",
     description: "Automatically start a GoToMeeting when you are in range of your beacon, then post the link to your Podio group.",
     author: "Octoblu",
-    active: true,
     installs: "333"
   },
   {
@@ -79,7 +84,6 @@ let bluprints = [{
     intro: "Automatically start a meeting and send links to a list from a Podio app!",
     description: "Compile a list of emails and a date in a Podio app. On that date, a GoToMeeting will start and send out links to everyone in the email list.",
     author: "Octoblu",
-    active: true,
     installs: "333"
   },
   {
@@ -91,7 +95,6 @@ let bluprints = [{
     intro: "Host daily meetings with teams around the globe!",
     description: "Start a meeting with GoToMeeting, then immediately post a status to your Podio group with the information to join.",
     author: "Octoblu",
-    active: true,
     installs: "333"
   },
   {
@@ -103,7 +106,6 @@ let bluprints = [{
     intro: "You'll never have to send a mass email again.",
     description: "Create a Podio app that stores contact information and use Octoblu to send emails to each person. You can customize the subject and body of the email.",
     author: "Octoblu",
-    active: true,
     installs: "333"
   },
   {
@@ -115,7 +117,6 @@ let bluprints = [{
     intro: "File virus detection with SMS and Email alerts.",
     description: "Get an Email and SMS when ShareFile detects that one of your files has a virus.",
     author: "Octoblu",
-    active: true,
     installs: "333"
   },
   {
@@ -127,7 +128,6 @@ let bluprints = [{
     intro: "Let your Podio group know when you upload to ShareFile.",
     description: "Checks if the upload is recent, then sends a Podio status update when you share a file with ShareFile! ",
     author: "Octoblu",
-    active: true,
     installs: "333"
   }
 ]
