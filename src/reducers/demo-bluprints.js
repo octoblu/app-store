@@ -43,6 +43,28 @@ let bluprints = [{
     installs: "333"
   },
   {
+    label: "Citrix Receiver Scheduler",
+    id: "919fd00c-a53c-4409-ab9c-72aba5947769",
+    tags: ['citrix-receiver'],
+    octobluImportUrl: "https://app.octoblu.com/bluprints/import/919fd00c-a53c-4409-ab9c-72aba5947769",
+    collectionIds:['workspace'],
+    intro: "Have Citrix Receiver launch apps when you get into work",
+    description: "The Citrix Receiver can launch and close your apps based on when you schedule it.",
+    author: "Octoblu",
+    installs: "333"
+  },
+  {
+    label: "Splunk Fired Alerts to Podio",
+    id: "a6820772-41c0-4b6d-a9f8-a89900bcfffe",
+    tags: ['splunk', 'podio'],
+    octobluImportUrl: "https://app.octoblu.com/bluprints/import/a6820772-41c0-4b6d-a9f8-a89900bcfffe",
+    collectionIds:['monitoring-alerts'],
+    intro: "Automatically post Splunk alerts as Podio statuses",
+    description: "Get Fired Alerts from your Splunk Instance and post them to Podio as statuses!",
+    author: "Octoblu",
+    installs: "333"
+  },
+  {
     label: "Daily SSL Labs Grade Report via E-mail",
     id: "2be55069-2e89-4dba-ae0b-96638bb50ce4",
     tags: ['xenapp'],
