@@ -7,8 +7,8 @@ addons:
     repo_token: a346754071423801ffb9ee6ed15557e835cd0341eb452542410cc11bcd052adf
 env:
   global:
-  - AWS_ACCESS_KEY_ID: AKIAJH2D5IPIRHYJT5IA
-  - AWS_SECRET_ACCESS_KEY: 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
+    AWS_ACCESS_KEY_ID: AKIAJH2D5IPIRHYJT5IA
+    AWS_SECRET_ACCESS_KEY: 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
 before_script:
 - if [ ${TRAVIS_BRANCH} == master ]; then export NODE_ENV=production; else export NODE_ENV=staging; fi
 after_success:
