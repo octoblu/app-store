@@ -4,13 +4,13 @@ import { Link } from 'react-router'
 
 import './index.css'
 
-import ChannelImage from '../channel-image'
+import DeviceImage from '../device-image'
 
 const ChannelImages = ({ bluprint, collectionId, className }) => {
   const classes = classNames('ChannelImages', className)
-  const channelImages = _.map(bluprint.tags, (tag, index) =>
-    <Link to={`/collections/${collectionId}?tag=${tag}`} key={index}>
-      <ChannelImage name={tag} className="ChannelImages-image" />
+  const channelImages = _.map(bluprint.types, (type, index) =>
+    <Link to={`/collections/${collectionId}?tag=${type.split(':')[1]}`} key={index}>
+      <DeviceImage type={type} className="ChannelImages-image" />
     </Link>
   )
 
