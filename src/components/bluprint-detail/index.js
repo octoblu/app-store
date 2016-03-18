@@ -11,11 +11,6 @@ import './index.css'
 const BluprintDetail = ({ bluprint }) => {
   const channelImage = _.map(bluprint.tags, (tag, index) => <ChannelImage key={index} name={tag} className="BluprintDetail-icon" />)
 
-  let button = <Button href={bluprint.octobluImportUrl} kind="jumbo">Automate</Button>
-  if (!bluprint.active){
-    button = <Button disabled kind="jumbo" className="BluprintDetail-automateBtn--disabled">Coming Soon!</Button>
-  }
-
   let blogPost = null
   if (bluprint.blogPost){
     blogPost = <a className="BluprintDetail-blogLink" href={bluprint.blogPost}>Blog Post</a>
@@ -27,7 +22,7 @@ const BluprintDetail = ({ bluprint }) => {
     <p className="BluprintDetail-description">{bluprint.description}</p>
     { blogPost }
 
-    {button}
+    <Button href={bluprint.octobluImportUrl} kind="jumbo">Automate</Button>
     <BluprintMeta bluprint={bluprint}/>
   </div>
 }
