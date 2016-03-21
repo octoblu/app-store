@@ -7,7 +7,6 @@ const BluprintsNavBar = ({octobluUrl}) => {
     <TopBarNav>
       <a className="TopBarNav-link" href={`${octobluUrl}/bluprints`}>My Bluprints</a>
       <a className="TopBarNav-link" href={`${octobluUrl}/discover`}>Discover Bluprints</a>
-      <a className="TopBarNav-link TopBarNav-link--active" href="//store.octoblu.com">Citrix App Store</a>
     </TopBarNav>
   </TopBar>
 }
