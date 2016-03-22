@@ -4,14 +4,14 @@ import MdPerson from 'react-icons/lib/md/person'
 
 import './index.css'
 
-import ChannelImages from '../channel-images'
+import BluprintCardTags from '../bluprint-card-tags'
 
 const BluprintCard = ({ bluprint, collectionId }) => {
   return <div className="BluprintCard">
-    <ChannelImages
+    <BluprintCardTags
       bluprint={bluprint}
       collectionId={collectionId}
-      className="BluprintCard-channelImages"
+      className="BluprintCard-tags"
     />
 
     <main className="BluprintCard-main">

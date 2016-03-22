@@ -1,6 +1,6 @@
 .BluprintDetail {
   width: 640px;
-  margin: 24px auto;
+  margin: 48px auto 24px;
 
   text-align: center;
 }
@@ -26,4 +26,14 @@
 
 .BluprintDetail-automateBtn--disabled {
   opacity: 0.5;
+}
+
+.BluprintDetail-meta {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 24px;
+  padding: 0 120px;
 }

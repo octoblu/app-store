@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import { FacebookButton } from 'react-social'
 
 import './index.css'
-import ChannelImage from '../channel-image'
+import ThingImage from '../thing-image'
 
 const FacebookShareButton = ({ className, message }) => {
   const componentClass = classNames(
@@ -20,7 +20,7 @@ const FacebookShareButton = ({ className, message }) => {
       message={message}
       className={componentClass}
     >
-      <ChannelImage name="facebook" className="Share-buttonImage" />
+      <ThingImage type="channel:facebook" className="Share-buttonImage" />
       Facebook
     </FacebookButton>
   )

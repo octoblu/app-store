@@ -1,11 +1,7 @@
 .Share {
   display: flex;
-  flex-direction: column;
-}
-
-.Share-buttons {
-  display: flex;
   flex: 1;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-end;
   padding-bottom: 36px;
@@ -33,9 +29,3 @@
   width: 18px;
   margin: 0 6px 0 0;
 }
-
-.Share-button--email {}
-
-.Share-button--facebook {}
-
-.Share-button--twitter {}

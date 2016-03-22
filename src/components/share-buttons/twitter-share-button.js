@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import { TwitterButton } from 'react-social'
 
 import './index.css'
-import ChannelImage from '../channel-image'
+import ThingImage from '../thing-image'
 
 const TwitterShareButton = ({ className, message }) => {
   const componentClass = classNames(
@@ -21,7 +21,7 @@ const TwitterShareButton = ({ className, message }) => {
       className={componentClass}
       url={window.location.href}
     >
-      <ChannelImage name="twitter" className="Share-buttonImage" /> Twitter
+      <ThingImage type="channel:twitter" className="Share-buttonImage" /> Twitter
     </TwitterButton>
   )
 }

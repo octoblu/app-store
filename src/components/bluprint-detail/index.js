@@ -1,29 +1,32 @@
 import React, { PropTypes } from 'react'
 import { Link } from 'react-router'
 
-import DeviceImage from '../device-image'
+import ThingImage from '../thing-image'
 import Button from '../button'
-import BluprintMeta from '../bluprint-meta'
-import ShareButtons from '../share'
+import ShareButtons from '../share-buttons'
 
 import './index.css'
 
 const BluprintDetail = ({ bluprint }) => {
-  const channelImage = _.map(bluprint.types, (type) => <DeviceImage type={type} className="BluprintDetail-icon" />)
+  const thingImages = _.map(bluprint.types, (type, index) => {
+    return <ThingImage type={type} className="BluprintDetail-icon" key={index}/>
+  })
 
-  let blogPost = null
+  let blogPostLink = null
   if (bluprint.blogPost){
-    blogPost = <a className="BluprintDetail-blogLink" href={bluprint.blogPost}>Blog Post</a>
+    blogPostLink = <a className="BluprintDetail-blogLink" href={bluprint.blogPost}>Blog Post</a>
   }
 
   return <div className="BluprintDetail">
-    {channelImage}
+    {thingImages}
+
     <h1 className="font-bold BluprintDetail-label">{bluprint.label}</h1>
     <p className="BluprintDetail-description">{bluprint.description}</p>
-    { blogPost }
+
+    { blogPostLink }
 
     <Button href={bluprint.octobluImportUrl} kind="jumbo">Automate</Button>
-    <BluprintMeta bluprint={bluprint}/>
+    <ShareButtons label={bluprint.label} className="BluprintDetail-meta"/>
   </div>
 }
 

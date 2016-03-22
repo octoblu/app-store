@@ -4,7 +4,7 @@ import classNames from 'classnames'
 import './index.css'
 
 import Button from '../button'
-import ChannelImage from '../channel-image'
+import ThingImage from '../thing-image'
 
 const EmailButton = ({ className, subject, body }) => {
   const componentClass = classNames(
@@ -17,7 +17,7 @@ const EmailButton = ({ className, subject, body }) => {
     href={`mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`}
     title="Share App via Email"
     className={componentClass}>
-    <ChannelImage name="email" className="Share-buttonImage" />
+    <ThingImage type="channel:email" className="Share-buttonImage" />
     Email
   </Button>
 }

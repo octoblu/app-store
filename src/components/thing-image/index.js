@@ -10,17 +10,17 @@ const parseType = (type) => {
   return {category, name}
 }
 
-const DeviceImage = ({type, className}) => {
-  const componentClass = classNames('DeviceImage', className)
+const ThingImage = ({type, className}) => {
+  const componentClass   = classNames('ThingImage', className)
   const {category, name} = parseType(type)
-  const url = `https://icons.octoblu.com/${category}/${name}.svg`
+  const url              = `https://icons.octoblu.com/${category}/${name}.svg`
 
   return <img src={url} className={componentClass} alt={name}/>
 }
 
-DeviceImage.propTypes = {
+ThingImage.propTypes = {
   type: PropTypes.string.isRequired,
   className: PropTypes.string
 }
 
-export default DeviceImage
+export default ThingImage
