@@ -4,10 +4,9 @@ import React, { PropTypes } from 'react'
 import './index.css'
 
 const ChannelImage = ({name, className}) => {
-  const componentClass = classNames('ChannelImage', className)
   const url = `https://icons.octoblu.com/channel/${name}.svg`
 
-  return <img src={url} className={componentClass} alt={name}/>
+  return <img src={url} className={className} alt={name}/>
 }
 
 ChannelImage.propTypes = {

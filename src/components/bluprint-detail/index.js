@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 import { Link } from 'react-router'
 
-import ChannelImage from '../channel-image'
+import DeviceImage from '../device-image'
 import Button from '../button'
 import BluprintMeta from '../bluprint-meta'
 import ShareButtons from '../share'
@@ -9,7 +9,7 @@ import ShareButtons from '../share'
 import './index.css'
 
 const BluprintDetail = ({ bluprint }) => {
-  const channelImage = _.map(bluprint.tags, (tag, index) => <ChannelImage key={index} name={tag} className="BluprintDetail-icon" />)
+  const channelImage = _.map(bluprint.types, (type) => <DeviceImage type={type} className="BluprintDetail-icon" />)
 
   let blogPost = null
   if (bluprint.blogPost){

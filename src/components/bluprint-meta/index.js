@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react'
 import { Link } from 'react-router'
 
-import ChannelImage from '../channel-image'
 import Button from '../button'
 import ShareButtons from '../share'
 
