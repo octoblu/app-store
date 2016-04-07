@@ -3,7 +3,6 @@ import { Link } from 'react-router'
 
 import ThingImage from '../thing-image'
 import Button from '../button'
-import ShareButtons from '../share-buttons'
 
 import './index.css'
 
@@ -26,7 +25,6 @@ const BluprintDetail = ({ bluprint }) => {
     { blogPostLink }
 
     <Button href={bluprint.octobluImportUrl} kind="jumbo">Automate</Button>
-    <ShareButtons label={bluprint.label} className="BluprintDetail-meta"/>
   </div>
 }
 
