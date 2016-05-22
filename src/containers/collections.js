@@ -62,7 +62,7 @@ export default class Collections extends Component {
       {topBar}
 
       <Hero>
-        <HeroTitle>Automation App Store</HeroTitle>
+        <HeroTitle>IoT App Store</HeroTitle>
         <HeroSubTitle>Explore. Automate. Empower.</HeroSubTitle>
         {visitOctobluButton}
       </Hero>

@@ -1,4 +1,17 @@
-let bluprints = [{
+let bluprints = [
+  {
+      label: "Citrix Cloud Notification to Slack",
+      id: "4db60634-32a6-4f0e-a012-3fd884d70d02",
+      octobluImportUrl: "https://app.octoblu.com/bluprints/4db60634-32a6-4f0e-a012-3fd884d70d02/detail",
+      tags: ['slack'],
+      types: ['channel:slack'],
+      collectionIds:['monitoring-alerts'],
+      intro: "Citrix Cloud Notification to Slack",
+      description: "Captures notifications from Citrix Cloud and publishes them in a slack Channel",
+      author: "Ian F.",
+      installs: "333"
+  },
+  {
     label: "Dropbox To Sharefile",
     id: "fb3b8a07-6472-4730-a77a-0ad1d5defb50",
     octobluImportUrl: "https://app.octoblu.com/bluprints/import/fb3b8a07-6472-4730-a77a-0ad1d5defb50",
