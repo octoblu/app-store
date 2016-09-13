@@ -26,6 +26,9 @@ export default class Collections extends Component {
     let { collections, context } = this.props
     let { items } = collections
 
+    console.log('OCTOBLU_URL', OCTOBLU_URL)
+    console.log('context', context)
+
     let collectionCards = _.map(items, (collection) =>
       <CollectionCard
         collection={collection}
