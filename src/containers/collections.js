@@ -15,6 +15,7 @@ import { fetchCollections } from '../actions/collection-actions'
 export default class Collections extends Component {
   constructor(props) {
     super(props)
+    console.log('Collections!');
   }
 
   componentDidMount() {
