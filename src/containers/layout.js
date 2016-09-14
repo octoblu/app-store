@@ -8,7 +8,7 @@ import '../styles/base.css'
 import AppBar from '../components/zooids/app-bar'
 import {OCTOBLU_URL} from '../constants'
 
-export default class Layout extends Component {
+class Layout extends Component {
   render() {
     const {context} = this.props
 

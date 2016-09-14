@@ -9,7 +9,7 @@ import Spinner from '../components/spinner'
 
 import {setContext} from '../actions/context-actions'
 
-export default class ContextHandler extends Component {
+class ContextHandler extends Component {
   componentDidMount() {
     let {dispatch, params} = this.props
     let {context}          = params

@@ -9,7 +9,7 @@ import { Page } from '../components/page'
 
 import {fetchBluprints} from '../actions/bluprint-actions'
 
-export default class Bluprint extends Component {
+class Bluprint extends Component {
   constructor(props) {
     super(props)
   }

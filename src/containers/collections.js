@@ -12,7 +12,7 @@ import { Hero, HeroTitle, HeroSubTitle } from '../components/hero'
 import { OCTOBLU_URL } from '../constants'
 import { fetchCollections } from '../actions/collection-actions'
 
-export default class Collections extends Component {
+class Collections extends Component {
   constructor(props) {
     super(props)
     console.log('Collections!');

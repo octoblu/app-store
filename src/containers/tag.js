@@ -10,7 +10,7 @@ import { Page, PageTitle } from '../components/page'
 
 import { fetchBluprints, fetchBluprintsByTagName } from '../actions/bluprint-actions'
 
-export default class Tag extends Component {
+class Tag extends Component {
   constructor(props) {
     super(props)
   }

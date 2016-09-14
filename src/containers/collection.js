@@ -9,7 +9,7 @@ import { Page } from '../components/page'
 
 import { fetchBluprints, fetchBluprintsByCollectionId } from '../actions/bluprint-actions'
 
-export default class Collection extends Component {
+class Collection extends Component {
   constructor(props) {
     super(props)
   }
