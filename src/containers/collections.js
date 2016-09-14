@@ -9,7 +9,7 @@ import TopBarNav from '../components/zooids/top-bar-nav'
 import { Page } from '../components/page'
 import { Hero, HeroTitle, HeroSubTitle } from '../components/hero'
 
-import { OCTOBLU_URL } from '../constants'
+import { OCTOBLU_URL } from '../constants/'
 import { fetchCollections } from '../actions/collection-actions'
 
 class Collections extends Component {
