@@ -15,7 +15,6 @@ import { fetchCollections } from '../actions/collection-actions'
 class Collections extends Component {
   constructor(props) {
     super(props)
-    console.log('Collections!');
   }
 
   componentDidMount() {
@@ -27,9 +26,6 @@ class Collections extends Component {
     let { collections, context } = this.props
     let { items } = collections
 
-    console.log('OCTOBLU_URL', OCTOBLU_URL)
-    console.log('context', context)
-
     let collectionCards = _.map(items, (collection) =>
       <CollectionCard
         collection={collection}
@@ -39,7 +35,7 @@ class Collections extends Component {
     let topBar = null
     let visitOctobluButton = (
       <Button
-        href={OCTOBLU_URL}
+        href="https://app.octoblu.com"
         className="Hero-floatingButton"
         kind="hollow-neutral"
         size="small"
