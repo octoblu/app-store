@@ -3,25 +3,25 @@
 <head>
   <title>Citrix IoT App Store</title>
   <link rel="stylesheet" href="https://citrix.cloud.com/navbar/styles/cwc-navbar.min.css" />
+  <script>
+    var queryParams = window.location.search.split('&')
+    queryParams.forEach(function(param){
+      var pair = param.split('=')
+      name = pair[0]
+      value = decodeURIComponent(pair[1])
+      if (name === 'sessionId') {
+        localStorage.setItem('workspaceCloudSessionId', value)
+      }
+      if (name === 'customerId') {
+        localStorage.setItem('workspaceCloudCustomerId', value)
+      }
+    })
+
+    window.cwcCustomerId = localStorage.getItem('workspaceCloudCustomerId')
+    window.cwcSessionId = localStorage.getItem('workspaceCloudSessionId')
+
+  </script>
 </head>
-<script>
-  var queryParams = window.location.search.split('&')
-  queryParams.each(function(param){
-    var pair = param.split('=')
-    name = pair[0]
-    value = decodeURIComponent(pair[1])
-    if (name === 'sessionId') {
-      localStorage.setItem('workspaceCloudSessionId', value)
-    }
-    if (name === 'customerId') {
-      localStorage.setItem('workspaceCloudCustomerId', value)
-    }
-  })
-
-  window.cwcCustomerId = localStorage.getItem('workspaceCloudCustomerId')
-  window.cwcSessionId = localStorage.getItem('workspaceCloudSessionId')
-
-</script>
 <body>
   <cwc-navbar domain="https://citrix.cloud.com"></cwc-navbar>
   <div id='app'></div>
