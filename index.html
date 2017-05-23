@@ -29,10 +29,12 @@
       window.cwcCustomerId = customerId
       window.cwcSessionId = sessionId
     } else {
-      localStorage.removeItem('workspaceCloudOTP')
-      localStorage.removeItem('workspaceCloudCustomerId')
-      localStorage.removeItem('workspaceCloudSessionId')
-      window.location = 'https://app.octoblu.com/workspacecloud?otp=' + encodeURIComponent(otp) + '&customerId=' + encodeURIComponent(customerId)
+      if (otp) {
+        localStorage.removeItem('workspaceCloudOTP')
+        localStorage.removeItem('workspaceCloudCustomerId')
+        localStorage.removeItem('workspaceCloudSessionId')
+        window.location = 'https://app.octoblu.com/workspacecloud?otp=' + encodeURIComponent(otp) + '&customerId=' + encodeURIComponent(customerId)
+      }
     }
 
     window.addEventListener('message', function(event) {
