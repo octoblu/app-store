@@ -4,8 +4,6 @@ node_js:
 branches:
   only:
     - '/^v[0-9]/'
-before_install:
-  - mv .travis.npmrc .npmrc
 after_success:
   - npm run coverage
   - 'npm run mocha:json'
