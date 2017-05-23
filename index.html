@@ -4,7 +4,7 @@
   <title>Citrix IoT App Store</title>
   <link rel="stylesheet" href="https://citrix.cloud.com/navbar/styles/cwc-navbar.min.css" />
   <script>
-    var queryParams = window.location.search.split('&')
+    var queryParams = window.location.search.replace(/\?/, '').split('&')
     queryParams.forEach(function(param){
       var pair = param.split('=')
       name = pair[0]
@@ -20,28 +20,20 @@
       }
     })
 
+    localStorage.removeItem('workspaceCloudShowApp')
+
     otp = localStorage.getItem('workspaceCloudOTP')
     customerId = localStorage.getItem('workspaceCloudCustomerId')
-    if (otp) {
+    sessionId = localStorage.getItem('workspaceCloudSessionId')
+    if (customerId && sessionId) {
+      window.cwcCustomerId = customerId
+      window.cwcSessionId = sessionId
+    } else {
       localStorage.removeItem('workspaceCloudOTP')
       localStorage.removeItem('workspaceCloudCustomerId')
       localStorage.removeItem('workspaceCloudSessionId')
       window.location = 'https://app.octoblu.com/workspacecloud?otp=' + encodeURIComponent(otp) + '&customerId=' + encodeURIComponent(customerId)
-    } else {
-      window.cwcCustomerId = customerId
-      window.cwcSessionId = localStorage.getItem('workspaceCloudSessionId')
     }
-
-    window.addEventListener("message", function(event) {
-      if (event.origin === window.location.origin && event.data) {
-        if (event.data.name === "$cwcNavbarUserAuthorized") {
-          localStorage.setItem('workspaceCloudShowApp', true)
-        }
-        if (event.data.name === '$cwcNavbarUserUnauthorized') {
-          localStorage.removeItem('workspaceCloudShowApp')
-        }
-      }
-    })
   </script>
 </head>
 <body>
