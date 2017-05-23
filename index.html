@@ -34,10 +34,18 @@
       localStorage.removeItem('workspaceCloudSessionId')
       window.location = 'https://app.octoblu.com/workspacecloud?otp=' + encodeURIComponent(otp) + '&customerId=' + encodeURIComponent(customerId)
     }
+
+    window.addEventListener('message', function(event) {
+      if (event.origin === location.origin && event.data && event.data.name === '$cwcNavbarUserLoggedOff') {
+        localStorage.clear()
+        window.postMessage({name: '$octobluUserLoggedOff'}, '*')
+      }
+    })
+
   </script>
 </head>
 <body>
-  <cwc-navbar domain="https://citrix.cloud.com" service="IoT"></cwc-navbar>
+  <cwc-navbar domain="https://citrix.cloud.com" service="IoT" logoff-event="$octobluUserLoggedOff"></cwc-navbar>
   <div id='app'></div>
   <script src="/dist/bundle.js"></script>
   <script id="cwc-navbar-source" src="https://citrix.cloud.com/navbar/scripts/cwc-navbar.min.js"></script>
