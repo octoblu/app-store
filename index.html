@@ -15,15 +15,37 @@
       if (name === 'customerId') {
         localStorage.setItem('workspaceCloudCustomerId', value)
       }
+      if (name === 'otp') {
+        localStorage.setItem('workspaceCloudOTP', value)
+      }
     })
 
-    window.cwcCustomerId = localStorage.getItem('workspaceCloudCustomerId')
-    window.cwcSessionId = localStorage.getItem('workspaceCloudSessionId')
+    otp = localStorage.getItem('workspaceCloudOTP')
+    customerId = localStorage.getItem('workspaceCloudCustomerId')
+    if (otp) {
+      localStorage.removeItem('workspaceCloudOTP')
+      localStorage.removeItem('workspaceCloudCustomerId')
+      localStorage.removeItem('workspaceCloudSessionId')
+      window.location = 'https://app.octoblu.com/workspacecloud?otp=' + encodeURIComponent(otp) + '&customerId=' + encodeURIComponent(customerId)
+    } else {
+      window.cwcCustomerId = customerId
+      window.cwcSessionId = localStorage.getItem('workspaceCloudSessionId')
+    }
 
+    window.addEventListener("message", function(event) {
+      if (event.origin === window.location.origin && event.data) {
+        if (event.data.name === "$cwcNavbarUserAuthorized") {
+          localStorage.setItem('workspaceCloudShowApp', true)
+        }
+        if (event.data.name === '$cwcNavbarUserUnauthorized') {
+          localStorage.removeItem('workspaceCloudShowApp')
+        }
+      }
+    })
   </script>
 </head>
 <body>
-  <cwc-navbar domain="https://citrix.cloud.com"></cwc-navbar>
+  <cwc-navbar domain="https://citrix.cloud.com" service="IoT"></cwc-navbar>
   <div id='app'></div>
   <script src="/dist/bundle.js"></script>
   <script id="cwc-navbar-source" src="https://citrix.cloud.com/navbar/scripts/cwc-navbar.min.js"></script>
