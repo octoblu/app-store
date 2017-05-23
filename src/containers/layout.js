@@ -20,7 +20,7 @@ class Layout extends Component {
         if (event.data.name === "$cwcNavbarUserAuthorized") {
           this.setState({ showApp: true })
         }
-        if (event.data.name === '$cwcNavbarUserUnauthorized') {
+        if (event.data.name === '$cwcNavbarUserNotAuthorized') {
           this.setState({ showApp: false })
         }
       }
