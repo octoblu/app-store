@@ -22,9 +22,9 @@
 
     localStorage.removeItem('workspaceCloudShowApp')
 
-    otp = localStorage.getItem('workspaceCloudOTP')
-    customerId = localStorage.getItem('workspaceCloudCustomerId')
-    sessionId = localStorage.getItem('workspaceCloudSessionId')
+    var otp = localStorage.getItem('workspaceCloudOTP')
+    var customerId = localStorage.getItem('workspaceCloudCustomerId')
+    var sessionId = localStorage.getItem('workspaceCloudSessionId')
     if (customerId && sessionId) {
       window.cwcCustomerId = customerId
       window.cwcSessionId = sessionId
@@ -44,11 +44,32 @@
       }
     })
 
+    function load() {
+      var hostname = window.location.hostname
+
+      var cwcDomain = "cloudburrito.com"
+
+      if (hostname == "cwc-store.octoblu.com") cwcDomain = "cloud.com"
+
+      var cwcNavbar = document.createElement('cwc-navbar')
+      cwcNavbar.setAttribute("domain", "https://citrix." + cwcDomain)
+      cwcNavbar.setAttribute("service", "IoT App Store")
+      cwcNavbar.setAttribute("logoff-event", "$octobluUserLoggedOff")
+
+      var app = document.getElementById('app')
+      document.body.insertBefore(cwcNavbar, app)
+
+      var script = document.createElement('script')
+      script.src = "https://citrix." + cwcDomain + "/navbar/scripts/cwc-navbar.min.js"
+      document.head.appendChild(script)
+
+    }
+
+    window.onload = load
+
   </script>
 </head>
 <body>
-  <cwc-navbar domain="https://citrix.cloud.com" service="IoT App Store" logoff-event="$octobluUserLoggedOff"></cwc-navbar>
   <div id='app'></div>
-  <script id="cwc-navbar-source" src="https://citrix.cloud.com/navbar/scripts/cwc-navbar.min.js"></script>
 </body>
 </html>
