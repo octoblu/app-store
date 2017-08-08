@@ -6,9 +6,9 @@
   <script>
     var queryParams = window.location.search.replace(/\?/, '').split('&')
     queryParams.forEach(function(param){
-      var pair = param.split('=')
-      name = pair[0]
-      value = decodeURIComponent(pair[1])
+      var params = param.split('=')
+      name = params[0]
+      value = decodeURIComponent(params[1])
       if (name === 'sessionId') {
         localStorage.setItem('workspaceCloudSessionId', value)
       }
@@ -18,6 +18,10 @@
       if (name === 'otp') {
         localStorage.setItem('workspaceCloudOTP', value)
       }
+      if (name === 'cwcHostname') {
+        localStorage.setItem('workspaceCloudHostname', value)
+      }
+
     })
 
     localStorage.removeItem('workspaceCloudShowApp')
@@ -25,6 +29,7 @@
     var otp = localStorage.getItem('workspaceCloudOTP')
     var customerId = localStorage.getItem('workspaceCloudCustomerId')
     var sessionId = localStorage.getItem('workspaceCloudSessionId')
+
     if (customerId && sessionId) {
       window.cwcCustomerId = customerId
       window.cwcSessionId = sessionId
@@ -46,14 +51,10 @@
 
     function load() {
       if (otp) return
-      var hostname = window.location.hostname
-
-      var cwcDomain = "cloudburrito.com"
-
-      if (hostname === "cwc-store.octoblu.com") cwcDomain = "cloud.com"
+      var cwcHostname = localStorage.getItem('workspaceCloudHostname')
 
       var cwcNavbar = document.createElement('cwc-navbar')
-      cwcNavbar.setAttribute("domain", "https://citrix." + cwcDomain)
+      cwcNavbar.setAttribute("domain", "https://" + cwcHostname)
       cwcNavbar.setAttribute("service", "IoT App Store")
       cwcNavbar.setAttribute("logoff-event", "$octobluUserLoggedOff")
 
@@ -61,7 +62,7 @@
       document.body.insertBefore(cwcNavbar, app)
 
       var script = document.createElement('script')
-      script.src = "https://citrix." + cwcDomain + "/navbar/scripts/cwc-navbar.min.js"
+      script.src = "https://" + cwcHostname + "/navbar/scripts/cwc-navbar.min.js"
       document.head.appendChild(script)
 
     }
